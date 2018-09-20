@@ -54,3 +54,13 @@ void Bank::validate(std::string in_value)
     }
   }
 }
+
+void CreditCardNumber::set_value(std::string in_value)
+{
+	this->validate(in_value);
+	this->value_ = in_value;
+}
+void CreditCardNumber::validate(std::string in_value)
+{
+	
+}

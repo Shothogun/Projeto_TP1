@@ -91,7 +91,7 @@ void CreditCardNumber::validate(std::string in_value)
  
         isSecond = !isSecond;
     }
-    if (nSum % 10 == 0)
+    if (nSum % 10 != 0)
     {
       throw std::invalid_argument("Argumento invalido. Número de cartão inválido");
     }

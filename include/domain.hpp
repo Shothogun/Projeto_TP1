@@ -78,20 +78,22 @@ class AccommodationCapacity
 		void set_value(std::string in_value);
 		std::string get_value();
 
-	private:
-
-}
+};
 
 class CreditCardNumber
 {
 	public:
 		CreditCardNumber(std::string in_value);
 		void set_value(std::string in_value);
-		std::string in_value;
+		std::string get_value();
 	private:
-		std::string in_value;
+		const static int kSize_ = 16;
+		std::string value_;
 		void validate(std::string in_value);
+};
+inline std::string CreditCardNumber::get_value() 
+{
+	return (this->value_);
 }
-
 
 #endif	// PROJETO_TP1_DOMAIN_H

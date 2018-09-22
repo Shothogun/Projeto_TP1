@@ -163,6 +163,18 @@ class AccommodationCapacity
 		void set_value(std::string in_value);
 		std::string get_value();
 
+  private: 
+    const static int kSize_ = 1; 
+    std::string value_; 
+    void validate(std::string in_value); 
+ 
+}; 
+ 
+inline std::string AccommodationCapacity::get_value()  
+{ 
+  return (this->value_); 
+} 
+
 };
 
 class CreditCardNumber

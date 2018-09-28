@@ -4,6 +4,10 @@
 #include <stdexcept>
 #include <iostream>
 
+//! Months enum type
+/*! Months values begins at 1(January) and end at 12(December)*/
+enum Months{kJan=1 ,kFev, kMar, kAbr,kMai, kJun, kJul, kAgo, kSet, kOut, kNov, kDez};
+
 // Class declaration
 
 //! Agency
@@ -45,7 +49,7 @@ class Agency
 
 		//! Agency value's size
 		/*!	
-				Defines Agency's standard value. const static int value.
+				Defines Agency's standard size value. const static int value.
 		*/
 		const static int kSize_ = 5;
 
@@ -111,7 +115,7 @@ class Bank
 
 		//! Bank value's size
 		/*!	
-				Defines Bank's standard value. const static int type.
+				Defines Bank's standard size value. const static int type.
 		*/
 		const static int kSize_ = 3;
 
@@ -312,10 +316,28 @@ class Date
 		*/
 		std::string get_value();
 
+		//! Get day function
+		/*!
+				Returns day value. int type.
+		*/
+		int get_day();
+
+		//! Get month function
+		/*!
+				Returns month value. int type.
+		*/
+		int get_month();
+
+		//! Get year function
+		/*!
+				Returns year value. int type.
+		*/
+		int get_year();
+
 	private:
 		//! Date value's size
 		/*!	
-				Defines Date's standard value. const static int value.
+				Defines Date's standard size value. const static int value.
 		*/
 		const static int kSize_ = 11;
 
@@ -324,6 +346,24 @@ class Date
 				It's a sequence of 11 characters(DD/MMM/AAAA) between 0-9. std::string value.
 		*/
 		std::string value_;
+
+		//!	Day's value
+		/*!
+				Value depends on month and leap year. int type.
+		*/
+		int day_;
+
+		//!	Month's value
+		/*!
+				Value between 1 to 12. int type.
+		*/
+		int month_;
+
+		//!	Year's value
+		/*!
+				Value between 2000 to 2099. int type.
+		*/
+		int year_;
 
 		//! Validate function.
 		/*!	
@@ -334,11 +374,153 @@ class Date
 				\sa Date::Date(std::string in_value)				
 		*/
 		void validate(std::string in_value);
+
+		//! Month Validate function.
+		/*!	
+				Validates the Date's month value set during its construction.
+				Its follows the months enum standard
+
+				\param month_in a std::string type.
+
+				\sa Months			
+		*/
+		int month_validate(std::string month_in);
+
+		//! Day Validate function.
+		/*!	
+				Validates the day value in a certain month of certain year.
+				Verifies if the leap year.
+
+				\param year_value a int type.
+				\param month_value a int type.
+				\param day_value a int type.
+
+				\sa Months			
+		*/
+		void day_validate(int year_value,int month_value, int day_value);
+
 };
 
 inline std::string Date::get_value()
 {
 	return (this->value_);
+}
+
+inline int Date::get_day()
+{
+	return (this->day_);
+}
+
+inline int Date::get_month()
+{
+	return (this->month_);
+}
+
+inline int Date::get_year()
+{
+	return (this->year_);
+}
+
+//! Expiration Date
+/*!
+		Receives and validates date.
+*/
+class ExpirationDate
+{
+	public:
+
+		//! Constructor
+		/*!
+				Initializes Expiration date and validates its value, following the 
+				standards notion(DD/MM), where:
+
+				MM is two digits number between 01 to 12, 
+				AA is the month: 00 to 99.
+
+				\param in_value a std::string type.
+
+				\sa ExpirationDate::set_value(std::string in_value)	
+		*/
+		ExpirationDate(std::string in_value);
+
+		//!	Set Value function
+		/*!
+				Sets valid values to Expiration Date, called during its contruction.
+
+				\param in_value a std::string type.
+
+				\sa Date::validate(std::string in_value)
+		*/
+		void set_value(std::string in_value);
+
+		//! Get Value function
+		/*!
+				Returns value. std::string type.
+		*/
+		std::string get_value();
+
+		//! Get month function
+		/*!
+				Returns month value. int type.
+		*/
+		int get_month();
+
+		//! Get year function
+		/*!
+				Returns year value. int type.
+		*/
+		int get_year();
+
+	private:
+		//! Expiration Date value's size
+		/*!	
+				Defines Expiration Date's standard size value. const static int value.
+		*/
+		const static int kSize_ = 5;
+
+		//!	Expiration Date's value
+		/*!
+				It's a sequence of 5 characters(MM/AA) between 0-9. std::string value.
+		*/
+		std::string value_;
+
+		//!	Month's value
+		/*!
+				Value between 1 to 12. int type.
+		*/
+		int month_;
+
+		//!	Year's value
+		/*!
+				Value between 2000 to 2099. int type.
+		*/
+		int year_;
+
+		//! Validate function.
+		/*!	
+				Validates the Expiration Date value set during its construction.
+
+				It's important to note that the only way year input is invalid is 
+				in the case which the in_value has a length lesser than 5 and 
+				its digits is not a number, as every possible two number digits is satisfied 
+				in the standard(0 to 99). Therefore, the particular year substring value is not required 
+				to be check, in contrast to month(01 to 12).
+				
+				\param in_value a std::string type.
+
+				\sa ExpirationDate::ExpirationDate(std::string in_value)				
+		*/
+		void validate(std::string in_value);
+};
+
+inline int ExpirationDate::get_month()
+{
+	return (this->month_);
+}
+
+inline int ExpirationDate::get_year()
+{
+	return (this->year_);
 }
 
 class CreditCardNumber

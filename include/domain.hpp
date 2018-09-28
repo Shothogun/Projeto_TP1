@@ -4,6 +4,10 @@
 #include <stdexcept>
 #include <iostream>
 
+//! Months enum type
+/*! Months values begins at 1(January) and end at 12(December)*/
+enum{jan=1,fev,mar,abr,mai, jun, jul, ago,set,out,nov,dez};
+
 // Class declaration
 
 //! Agency
@@ -312,6 +316,24 @@ class Date
 		*/
 		std::string get_value();
 
+		//! Get Day function
+		/*!
+				Returns day value. int type.
+		*/
+		int get_day();
+
+		//! Get Value function
+		/*!
+				Returns month value. int type.
+		*/
+		int get_month();
+
+		//! Get Value function
+		/*!
+				Returns year value. int type.
+		*/
+		int get_year();
+
 	private:
 		//! Date value's size
 		/*!	
@@ -325,6 +347,24 @@ class Date
 		*/
 		std::string value_;
 
+		//!	Day's value
+		/*!
+				Value depends on month and leap year. int type.
+		*/
+		int day_;
+
+		//!	Month's value
+		/*!
+				Value between 1 to 12. int type.
+		*/
+		int month_;
+
+		//!	Year's value
+		/*!
+				Value between 2000 to 2099.
+		*/
+		int year_;
+
 		//! Validate function.
 		/*!	
 				Validates the Date value set during its construction.
@@ -334,11 +374,28 @@ class Date
 				\sa Date::Date(std::string in_value)				
 		*/
 		void validate(std::string in_value);
+		int month_validate(std::string month_in);
+		void day_validate(int year_value,int month_value, int day_value);
 };
 
 inline std::string Date::get_value()
 {
 	return (this->value_);
+}
+
+inline int Date::get_day()
+{
+	return (this->day_);
+}
+
+inline int Date::get_month()
+{
+	return (this->month_);
+}
+
+inline int Date::get_year()
+{
+	return (this->year_);
 }
 
 class CreditCardNumber

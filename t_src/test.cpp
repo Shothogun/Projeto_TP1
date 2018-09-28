@@ -243,3 +243,50 @@ TEST_CASE("create Date", "[Date]")
     REQUIRE(Date_test->get_year() == 2000);
   }
 }
+
+// Total -  52 Tests - 22 pass - 30 failed 
+TEST_CASE("create Expiration date", "[Expiration date]")
+{
+  SECTION("common set")
+  {
+    ExpirationDate* ExpirationDate_test = new ExpirationDate("03/18");
+    REQUIRE(ExpirationDate_test->get_month() == 3);
+    REQUIRE(ExpirationDate_test->get_year() == 2018);
+  }
+
+  // Size error
+  SECTION("Error 1")
+  {
+    ExpirationDate* ExpirationDate_test = new ExpirationDate("03/1");
+  }
+
+  // '/' error
+  SECTION("Error 2")
+  {
+    ExpirationDate* ExpirationDate_test = new ExpirationDate("1/008");
+  }
+
+  // Digits error 
+  SECTION("Error 3")
+  {
+    ExpirationDate* ExpirationDate_test = new ExpirationDate("0a/08");
+  }
+
+  // Digits error 
+  SECTION("Error 4")
+  {
+    ExpirationDate* ExpirationDate_test = new ExpirationDate("02//8");
+  }
+
+  // Month value error 
+  SECTION("Error 5")
+  {
+    ExpirationDate* ExpirationDate_test = new ExpirationDate("13/08");
+  }
+
+  // Month value error 
+  SECTION("Error 6")
+  {
+    ExpirationDate* ExpirationDate_test = new ExpirationDate("00/08");
+  }
+}

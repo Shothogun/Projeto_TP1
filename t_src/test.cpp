@@ -86,11 +86,64 @@ TEST_CASE("create Accommodation Capacity", "[Accommodation Capacity]")
    REQUIRE(AccommodationCapacity_test->get_value() == "a");
   }
 
-  // Size greater than standard
+  // Invalid digit entry
   SECTION( "Error 3" ) 
+  {
+   AccommodationCapacity* AccommodationCapacity_test = new AccommodationCapacity("a");
+   REQUIRE(AccommodationCapacity_test->get_value() == "A");
+  }
+
+
+  // Size greater than standard
+  SECTION( "Error 4" ) 
   {
    AccommodationCapacity* AccommodationCapacity_test = new AccommodationCapacity("123456");
    REQUIRE(AccommodationCapacity_test->get_value() == "123456");
+  }
+
+}
+
+
+TEST_CASE("create Daily Value", "[Daily Value]")
+{
+  SECTION( "common set" ) 
+  {
+   DailyValue* DailyValue_test = new DailyValue("20.00");
+   REQUIRE(DailyValue_test->get_value() == "20.00");
+  }
+
+  // Size lesser than standard
+  SECTION( "Error 1" ) 
+  {
+   DailyValue* DailyValue_test = new DailyValue("0.02");
+   REQUIRE(DailyValue_test->get_value() == "0.02");
+  }
+
+    // Size greater than standard
+  SECTION( "Error 2" ) 
+  {
+   DailyValue* DailyValue_test = new DailyValue("12300.00");
+   REQUIRE(DailyValue_test->get_value() == "123000.00");
+  }
+
+
+  // Invalid digit entry
+  SECTION( "Error 3" ) 
+  {
+   DailyValue* DailyValue_test = new DailyValue("a");
+   REQUIRE(DailyValue_test->get_value() == "a");
+  }
+
+  // Invalid digit entry
+  SECTION( "Error 4" ) 
+  {
+   DailyValue* DailyValue_test = new DailyValue("123as.00");
+  }
+
+  // Invalid digit entry
+  SECTION( "Error 5" ) 
+  {
+   DailyValue* DailyValue_test = new DailyValue("1232.00 3334.00");
   }
 
 }

@@ -78,6 +78,58 @@ void AccommodationCapacity::validate(std::string in_value)
     throw std::invalid_argument("Argumento invalido. Digito invalido");
   }
 }
+
+DailyValue::DailyValue(std::string in_value)
+{
+  this->set_value(in_value);
+}
+
+void DailyValue::set_value(std::string in_value)
+{
+  this->validate(in_value);
+  this->value_ = in_value;
+}
+
+void DailyValue::validate(std::string in_value)
+{
+  for(int i = 0; i < in_value.length(); i++)
+  {
+    if((in_value[i] < '0' or in_value[i] > '9') and in_value[i] != '.')
+    {
+      throw std::invalid_argument("Argumento invalido. Digito invalido");
+    }
+  }
+
+  double float_in_value = std::stof(in_value);
+
+
+  if(float_in_value < this->kMinorSize_)
+  {
+    throw std::invalid_argument("Argumento invalido. Valor de diaria menor que o padrao");
+  }
+
+  else if (float_in_value > this->kMajorSize_)
+  {
+    throw std::invalid_argument("Argumento invalido. Valor de diaria maior que o padrao");
+  }  
+}
+
+Date::Date(std::string in_value)
+{
+  this->set_value(in_value);
+}
+
+void Date::set_value(std::string in_value)
+{
+  this->validate(in_value);
+  this->value_ = in_value;
+}
+
+void Date::validate(std::string in_value)
+{
+
+}
+
 void CreditCardNumber::set_value(std::string in_value)
 {
 	this->validate(in_value);
@@ -89,6 +141,7 @@ void CreditCardNumber::validate(std::string in_value)
   {
     throw std::invalid_argument("Argumento invalido. Tamanho incorrespondente");
   }
+
 	for(int i = 0; i < this->kSize_; i++)
   {
     if(in_value[i] >'9' or in_value[i]<'0')
@@ -120,3 +173,4 @@ void CreditCardNumber::validate(std::string in_value)
     }
     
 }
+

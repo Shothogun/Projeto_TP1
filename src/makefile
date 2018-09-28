@@ -1,7 +1,7 @@
 IDIR = ../include
 
 CC = g++
-CXXFLAGS = -W -Wall -std=c++14 -I$(IDIR)
+CXXFLAGS = -W -Wall -std=c++14 -pedantic -I$(IDIR)
 
 EDIR = ../exe
 ODIR = ../obj

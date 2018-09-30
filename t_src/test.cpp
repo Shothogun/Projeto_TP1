@@ -153,7 +153,7 @@ TEST_CASE("create Daily Value", "[Daily Value]")
 // Total -  44 Tests - 20 pass - 24 failed
 TEST_CASE("create Date", "[Date]")
 {
-  SECTION("common set")
+  SECTION("common set 1")
   {
     Date *Date_test = new Date("02/jan/2023");
     REQUIRE(Date_test->get_value() == "02/jan/2023");
@@ -162,7 +162,7 @@ TEST_CASE("create Date", "[Date]")
     REQUIRE(Date_test->get_year() == 2023);
   }
 
-  SECTION("common set")
+  SECTION("common set 2")
   {
     Date *Date_test = new Date("27/jun/2005");
     REQUIRE(Date_test->get_value() == "27/jun/2005");
@@ -225,7 +225,7 @@ TEST_CASE("create Date", "[Date]")
     Date *Date_test = new Date("29/fev/2018");
   }
 
-  SECTION("Leap year")
+  SECTION("Leap year 1")
   {
     Date *Date_test = new Date("29/fev/2020");
     REQUIRE(Date_test->get_value() == "29/fev/2020");
@@ -234,7 +234,7 @@ TEST_CASE("create Date", "[Date]")
     REQUIRE(Date_test->get_year() == 2020);
   }
 
-  SECTION("Leap year")
+  SECTION("Leap year 2")
   {
     Date *Date_test = new Date("29/fev/2000");
     REQUIRE(Date_test->get_value() == "29/fev/2000");
@@ -288,5 +288,61 @@ TEST_CASE("create Expiration date", "[Expiration date]")
   SECTION("Error 6")
   {
     ExpirationDate* ExpirationDate_test = new ExpirationDate("00/08");
+  }
+}
+
+// Total -  58 Tests - 26 pass - 32 failed 
+TEST_CASE("create State", "[State]")
+{
+  SECTION("common set 1")
+  {
+    State* State_test = new State("AC");
+    REQUIRE(State_test->get_value() == "AC");
+    REQUIRE(State_test->get_state() == StateName::AC);
+  }
+
+    SECTION("common set 2")
+  {
+    State* State_test = new State("DF");
+    REQUIRE(State_test->get_value() == "DF");
+    REQUIRE(State_test->get_state() == StateName::DF);
+  }
+
+  SECTION("Error 1")
+  {
+    State* State_test = new State("df");
+    REQUIRE(State_test->get_value() == "DF");
+    REQUIRE(State_test->get_state() == StateName::AC);
+  }
+
+  SECTION("Error 2")
+  {
+    State* State_test = new State("EF");
+  }
+}
+
+// Total -  62 Tests - 28 pass - 34 failed 
+TEST_CASE("create Identifier", "[Identifier]")
+{
+  SECTION("common set 1")
+  {
+    Identifier *Identifier_test = new Identifier("ahyef");
+    REQUIRE(Identifier_test->get_value() == "ahyef");
+  }
+
+  SECTION("common set 2")
+  {
+    Identifier *Identifier_test = new Identifier("aaaaa");
+    REQUIRE(Identifier_test->get_value() == "aaaaa");
+  }
+
+  SECTION("Error 1")
+  {
+    Identifier *Identifier_test = new Identifier("Ahyef");
+  }
+
+  SECTION("Error 2")
+  {
+    Identifier *Identifier_test = new Identifier("a_yer");
   }
 }

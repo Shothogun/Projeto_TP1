@@ -413,35 +413,6 @@ void State::set_value(std::string in_value)
   this->value_ = in_value;
 }
 
-Identifier::Identifier(std::string in_value)
-{
-  this->set_value(in_value);
-}
-
-void Identifier::set_value(std::string in_value)
-{
-  this->validate(in_value);
-  this->value_ = in_value;
-}
-
-void Identifier::validate(std::string in_value)
-{
-  // --------------------- Verify size ---------------------
-  if(in_value.length() != this->kSize_)
-  {
-    throw std::invalid_argument("Identificador invalido. Tamanho incorrespondente");
-  }
-
-  // --------------------- Verify Digits ---------------------
-  for(uint i=0; i < in_value.length() ; i++)
-  {
-    if(in_value[i] < 'a' or in_value[i] > 'z')
-    {
-      throw std::invalid_argument("Identificador invalido. Dígito nao é letra minúscula");
-    }
-  }
-}
-
 StateName State::validate(std::string in_value)
 {
   if(in_value == "AC")
@@ -582,6 +553,108 @@ StateName State::validate(std::string in_value)
   else
   {
     throw std::invalid_argument("Argumento invalido. Estado inserido invalido.");
+  }
+}
+
+Identifier::Identifier(std::string in_value)
+{
+  this->set_value(in_value);
+}
+
+void Identifier::set_value(std::string in_value)
+{
+  this->validate(in_value);
+  this->value_ = in_value;
+}
+
+void Identifier::validate(std::string in_value)
+{
+  // --------------------- Verify size ---------------------
+  if(in_value.length() != this->kSize_)
+  {
+    throw std::invalid_argument("Identificador invalido. Tamanho incorrespondente");
+  }
+
+  // --------------------- Verify Digits ---------------------
+  for(uint i=0; i < in_value.length() ; i++)
+  {
+    if(in_value[i] < 'a' or in_value[i] > 'z')
+    {
+      throw std::invalid_argument("Identificador invalido. Dígito nao é letra minúscula");
+    }
+  }
+}
+
+Name::Name(std::string in_value)
+{
+   this->set_value(in_value);
+}
+
+void Name::set_value(std::string in_value)
+{
+  this->validate(in_value);
+  this->value_ = in_value;
+}
+
+void Name::validate(std::string in_value)
+{
+  // --------------------- Verify size ---------------------
+  if(in_value.length() != this->kSize_)
+  {
+    throw std::invalid_argument("Nome invalido. Tamanho incorrespondente");
+  }
+
+
+  bool at_least_one_letter = false;
+
+  // --------------------- Verify Digits ---------------------
+  for(uint i = 0; i < in_value.length(); i++)
+  {
+    // Verify character
+    if((in_value[i] < 'a' or in_value[i] > 'z') and (in_value[i] != '.' and in_value[i] != ' '))
+    {
+      if((in_value[i] < 'A' or in_value[i] > 'Z'))
+      {
+        throw std::invalid_argument("Nome invalido. Digito incorrespondente com o padrão");
+      }
+    }
+
+    if((in_value[i] > 'a' and in_value[i] < 'z') or (in_value[i] > 'A' and in_value[i] < 'Z'))
+    {
+      at_least_one_letter = true;
+    }
+
+    // Dot is the first character
+    if(in_value[i] == '.' and i == 0)
+    {
+      throw std::invalid_argument("Nome invalido. Primeiro caracter é um '.', verifique o padrão");
+    }
+
+    // --------------------- Verify dot value ---------------------
+    else if(in_value[i] == '.' and i != 0)
+    {
+      if(in_value[i-1] < 'a' or in_value[i-1] > 'z')
+      {
+        if(in_value[i-1] < 'A' or in_value[i-1] > 'Z')
+        {
+          throw std::invalid_argument("Nome invalido. '.' não precedido por uma letra, verifique o padrão");
+        }
+      }
+    }
+
+    // Verify double space
+    if(in_value[i] == ' ' and i != 0)
+    {
+      if(in_value[i-1] == ' ')
+      {
+        throw std::invalid_argument("Nome invalido. Duplo espaço, verifique o padrão");
+      } 
+    } 
+  } // for
+  
+  if(at_least_one_letter == false)
+  {
+    throw std::invalid_argument("Nome invalido. Não há uma letra no nome, verifique o padrão");
   }
 }
 

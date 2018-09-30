@@ -346,3 +346,43 @@ TEST_CASE("create Identifier", "[Identifier]")
     Identifier *Identifier_test = new Identifier("a_yer");
   }
 }
+
+// Total -  68 Tests - 29 pass - 39 failed 
+TEST_CASE("create Name", "[Name]")
+{
+  SECTION("common set")
+  {
+    Name* Name_test = new Name("Otho T. Komatsu");
+    REQUIRE(Name_test->get_value() == "Otho T. Komatsu");
+  }
+
+  // Invalid digit
+  SECTION("Error 1")
+  {
+    Name* Name_test = new Name("05h0 T. K0ma75u");
+  }
+
+  // Name initial character is a dot
+  SECTION("Error 2")
+  {
+    Name* Name_test = new Name(".tho T. Komatsu");
+  }
+
+  // Dot without letter before
+  SECTION("Error 3")
+  {
+    Name* Name_test = new Name("Otho . Komatsu ");
+  }
+
+  // Double spaced name
+  SECTION("Error 4")
+  {
+    Name* Name_test = new Name("Otho  T Komatsu");
+  }
+
+  // No character
+  SECTION("Error 5")
+  {
+    Name* Name_test = new Name(" . . . . . . . ");
+  }
+}

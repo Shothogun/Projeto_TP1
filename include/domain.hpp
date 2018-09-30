@@ -544,8 +544,7 @@ inline int ExpirationDate::get_year()
 */
 class State
 {
-		public:
-
+	public:
 		//! Constructor
 		/*!
 				Initializes State and validates its value according to its initials.
@@ -631,7 +630,7 @@ inline StateName State::get_state()
 */
 class Identifier
 {
-		public:
+	public:
 		//! Constructor
 		/*!
 				Initializes Identifier and validates following the 
@@ -649,7 +648,7 @@ class Identifier
 
 				\param in_value a std::string type.
 
-				\sa State::validate(std::string in_value)
+				\sa Identifier::validate(std::string in_value)
 		*/
 		void set_value(std::string in_value);
 
@@ -661,7 +660,7 @@ class Identifier
 
 	private:
 
-		//! Identifier value's size
+		//! Identifier's size
 		/*!	
 				Defines Identifier's standard size value. const static int value.
 		*/
@@ -685,6 +684,90 @@ class Identifier
 };
 
 inline std::string Identifier::get_value()
+{
+	return (this->value_);
+}
+
+//! Name
+/*!
+		Receives and validates Name.
+*/
+class Name
+{
+	public:
+		//! Constructor
+		/*!
+				Initializes Name and validates following the 
+				standards notion(XXXXXXXXXXXXXXX), each X is a letter, space or dot.
+				It's forbidden adjacents spaces and before a dot there always a letter. 
+
+				\param in_value a std::string type.
+
+				\sa Name::set_value(std::string in_value)	
+		*/
+		Name(std::string in_value);
+
+		//!	Set Value function
+		/*!
+				Sets valid values to Name, called during its contruction.
+
+				\param in_value a std::string type.
+
+				\sa Name::validate(std::string in_value)
+		*/
+		void set_value(std::string in_value);
+
+		//! Get Value function
+		/*!
+				Returns value. std::string type.
+		*/
+		std::string get_value();
+
+	private:
+		//! Name's size
+		/*!	
+				Defines Name's standard size value. const static int value.
+		*/
+		const static int kSize_ = 15;
+
+		//!	Identifier value
+		/*!
+				It's a sequence of 15 letter(XXXXXXXXXXXXXXX), dot and space. std::string type.
+		*/
+		std::string value_;
+
+		//! Validate function.
+		/*!	
+				Validates the Name value set during its construction.
+				It's a string of 15 characters, letter, dots and spaces.
+
+				It's not allowed:
+
+				- Name with less or greater than 15 characters.
+
+				- Name with dot not preceded of letter.
+
+				- Name with double space.
+
+				- Name without a character.
+
+				Note: It's important to note that if the name not contains a letter,
+				the only possible way of fill it is with dot and space. However, 
+				if the name starts with a dot 2th rule is violated. So, it must start 
+				with a space. But, following to the next character, the only possible 
+				character is a dot, either it would be double spaced. At this point, 
+				the dot would violate the 2th rule. Neither possible characters different from
+				a letter is possible. Therefore, a name without a letter would automaticaly sufficient
+				forbid with the 3 first rules, since either would be violated.
+
+				\param in_value a std::string type.
+
+				\sa Name::Name(std::string in_value)				
+		*/
+		void validate(std::string in_value);
+};
+
+inline std::string Name::get_value()
 {
 	return (this->value_);
 }

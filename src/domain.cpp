@@ -1,6 +1,7 @@
 #include <iostream>
 #include <array>
 #include <string>
+#include <algorithm>
 #include "../include/domain.hpp"
 
 Agency::Agency(std::string in_value)
@@ -604,7 +605,7 @@ void Name::validate(std::string in_value)
     throw std::invalid_argument("Nome invalido. Tamanho incorrespondente");
   }
 
-
+  const int first = 0;
   bool at_least_one_letter = false;
 
   // --------------------- Verify Digits ---------------------
@@ -619,19 +620,19 @@ void Name::validate(std::string in_value)
       }
     }
 
-    if((in_value[i] > 'a' and in_value[i] < 'z') or (in_value[i] > 'A' and in_value[i] < 'Z'))
+    if((in_value[i] >= 'a' and in_value[i] <= 'z') or (in_value[i] >= 'A' and in_value[i] <= 'Z'))
     {
       at_least_one_letter = true;
     }
 
     // Dot is the first character
-    if(in_value[i] == '.' and i == 0)
+    if(in_value[i] == '.' and i == first)
     {
       throw std::invalid_argument("Nome invalido. Primeiro caracter é um '.', verifique o padrão");
     }
 
     // --------------------- Verify dot value ---------------------
-    else if(in_value[i] == '.' and i != 0)
+    else if(in_value[i] == '.' and i != first)
     {
       if(in_value[i-1] < 'a' or in_value[i-1] > 'z')
       {
@@ -643,7 +644,7 @@ void Name::validate(std::string in_value)
     }
 
     // Verify double space
-    if(in_value[i] == ' ' and i != 0)
+    if(in_value[i] == ' ' and i != first)
     {
       if(in_value[i-1] == ' ')
       {
@@ -658,47 +659,224 @@ void Name::validate(std::string in_value)
   }
 }
 
+CreditCardNumber::CreditCardNumber(std::string in_value)
+{
+  this->set_value(in_value);
+}
+
 void CreditCardNumber::set_value(std::string in_value)
 {
 	this->validate(in_value);
 	this->value_ = in_value;
 }
+
 void CreditCardNumber::validate(std::string in_value)
 {
+  // --------------------- Verify size ---------------------
 	if(in_value.length() != this->kSize_)
   {
-    throw std::invalid_argument("Argumento invalido. Tamanho incorrespondente");
+    throw std::invalid_argument("Cartão de Crédito invalido. Tamanho incorrespondente");
   }
 
+  // --------------------- Verify Digits ---------------------
 	for(int i = 0; i < this->kSize_; i++)
   {
     if(in_value[i] >'9' or in_value[i]<'0')
     {
-      throw std::invalid_argument("Argumento invalido. Digitos invalidos");
+      throw std::invalid_argument("Cartão de Crédito invalido. Digitos invalidos");
     }
   }
-  // needs refactoring
-    int nSum = 0, isSecond = false;
-    for (int i = in_value.length() - 1; i >= 0; i--) {
- 
-        int d = in_value[i] - 'a';
- 
-        if (isSecond == true) {
-            d = d * 2;
-        }
- 
-        // We add two digits to handle
-        // cases that make two digits after
-        // doubling
-        nSum += d / 10;
-        nSum += d % 10;
- 
-        isSecond = !isSecond;
-    }
-    if (nSum % 10 != 0)
+
+  // --------------------- Luhn Algorithm ---------------------
+
+  int sum = 0;
+  int digit_int = 0;
+  int parity = 0;
+
+  for (int i = in_value.length()-1 ; i >= 0; i--)
+  {
+    parity = in_value.length() - i;
+    std::string digit = in_value.substr(i,1);
+    digit_int = stoi(digit);
+
+    if(parity%2 == 0)
     {
-      throw std::invalid_argument("Argumento invalido. Número de cartão inválido");
+      digit_int *= 2;
+      if(digit_int > 9)
+      {
+        digit_int = digit_int%10 + 1;
+      }
     }
-    
+
+    sum += digit_int; 
+  }
+
+  if(sum % 10 != 0)
+  {
+    throw std::invalid_argument("Cartão de Crédito invalido. Numero não encontrado");
+  } 
 }
 
+AccountNumber::AccountNumber(std::string in_value)
+{
+  this->set_value(in_value);
+}
+
+void AccountNumber::set_value(std::string in_value)
+{
+  this->validate(in_value);
+  this->value_ = in_value;
+}
+
+void AccountNumber::validate(std::string in_value)
+{
+  // --------------------- Verify size ---------------------
+  if(in_value.length() != this->kSize_)
+  {
+    throw std::invalid_argument("Conta corrente invalido. Tamanho incorrespondente");
+  }
+
+  // --------------------- Verify Digits ---------------------
+  for(int i = 0; i < this->kSize_; i++)
+  {
+    if(in_value[i] >'9' or in_value[i]<'0')
+    {
+      throw std::invalid_argument("Conta corrente invalido. Digitos invalidos");
+    }
+  }
+}
+
+Password::Password(std::string in_value)
+{
+  this->set_value(in_value);
+}
+
+void Password::set_value(std::string in_value)
+{
+  this->validate(in_value);
+  this->value_ = in_value;
+}
+
+void Password::validate(std::string in_value)
+{
+  // --------------------- Verify size ---------------------
+  if(in_value.length() != this->kSize_)
+  {
+    throw std::invalid_argument("Senha invalida. Tamanho incorrespondente");
+  }
+
+  const int first = 0;
+  bool at_least_one_upper_case = false;
+  bool at_least_one_lower_case = false;
+  bool at_least_one_digit = false;
+  bool at_least_one_special = false;
+
+  // Sorting to verify doubled character
+  std::string sorted_in_value = in_value;
+  std::sort(sorted_in_value.begin(), sorted_in_value.end());
+
+  for(uint i = 0; i < sorted_in_value.length(); i++)
+  {
+    // Initialize valid_character as false(verify if character follows the standard,
+    // in positive valid_character = true).
+
+    bool valid_character = false;
+
+    if(sorted_in_value[i] >= 'a' and sorted_in_value[i] <= 'z')
+    {
+      at_least_one_lower_case = true;
+      valid_character = true;
+    }
+
+    if(sorted_in_value[i] >= 'A' and sorted_in_value[i] <= 'Z')
+    {
+      at_least_one_upper_case = true;
+      valid_character = true;
+    }
+
+    if(sorted_in_value[i] >= '0' and sorted_in_value[i] <= '9')
+    {
+      at_least_one_digit = true;
+      valid_character = true;
+    }
+
+    if(sorted_in_value[i] == '!' or sorted_in_value[i] == '#' or sorted_in_value[i] == '$' or 
+       sorted_in_value[i] == '%' or sorted_in_value[i] == '&')
+    {
+      at_least_one_special = true;
+      valid_character = true;
+    }
+
+    // --------------------- Verify Digits ---------------------
+    
+    if(valid_character == false)
+    {
+      throw std::invalid_argument("Senha invalida. Caractere invalido, verifique o padrão");
+    }
+    
+    // --------------------- Verify dublicated characters ---------------------
+
+    if(i != first)
+    {
+      if(sorted_in_value[i] == sorted_in_value[i-1])
+      {
+        throw std::invalid_argument("Senha invalida. Caracteres repetidos, verifique o padrão");
+      }
+    }
+  } // for
+
+  // --------------------- Verify required characters ---------------------
+  if(at_least_one_digit == false)
+  {
+    throw std::invalid_argument("Senha invalida. Falta um dígito numero na senha, verifique o padrão");
+  }
+
+  if(at_least_one_lower_case == false)
+  {
+    throw std::invalid_argument("Senha invalida. Falta um dígito letra minúscula na senha, verifique o padrão");
+  }
+
+  if(at_least_one_upper_case == false)
+  {
+    throw std::invalid_argument("Senha invalida. Falta um dígito letra maiúscula na senha, verifique o padrão");
+  }
+
+  if(at_least_one_special == false)
+  {
+    throw std::invalid_argument("Senha invalida. Falta um caractere especial na senha, verifique o padrão");
+  }
+}
+
+AccommodationType::AccommodationType(std::string in_value)
+{
+  this->set_value(in_value);
+}
+
+void AccommodationType::set_value(std::string in_value)
+{
+  this->accommodation_type_ = this->validate(in_value);
+  this->value_ = in_value;
+}
+
+AccommodationOption AccommodationType::validate(std::string in_value)
+{
+  if(in_value == "Apartamento")
+  {
+    return AccommodationOption::Apartamento;
+  }
+
+  else if(in_value == "Casa")
+  {
+    return AccommodationOption::Casa;
+  }
+
+  else if(in_value == "Flat")
+  {
+    return AccommodationOption::Flat;
+  }
+
+  else
+  {
+    throw std::invalid_argument("Tipo de acomodação inválida. Tamanho incorrespondente");
+  }
+}

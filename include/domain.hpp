@@ -4,8 +4,6 @@
 #include <stdexcept>
 #include <iostream>
 
-
-
 //! Months enum type
 /*! Months values begins at 1(January) and end at 12(December)*/
 enum Months{kJan=1 ,kFev, kMar, kAbr,kMai, kJun, kJul, kAgo, kSet, kOut, kNov, kDez};
@@ -14,6 +12,10 @@ enum Months{kJan=1 ,kFev, kMar, kAbr,kMai, kJun, kJul, kAgo, kSet, kOut, kNov, k
 
 enum class StateName{AC, AL, AP, AM, BA, CE, DF, ES, GO, MA, MT, MS, 
 							 MG, PA, PB, PR, PE, PI, RJ, RN, RS, RO, RR, SC, SP, SE, TO};
+
+//! AccommodationOption enum type
+
+enum class AccommodationOption{Apartamento, Casa, Flat};
 
 // Class declaration
 
@@ -730,7 +732,7 @@ class Name
 		*/
 		const static int kSize_ = 15;
 
-		//!	Identifier value
+		//!	Name value
 		/*!
 				It's a sequence of 15 letter(XXXXXXXXXXXXXXX), dot and space. std::string type.
 		*/
@@ -772,15 +774,64 @@ inline std::string Name::get_value()
 	return (this->value_);
 }
 
+//! Credit Card Number
+/*!
+		Receives and validates Credit card number.
+*/
 class CreditCardNumber
 {
 	public:
+
+		//! Constructor
+		/*! 
+				Initializes Credit Card Number and validates its value, following the 
+				standards notion(XXXXXXXXXXXXXXXX, all digits between 0 and 9), and validation test.
+
+				\param in_value a std::string type
+
+				\sa CreditCardNumber::set_value(std::string in_value)	
+		*/
 		CreditCardNumber(std::string in_value);
+
+		//! Set Value function
+		/*!	
+				Sets valid values to a Credit Card Number, called during its contruction.
+
+				\param in_value a std::string type.
+
+				\sa CreditCardNumber::validate(std::string in_value)
+		*/
 		void set_value(std::string in_value);
+
+		//! Get Value function
+		/*! 
+			Returns Credit Card Number value. std::string type.
+		*/
 		std::string get_value();
+
 	private:
+
+		//! Credit Card Number value's size
+		/*!	
+				Defines Credit Card Number's standard size value. const static int value.
+		*/
 		const static int kSize_ = 16;
+		
+		//!	Credit Card Number value
+		/*!
+				It's a sequence of 16 digits(XXXXXX) between 0-9. std::string type.
+		*/		
 		std::string value_;
+
+		//! Validate function.
+		/*!	
+				Validates the Credit Card Number value set during its construction, following the 
+				Luhn's algorithm test
+
+				\param in_value a std::string type.
+
+				\sa CreditCardNumber::CreditCardNumber(std::string in_value)				
+		*/
 		void validate(std::string in_value);
 };
 
@@ -789,6 +840,229 @@ inline std::string CreditCardNumber::get_value()
 	return (this->value_);
 }
 
+//! Account number
+/*!
+		Receives and validates Account's number.
+*/
+class AccountNumber
+{
+	public:
 
+		//! Constructor
+		/*! 
+				Initializes Account number and validates its value, following the 
+				standards notion(XXXXXX, all digits between 0 and 9).
+
+				\param in_value a std::string type
+
+				\sa AccountNumber::set_value(std::string in_value)	
+		*/
+		AccountNumber(std::string in_value);
+
+		//! Set Value function
+		/*!	
+				Sets valid values to a AccountNumber, called during its contruction.
+
+				\param in_value a std::string type.
+
+				\sa AccountNumber::validate(std::string in_value)
+		*/
+		void set_value(std::string in_value);
+
+		//! Get Value function
+		/*! 
+			Returns AccountNumber value. std::string type.
+		*/
+		std::string get_value();
+
+	private:
+
+		//! Account number value's size
+		/*!	
+				Defines Account number's standard size value. const static int value.
+		*/
+		const static int kSize_ = 6;
+
+		//!	Account number value
+		/*!
+				It's a sequence of 6 digits(XXXXXX) between 0-9. std::string type.
+		*/
+		std::string value_;
+
+		//! Validate function.
+		/*!	
+				Validates the Account number value set during its construction.
+
+				\param in_value a std::string type.
+
+				\sa AccountNumber::AccountNumber(std::string in_value)				
+		*/
+		void validate(std::string in_value);
+};
+
+inline std::string AccountNumber::get_value() 
+{
+	return (this->value_);
+}
+
+
+//! Password
+/*!
+		Receives and validates Password.
+*/
+class Password
+{
+	public:
+		//! Constructor
+		/*!
+				Initializes Password and validates following the 
+				standards notion(XXXXXXXX), each X is a letter, special character (! # $ % &),
+				and number (0 to 9).
+
+				\param in_value a std::string type.
+
+				\sa Password::set_value(std::string in_value)	
+		*/
+		Password(std::string in_value);
+
+		//!	Set Value function
+		/*!
+				Sets valid values to Password, called during its contruction.
+
+				\param in_value a std::string type.
+
+				\sa Password::validate(std::string in_value)
+		*/
+		void set_value(std::string in_value);
+
+		//! Get Value function
+		/*!
+				Returns value. std::string type.
+		*/
+		std::string get_value();
+
+	private:
+		//! Password's size
+		/*!	
+				Defines Password's standard size value. const static int value.
+		*/
+		const static int kSize_ = 8;
+
+		//!	Identifier value
+		/*!
+				It's a sequence of 8 letter(XXXXXXXX), special character (! # $ % &),
+				and number (0 to 9). std::string type.
+		*/
+		std::string value_;
+
+		//! Validate function.
+		/*!	
+				Validates the Password value set during its construction.
+				It's a string of 8 characters, letter, special character and number.
+
+				It's not allowed:
+
+				- Repeated character.
+
+				It must at least have:
+
+				- One Upper case letter
+
+				- One Lower case letter
+
+				- One number
+
+				- One Special character
+
+				\param in_value a std::string type.
+
+				\sa Password::Password(std::string in_value)				
+		*/
+		void validate(std::string in_value);
+};
+
+inline std::string Password::get_value()
+{
+	return (this->value_);
+}
+
+//! AccommodationType
+/*! 
+ * 	Receive and validates AccommodationType number.
+!*/
+class AccommodationType
+{
+	public:
+
+		//! Constructor
+		/*! 
+				Initializes Accommodation Type and validates its value, a Apartamento
+				Casa or Flat.
+
+				\param in_value a std::string type
+
+				\sa AccommodationType::set_value(std::string in_value)	
+		*/
+		AccommodationType(std::string in_value);
+
+		//! Set Value function
+		/*!	
+				Sets valid values to a Accommodation Type, called during its contruction.
+
+				\param in_value a std::string type.
+
+				\sa AccommodationType::validate(std::string in_value)
+		*/
+		void set_value(std::string in_value);
+
+		//! Get Value function
+		/*! 
+			Returns Accommodation Type value. std::string type.
+		*/
+		std::string get_value();
+
+		//! Get Value function
+		/*! 
+			Returns Accommodation Type enum value. enum class AccommodationOption type.
+		*/
+		AccommodationOption get_accommodation_type();
+
+	private:
+		//!	AccommodationType value
+		/*!
+				It's only three options: "Apartamento", "Casa" or "Flat". std::string type.
+		*/
+		std::string value_;
+
+		//!	AccommodationType value
+		/*!
+				It's only three options: AccommodationType::Apartamento, 
+				AccommodationType::Casa or AccommodationType::Flat. std::string type.
+		*/
+		AccommodationOption accommodation_type_;
+
+		//! Validate function.
+		/*!	
+				Validates the Accommodation Type value set during its construction.
+
+				Returns a AccommodationType variable.
+
+				\param in_value a std::string type.
+
+				\sa AccommodationType::AccommodationType(std::string in_value)				
+		*/
+		AccommodationOption validate(std::string in_value);
+		
+};
+
+inline std::string AccommodationType::get_value() 
+{
+	return (this->value_);
+}
+
+inline AccommodationOption AccommodationType::get_accommodation_type() 
+{
+	return (this->accommodation_type_);
+}
 
 #endif	// PROJETO_TP1_DOMAIN_H

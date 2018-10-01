@@ -386,3 +386,134 @@ TEST_CASE("create Name", "[Name]")
     Name* Name_test = new Name(" . . . . . . . ");
   }
 }
+
+
+// Total - 72 Tests - 30 pass - 42 failed
+TEST_CASE("create account number", "[AccountNumber]")
+{
+  SECTION( "common set" ) 
+  {
+   AccountNumber* AccountNumber_test = new AccountNumber("123456");
+   REQUIRE(AccountNumber_test->get_value() == "123456");
+  }
+
+  // Size lesser than standard
+  SECTION( "Error 1" ) 
+  {
+   AccountNumber* AccountNumber_test = new AccountNumber("12345");
+   REQUIRE(AccountNumber_test->get_value() == "12345");
+  }
+
+  // Invalid digit entry
+  SECTION( "Error 2" ) 
+  {
+   AccountNumber* AccountNumber_test = new AccountNumber("123a5");
+   REQUIRE(AccountNumber_test->get_value() == "123a5");
+  }
+
+  // Size greater than standard
+  SECTION( "Error 3" ) 
+  {
+   AccountNumber* AccountNumber_test = new AccountNumber("1234567");
+   REQUIRE(AccountNumber_test->get_value() == "123456");
+  }
+}
+
+// Total - 79 Tests - 31 pass - 48 failed
+TEST_CASE("create password", "[Password]")
+{
+  SECTION("common set")
+  {
+    Password* Password_test = new Password("123Abc!&");
+    REQUIRE(Password_test->get_value() == "123Abc!&");
+  }
+
+  // Invalid digit
+  SECTION("Error 1")
+  {
+    Password* Password_test = new Password("123Abc_&");
+  }
+
+  // Duplicated character
+  SECTION("Error 2")
+  {
+    Password* Password_test = new Password("123Abc1&");
+  }
+
+  // No digit
+  SECTION("Error 3")
+  {
+    Password* Password_test = new Password("%Abc#&Bd");
+  }
+
+  // No lower case
+  SECTION("Error 4")
+  {
+    Password* Password_test = new Password("SA3C#&ED");
+  }
+
+  // No upper case
+  SECTION("Error 5")
+  {
+    Password* Password_test = new Password("sabc#&2d");
+  }
+
+  // No special character
+  SECTION("Error 6")
+  {
+    Password* Password_test = new Password("sabcEA2d");
+  }
+}
+
+// Total - 86 Tests - 37 pass - 49 failed
+TEST_CASE("create accommodation type", "[AccommodationType]")
+{
+  SECTION("common set")
+  {
+    AccommodationType* AccommodationType_test1 = new AccommodationType("Apartamento");
+    AccommodationType* AccommodationType_test2 = new AccommodationType("Casa");
+    AccommodationType* AccommodationType_test3 = new AccommodationType("Flat");
+
+    REQUIRE(AccommodationType_test1->get_value() == "Apartamento");
+    REQUIRE(AccommodationType_test1->get_accommodation_type() == AccommodationOption::Apartamento);
+
+    REQUIRE(AccommodationType_test2->get_value() == "Casa");
+    REQUIRE(AccommodationType_test2->get_accommodation_type() == AccommodationOption::Casa);
+
+    REQUIRE(AccommodationType_test3->get_value() == "Flat");
+    REQUIRE(AccommodationType_test3->get_accommodation_type() == AccommodationOption::Flat);
+  }
+
+  SECTION("uncommon set")
+  {
+    AccommodationType* AccommodationType_test1 = new AccommodationType("dewededef");
+  }
+}
+
+// Total - 90 Tests - 39 pass - 51 failed
+TEST_CASE("create CreditCardNumber", "[CreditCardNumber]")
+{
+  SECTION("common set 1")
+  {
+    CreditCardNumber* CreditCardNumber_test = new CreditCardNumber("1111111111111117");
+    REQUIRE(CreditCardNumber_test->get_value() == "1111111111111117");
+  }         
+
+    SECTION("common set 2")
+  {
+    CreditCardNumber* CreditCardNumber_test = new CreditCardNumber("8297148378413852");
+    REQUIRE(CreditCardNumber_test->get_value() == "8297148378413852");
+  }       
+
+  // Invalid Size
+  SECTION("Error 1")
+  {
+    CreditCardNumber* CreditCardNumber_test = new CreditCardNumber("111111111117");
+  }               
+
+  // Invalid code number
+  SECTION("Error 2")
+  {
+    CreditCardNumber* CreditCardNumber_test = new CreditCardNumber("3123847012389478");
+  }                                                                
+}

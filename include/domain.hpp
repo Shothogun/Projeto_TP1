@@ -150,7 +150,7 @@ inline std::string Bank::get_value()
 	return (this->value_);
 }
 
-//! Accommodation Capacity
+//! AccommodationCapacity
 /*!
 		Receives and validates Accommodation and Capacity number.
 */
@@ -160,7 +160,7 @@ class AccommodationCapacity
 
 		//! Constructor
 		/*! 
-				Initializes Accommodation Capacity and validates its value, 1 digit, between 1-9.
+				Initializes AccommodationCapacity and validates its value, 1 digit, between 1-9.
 
 				\param in_value a std::string type.
 
@@ -170,7 +170,7 @@ class AccommodationCapacity
 
 		//!	Set Value function
 		/*!
-				Sets valid values to a Accommodation capacity, called during its contruction.
+				Sets valid values to a AccommodationCapacity, called during its contruction.
 
 				\param in_value a std::string type.
 
@@ -186,14 +186,14 @@ class AccommodationCapacity
 
   private: 
 
-		//!	Accommodation capacity value's size
+		//!	AccommodationCapacity value's size
 		/*!
 				Defines Accommodation value following the standard: 1 digit between
 				1 to 9. const static int type.
 		*/
     const static int kSize_ = 1; 
 
-		//! Accommodation capacity value
+		//! AccommodationCapacity value
 		/*!
 				1 digit between 1 to 9. std::string type.
 		*/
@@ -201,7 +201,7 @@ class AccommodationCapacity
 
 		//! Validate function.
 		/*!
-				Validates the Accommodation capacity value set during its construction.
+				Validates the AccommodationCapacity value set during its construction.
 
 				\param in_value a std::string type.
 
@@ -216,7 +216,7 @@ inline std::string AccommodationCapacity::get_value()
   return (this->value_); 
 }
 
-//! Daily Value
+//! DailyValue
 /*!
 		Receives and validates daily value price.
 */
@@ -226,7 +226,7 @@ class DailyValue
 	public:
 		//! Constructor
 		/*! 
-				Initializes Daily Value and validates its value, between 1.00 to 10'000.00.
+				Initializes DailyValue and validates its value, between 1.00 to 10'000.00.
 
 				\param in_value a std::string type.
 
@@ -236,7 +236,7 @@ class DailyValue
 
 		//!	Set Value function
 		/*!
-				Sets valid values to a Daily Value, called during its contruction.
+				Sets valid values to a DailyValue, called during its contruction.
 
 				\param in_value a std::string type.
 
@@ -252,19 +252,19 @@ class DailyValue
 
 	private:
 
-		//!	Daily value's minor value
+		//!	DailyValue's minor value
 		/*!
 				Defines major Daily's value possible: 1.00 real. constexpr static double type.
 		*/
 		constexpr static double kMinorSize_ = 1.00;
 
-		//!	Daily value's major value
+		//!	DailyValue's major value
 		/*!
 				Defines minor Daily's value possible: 10'000.00 real. constexpr static double type.
 		*/
 		constexpr static double kMajorSize_ = 10000.00;
 
-		//!	Daily value's value
+		//!	DailyValue's value
 		/*!
 				Number between 1.00 to 10'000.00. std::string type.
 		*/
@@ -279,7 +279,7 @@ class DailyValue
 
 		//!	Validate function.
 		/*!
-				Validates the Daily value's value set during its construction.
+				Validates the DailyValue's value set during its construction.
 
 				\param in_value a std::string type.
 
@@ -438,7 +438,7 @@ inline int Date::get_year()
 	return (this->year_);
 }
 
-//! Expiration Date
+//! ExpirationDate
 /*!
 		Receives and validates date.
 */
@@ -448,7 +448,7 @@ class ExpirationDate
 
 		//! Constructor
 		/*!
-				Initializes Expiration date and validates its value, following the 
+				Initializes ExpirationDate and validates its value, following the 
 				standards notion(DD/MM), where:
 
 				MM is two digits number between 01 to 12, 
@@ -462,7 +462,7 @@ class ExpirationDate
 
 		//!	Set Value function
 		/*!
-				Sets valid values to Expiration Date, called during its contruction.
+				Sets valid values to ExpirationDate, called during its contruction.
 
 				\param in_value a std::string type.
 
@@ -489,13 +489,13 @@ class ExpirationDate
 		int get_year();
 
 	private:
-		//! Expiration Date value's size
+		//! ExpirationDate value's size
 		/*!	
-				Defines Expiration Date's standard size value. const static int value.
+				Defines ExpirationDate's standard size value. const static int value.
 		*/
 		const static int kSize_ = 5;
 
-		//!	Expiration Date's value
+		//!	ExpirationDate's value
 		/*!
 				It's a sequence of 5 characters(MM/AA) between 0-9. std::string value.
 		*/
@@ -515,7 +515,7 @@ class ExpirationDate
 
 		//! Validate function.
 		/*!	
-				Validates the Expiration Date value set during its construction.
+				Validates the ExpirationDate value set during its construction.
 
 				It's important to note that the only way year input is invalid is 
 				in the case which the in_value has a length lesser than 5 and 
@@ -774,7 +774,7 @@ inline std::string Name::get_value()
 	return (this->value_);
 }
 
-//! Credit Card Number
+//! CreditCardNumber
 /*!
 		Receives and validates Credit card number.
 */
@@ -784,7 +784,7 @@ class CreditCardNumber
 
 		//! Constructor
 		/*! 
-				Initializes Credit Card Number and validates its value, following the 
+				Initializes CreditCardNumber and validates its value, following the 
 				standards notion(XXXXXXXXXXXXXXXX, all digits between 0 and 9), and validation test.
 
 				\param in_value a std::string type
@@ -795,7 +795,7 @@ class CreditCardNumber
 
 		//! Set Value function
 		/*!	
-				Sets valid values to a Credit Card Number, called during its contruction.
+				Sets valid values to a CreditCardNumber, called during its contruction.
 
 				\param in_value a std::string type.
 
@@ -805,19 +805,19 @@ class CreditCardNumber
 
 		//! Get Value function
 		/*! 
-			Returns Credit Card Number value. std::string type.
+			Returns CreditCardNumber value. std::string type.
 		*/
 		std::string get_value();
 
 	private:
 
-		//! Credit Card Number value's size
+		//! CreditCardNumber value's size
 		/*!	
-				Defines Credit Card Number's standard size value. const static int value.
+				Defines CreditCardNumber's standard size value. const static int value.
 		*/
 		const static int kSize_ = 16;
 		
-		//!	Credit Card Number value
+		//!	CreditCardNumber value
 		/*!
 				It's a sequence of 16 digits(XXXXXX) between 0-9. std::string type.
 		*/		
@@ -825,7 +825,7 @@ class CreditCardNumber
 
 		//! Validate function.
 		/*!	
-				Validates the Credit Card Number value set during its construction, following the 
+				Validates the CreditCardNumber value set during its construction, following the 
 				Luhn's algorithm test
 
 				\param in_value a std::string type.
@@ -840,7 +840,7 @@ inline std::string CreditCardNumber::get_value()
 	return (this->value_);
 }
 
-//! Account number
+//! AccountNumber
 /*!
 		Receives and validates Account's number.
 */
@@ -850,7 +850,7 @@ class AccountNumber
 
 		//! Constructor
 		/*! 
-				Initializes Account number and validates its value, following the 
+				Initializes AccountNumber and validates its value, following the 
 				standards notion(XXXXXX, all digits between 0 and 9).
 
 				\param in_value a std::string type
@@ -877,13 +877,13 @@ class AccountNumber
 
 	private:
 
-		//! Account number value's size
+		//! AccountNumber value's size
 		/*!	
-				Defines Account number's standard size value. const static int value.
+				Defines AccountNumber's standard size value. const static int value.
 		*/
 		const static int kSize_ = 6;
 
-		//!	Account number value
+		//!	AccountNumber value
 		/*!
 				It's a sequence of 6 digits(XXXXXX) between 0-9. std::string type.
 		*/
@@ -891,7 +891,7 @@ class AccountNumber
 
 		//! Validate function.
 		/*!	
-				Validates the Account number value set during its construction.
+				Validates the AccountNumber value set during its construction.
 
 				\param in_value a std::string type.
 
@@ -996,7 +996,7 @@ class AccommodationType
 
 		//! Constructor
 		/*! 
-				Initializes Accommodation Type and validates its value, a Apartamento
+				Initializes AccommodationType and validates its value, a Apartamento
 				Casa or Flat.
 
 				\param in_value a std::string type
@@ -1007,7 +1007,7 @@ class AccommodationType
 
 		//! Set Value function
 		/*!	
-				Sets valid values to a Accommodation Type, called during its contruction.
+				Sets valid values to a AccommodationType, called during its contruction.
 
 				\param in_value a std::string type.
 
@@ -1017,13 +1017,13 @@ class AccommodationType
 
 		//! Get Value function
 		/*! 
-			Returns Accommodation Type value. std::string type.
+			Returns AccommodationType value. std::string type.
 		*/
 		std::string get_value();
 
 		//! Get Value function
 		/*! 
-			Returns Accommodation Type enum value. enum class AccommodationOption type.
+			Returns AccommodationType enum value. enum class AccommodationOption type.
 		*/
 		AccommodationOption get_accommodation_type();
 
@@ -1043,7 +1043,7 @@ class AccommodationType
 
 		//! Validate function.
 		/*!	
-				Validates the Accommodation Type value set during its construction.
+				Validates the AccommodationType value set during its construction.
 
 				Returns a AccommodationType variable.
 

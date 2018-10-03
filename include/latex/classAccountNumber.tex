@@ -1,0 +1,142 @@
+\hypertarget{classAccountNumber}{}\section{Account\+Number Class Reference}
+\label{classAccountNumber}\index{Account\+Number@{Account\+Number}}
+
+
+\hyperlink{classAccountNumber}{Account\+Number}.  
+
+
+
+
+{\ttfamily \#include $<$domain.\+hpp$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classAccountNumber_af96b3289a1091b138cef7df15a2f40b4}{Account\+Number} (std\+::string in\+\_\+value)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+void \hyperlink{classAccountNumber_a8e44f29a45c507e4819fed27ff125037}{set\+\_\+value} (std\+::string in\+\_\+value)
+\begin{DoxyCompactList}\small\item\em Set Value function. \end{DoxyCompactList}\item 
+std\+::string \hyperlink{classAccountNumber_a9292dbf3e0ccee42c3e66c52ef9afa6d}{get\+\_\+value} ()
+\begin{DoxyCompactList}\small\item\em Get Value function. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classAccountNumber_a723fa9aa61240673c9ebc99e7c1a43e7}{validate} (std\+::string in\+\_\+value)
+\begin{DoxyCompactList}\small\item\em Validate function. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \hyperlink{classAccountNumber_a3fc2214ec003f7f3aad3419ac71d6605}{value\+\_\+}
+\begin{DoxyCompactList}\small\item\em \hyperlink{classAccountNumber}{Account\+Number} value. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static const int \hyperlink{classAccountNumber_aa70d40dba69a81e22dbaf6005e2dde48}{k\+Size\+\_\+} = 6
+\begin{DoxyCompactList}\small\item\em \hyperlink{classAccountNumber}{Account\+Number} value\textquotesingle{}s size. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{classAccountNumber}{Account\+Number}. 
+
+Receives and validates \hyperlink{classAccount}{Account}\textquotesingle{}s number. 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Account\+Number@{Account\+Number}!Account\+Number@{Account\+Number}}
+\index{Account\+Number@{Account\+Number}!Account\+Number@{Account\+Number}}
+\subsubsection[{\texorpdfstring{Account\+Number(std\+::string in\+\_\+value)}{AccountNumber(std::string in_value)}}]{\setlength{\rightskip}{0pt plus 5cm}Account\+Number\+::\+Account\+Number (
+\begin{DoxyParamCaption}
+\item[{std\+::string}]{in\+\_\+value}
+\end{DoxyParamCaption}
+)}\hypertarget{classAccountNumber_af96b3289a1091b138cef7df15a2f40b4}{}\label{classAccountNumber_af96b3289a1091b138cef7df15a2f40b4}
+
+
+Constructor. 
+
+Initializes \hyperlink{classAccountNumber}{Account\+Number} and validates its value, following the standards notion(\+X\+X\+X\+X\+X\+X, all digits between 0 and 9).
+
+
+\begin{DoxyParams}{Parameters}
+{\em in\+\_\+value} & a std\+::string type\\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{classAccountNumber_a8e44f29a45c507e4819fed27ff125037}{Account\+Number\+::set\+\_\+value(std\+::string in\+\_\+value)} 
+\end{DoxySeeAlso}
+
+
+\subsection{Member Function Documentation}
+\index{Account\+Number@{Account\+Number}!get\+\_\+value@{get\+\_\+value}}
+\index{get\+\_\+value@{get\+\_\+value}!Account\+Number@{Account\+Number}}
+\subsubsection[{\texorpdfstring{get\+\_\+value()}{get_value()}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string Account\+Number\+::get\+\_\+value (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classAccountNumber_a9292dbf3e0ccee42c3e66c52ef9afa6d}{}\label{classAccountNumber_a9292dbf3e0ccee42c3e66c52ef9afa6d}
+
+
+Get Value function. 
+
+Returns \hyperlink{classAccountNumber}{Account\+Number} value. std\+::string type. \index{Account\+Number@{Account\+Number}!set\+\_\+value@{set\+\_\+value}}
+\index{set\+\_\+value@{set\+\_\+value}!Account\+Number@{Account\+Number}}
+\subsubsection[{\texorpdfstring{set\+\_\+value(std\+::string in\+\_\+value)}{set_value(std::string in_value)}}]{\setlength{\rightskip}{0pt plus 5cm}void Account\+Number\+::set\+\_\+value (
+\begin{DoxyParamCaption}
+\item[{std\+::string}]{in\+\_\+value}
+\end{DoxyParamCaption}
+)}\hypertarget{classAccountNumber_a8e44f29a45c507e4819fed27ff125037}{}\label{classAccountNumber_a8e44f29a45c507e4819fed27ff125037}
+
+
+Set Value function. 
+
+Sets valid values to a \hyperlink{classAccountNumber}{Account\+Number}, called during its contruction.
+
+
+\begin{DoxyParams}{Parameters}
+{\em in\+\_\+value} & a std\+::string type.\\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{classAccountNumber_a723fa9aa61240673c9ebc99e7c1a43e7}{Account\+Number\+::validate(std\+::string in\+\_\+value)} 
+\end{DoxySeeAlso}
+\index{Account\+Number@{Account\+Number}!validate@{validate}}
+\index{validate@{validate}!Account\+Number@{Account\+Number}}
+\subsubsection[{\texorpdfstring{validate(std\+::string in\+\_\+value)}{validate(std::string in_value)}}]{\setlength{\rightskip}{0pt plus 5cm}void Account\+Number\+::validate (
+\begin{DoxyParamCaption}
+\item[{std\+::string}]{in\+\_\+value}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classAccountNumber_a723fa9aa61240673c9ebc99e7c1a43e7}{}\label{classAccountNumber_a723fa9aa61240673c9ebc99e7c1a43e7}
+
+
+Validate function. 
+
+Validates the \hyperlink{classAccountNumber}{Account\+Number} value set during its construction.
+
+
+\begin{DoxyParams}{Parameters}
+{\em in\+\_\+value} & a std\+::string type.\\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{classAccountNumber_af96b3289a1091b138cef7df15a2f40b4}{Account\+Number\+::\+Account\+Number(std\+::string in\+\_\+value)} 
+\end{DoxySeeAlso}
+
+
+\subsection{Member Data Documentation}
+\index{Account\+Number@{Account\+Number}!k\+Size\+\_\+@{k\+Size\+\_\+}}
+\index{k\+Size\+\_\+@{k\+Size\+\_\+}!Account\+Number@{Account\+Number}}
+\subsubsection[{\texorpdfstring{k\+Size\+\_\+}{kSize_}}]{\setlength{\rightskip}{0pt plus 5cm}const int Account\+Number\+::k\+Size\+\_\+ = 6\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}\hypertarget{classAccountNumber_aa70d40dba69a81e22dbaf6005e2dde48}{}\label{classAccountNumber_aa70d40dba69a81e22dbaf6005e2dde48}
+
+
+\hyperlink{classAccountNumber}{Account\+Number} value\textquotesingle{}s size. 
+
+Defines \hyperlink{classAccountNumber}{Account\+Number}\textquotesingle{}s standard size value. const static int value. \index{Account\+Number@{Account\+Number}!value\+\_\+@{value\+\_\+}}
+\index{value\+\_\+@{value\+\_\+}!Account\+Number@{Account\+Number}}
+\subsubsection[{\texorpdfstring{value\+\_\+}{value_}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string Account\+Number\+::value\+\_\+\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classAccountNumber_a3fc2214ec003f7f3aad3419ac71d6605}{}\label{classAccountNumber_a3fc2214ec003f7f3aad3419ac71d6605}
+
+
+\hyperlink{classAccountNumber}{Account\+Number} value. 
+
+It\textquotesingle{}s a sequence of 6 digits(\+X\+X\+X\+X\+X\+X) between 0-\/9. std\+::string type. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{domain_8hpp}{domain.\+hpp}\end{DoxyCompactItemize}

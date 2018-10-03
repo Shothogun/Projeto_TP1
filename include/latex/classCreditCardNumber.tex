@@ -1,0 +1,142 @@
+\hypertarget{classCreditCardNumber}{}\section{Credit\+Card\+Number Class Reference}
+\label{classCreditCardNumber}\index{Credit\+Card\+Number@{Credit\+Card\+Number}}
+
+
+\hyperlink{classCreditCardNumber}{Credit\+Card\+Number}.  
+
+
+
+
+{\ttfamily \#include $<$domain.\+hpp$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classCreditCardNumber_ac54faa5140051048b7ef59c3475f08bc}{Credit\+Card\+Number} (std\+::string in\+\_\+value)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+void \hyperlink{classCreditCardNumber_ae54b7c422f816c05027b8dd70750b82d}{set\+\_\+value} (std\+::string in\+\_\+value)
+\begin{DoxyCompactList}\small\item\em Set Value function. \end{DoxyCompactList}\item 
+std\+::string \hyperlink{classCreditCardNumber_a3013b29d051a56fa79ca821bcc1f7d50}{get\+\_\+value} ()
+\begin{DoxyCompactList}\small\item\em Get Value function. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classCreditCardNumber_ad72572475b0bc3230dd21a7f8c3ac5e2}{validate} (std\+::string in\+\_\+value)
+\begin{DoxyCompactList}\small\item\em Validate function. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \hyperlink{classCreditCardNumber_aa7cc38774983178f7d851067e085b31c}{value\+\_\+}
+\begin{DoxyCompactList}\small\item\em \hyperlink{classCreditCardNumber}{Credit\+Card\+Number} value. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static const int \hyperlink{classCreditCardNumber_a6d0f1ed7f6c1705c65b582f39fccd783}{k\+Size\+\_\+} = 16
+\begin{DoxyCompactList}\small\item\em \hyperlink{classCreditCardNumber}{Credit\+Card\+Number} value\textquotesingle{}s size. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{classCreditCardNumber}{Credit\+Card\+Number}. 
+
+Receives and validates Credit card number. 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Credit\+Card\+Number@{Credit\+Card\+Number}!Credit\+Card\+Number@{Credit\+Card\+Number}}
+\index{Credit\+Card\+Number@{Credit\+Card\+Number}!Credit\+Card\+Number@{Credit\+Card\+Number}}
+\subsubsection[{\texorpdfstring{Credit\+Card\+Number(std\+::string in\+\_\+value)}{CreditCardNumber(std::string in_value)}}]{\setlength{\rightskip}{0pt plus 5cm}Credit\+Card\+Number\+::\+Credit\+Card\+Number (
+\begin{DoxyParamCaption}
+\item[{std\+::string}]{in\+\_\+value}
+\end{DoxyParamCaption}
+)}\hypertarget{classCreditCardNumber_ac54faa5140051048b7ef59c3475f08bc}{}\label{classCreditCardNumber_ac54faa5140051048b7ef59c3475f08bc}
+
+
+Constructor. 
+
+Initializes \hyperlink{classCreditCardNumber}{Credit\+Card\+Number} and validates its value, following the standards notion(\+X\+X\+X\+X\+X\+X\+X\+X\+X\+X\+X\+X\+X\+X\+X\+X, all digits between 0 and 9), and validation test.
+
+
+\begin{DoxyParams}{Parameters}
+{\em in\+\_\+value} & a std\+::string type\\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{classCreditCardNumber_ae54b7c422f816c05027b8dd70750b82d}{Credit\+Card\+Number\+::set\+\_\+value(std\+::string in\+\_\+value)} 
+\end{DoxySeeAlso}
+
+
+\subsection{Member Function Documentation}
+\index{Credit\+Card\+Number@{Credit\+Card\+Number}!get\+\_\+value@{get\+\_\+value}}
+\index{get\+\_\+value@{get\+\_\+value}!Credit\+Card\+Number@{Credit\+Card\+Number}}
+\subsubsection[{\texorpdfstring{get\+\_\+value()}{get_value()}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string Credit\+Card\+Number\+::get\+\_\+value (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classCreditCardNumber_a3013b29d051a56fa79ca821bcc1f7d50}{}\label{classCreditCardNumber_a3013b29d051a56fa79ca821bcc1f7d50}
+
+
+Get Value function. 
+
+Returns \hyperlink{classCreditCardNumber}{Credit\+Card\+Number} value. std\+::string type. \index{Credit\+Card\+Number@{Credit\+Card\+Number}!set\+\_\+value@{set\+\_\+value}}
+\index{set\+\_\+value@{set\+\_\+value}!Credit\+Card\+Number@{Credit\+Card\+Number}}
+\subsubsection[{\texorpdfstring{set\+\_\+value(std\+::string in\+\_\+value)}{set_value(std::string in_value)}}]{\setlength{\rightskip}{0pt plus 5cm}void Credit\+Card\+Number\+::set\+\_\+value (
+\begin{DoxyParamCaption}
+\item[{std\+::string}]{in\+\_\+value}
+\end{DoxyParamCaption}
+)}\hypertarget{classCreditCardNumber_ae54b7c422f816c05027b8dd70750b82d}{}\label{classCreditCardNumber_ae54b7c422f816c05027b8dd70750b82d}
+
+
+Set Value function. 
+
+Sets valid values to a \hyperlink{classCreditCardNumber}{Credit\+Card\+Number}, called during its contruction.
+
+
+\begin{DoxyParams}{Parameters}
+{\em in\+\_\+value} & a std\+::string type.\\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{classCreditCardNumber_ad72572475b0bc3230dd21a7f8c3ac5e2}{Credit\+Card\+Number\+::validate(std\+::string in\+\_\+value)} 
+\end{DoxySeeAlso}
+\index{Credit\+Card\+Number@{Credit\+Card\+Number}!validate@{validate}}
+\index{validate@{validate}!Credit\+Card\+Number@{Credit\+Card\+Number}}
+\subsubsection[{\texorpdfstring{validate(std\+::string in\+\_\+value)}{validate(std::string in_value)}}]{\setlength{\rightskip}{0pt plus 5cm}void Credit\+Card\+Number\+::validate (
+\begin{DoxyParamCaption}
+\item[{std\+::string}]{in\+\_\+value}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classCreditCardNumber_ad72572475b0bc3230dd21a7f8c3ac5e2}{}\label{classCreditCardNumber_ad72572475b0bc3230dd21a7f8c3ac5e2}
+
+
+Validate function. 
+
+Validates the \hyperlink{classCreditCardNumber}{Credit\+Card\+Number} value set during its construction, following the Luhn\textquotesingle{}s algorithm test
+
+
+\begin{DoxyParams}{Parameters}
+{\em in\+\_\+value} & a std\+::string type.\\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{classCreditCardNumber_ac54faa5140051048b7ef59c3475f08bc}{Credit\+Card\+Number\+::\+Credit\+Card\+Number(std\+::string in\+\_\+value)} 
+\end{DoxySeeAlso}
+
+
+\subsection{Member Data Documentation}
+\index{Credit\+Card\+Number@{Credit\+Card\+Number}!k\+Size\+\_\+@{k\+Size\+\_\+}}
+\index{k\+Size\+\_\+@{k\+Size\+\_\+}!Credit\+Card\+Number@{Credit\+Card\+Number}}
+\subsubsection[{\texorpdfstring{k\+Size\+\_\+}{kSize_}}]{\setlength{\rightskip}{0pt plus 5cm}const int Credit\+Card\+Number\+::k\+Size\+\_\+ = 16\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}\hypertarget{classCreditCardNumber_a6d0f1ed7f6c1705c65b582f39fccd783}{}\label{classCreditCardNumber_a6d0f1ed7f6c1705c65b582f39fccd783}
+
+
+\hyperlink{classCreditCardNumber}{Credit\+Card\+Number} value\textquotesingle{}s size. 
+
+Defines \hyperlink{classCreditCardNumber}{Credit\+Card\+Number}\textquotesingle{}s standard size value. const static int value. \index{Credit\+Card\+Number@{Credit\+Card\+Number}!value\+\_\+@{value\+\_\+}}
+\index{value\+\_\+@{value\+\_\+}!Credit\+Card\+Number@{Credit\+Card\+Number}}
+\subsubsection[{\texorpdfstring{value\+\_\+}{value_}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string Credit\+Card\+Number\+::value\+\_\+\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classCreditCardNumber_aa7cc38774983178f7d851067e085b31c}{}\label{classCreditCardNumber_aa7cc38774983178f7d851067e085b31c}
+
+
+\hyperlink{classCreditCardNumber}{Credit\+Card\+Number} value. 
+
+It\textquotesingle{}s a sequence of 16 digits(\+X\+X\+X\+X\+X\+X) between 0-\/9. std\+::string type. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{domain_8hpp}{domain.\+hpp}\end{DoxyCompactItemize}

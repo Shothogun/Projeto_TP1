@@ -1,0 +1,221 @@
+\hypertarget{domain_8hpp}{}\section{domain.\+hpp File Reference}
+\label{domain_8hpp}\index{domain.\+hpp@{domain.\+hpp}}
+{\ttfamily \#include $<$stdexcept$>$}\\*
+{\ttfamily \#include $<$iostream$>$}\\*
+Include dependency graph for domain.\+hpp\+:
+% FIG 0
+This graph shows which files directly or indirectly include this file\+:
+% FIG 1
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classAgency}{Agency}
+\begin{DoxyCompactList}\small\item\em \hyperlink{classAgency}{Agency}. \end{DoxyCompactList}\item 
+class \hyperlink{classBank}{Bank}
+\begin{DoxyCompactList}\small\item\em \hyperlink{classBank}{Bank}. \end{DoxyCompactList}\item 
+class \hyperlink{classAccommodationCapacity}{Accommodation\+Capacity}
+\begin{DoxyCompactList}\small\item\em \hyperlink{classAccommodationCapacity}{Accommodation\+Capacity}. \end{DoxyCompactList}\item 
+class \hyperlink{classDailyValue}{Daily\+Value}
+\begin{DoxyCompactList}\small\item\em \hyperlink{classDailyValue}{Daily\+Value}. \end{DoxyCompactList}\item 
+class \hyperlink{classDate}{Date}
+\begin{DoxyCompactList}\small\item\em \hyperlink{classDate}{Date}. \end{DoxyCompactList}\item 
+class \hyperlink{classExpirationDate}{Expiration\+Date}
+\begin{DoxyCompactList}\small\item\em \hyperlink{classExpirationDate}{Expiration\+Date}. \end{DoxyCompactList}\item 
+class \hyperlink{classState}{State}
+\begin{DoxyCompactList}\small\item\em \hyperlink{classState}{State}. \end{DoxyCompactList}\item 
+class \hyperlink{classIdentifier}{Identifier}
+\begin{DoxyCompactList}\small\item\em \hyperlink{classIdentifier}{Identifier}. \end{DoxyCompactList}\item 
+class \hyperlink{className}{Name}
+\begin{DoxyCompactList}\small\item\em \hyperlink{className}{Name}. \end{DoxyCompactList}\item 
+class \hyperlink{classCreditCardNumber}{Credit\+Card\+Number}
+\begin{DoxyCompactList}\small\item\em \hyperlink{classCreditCardNumber}{Credit\+Card\+Number}. \end{DoxyCompactList}\item 
+class \hyperlink{classAccountNumber}{Account\+Number}
+\begin{DoxyCompactList}\small\item\em \hyperlink{classAccountNumber}{Account\+Number}. \end{DoxyCompactList}\item 
+class \hyperlink{classPassword}{Password}
+\begin{DoxyCompactList}\small\item\em \hyperlink{classPassword}{Password}. \end{DoxyCompactList}\item 
+class \hyperlink{classAccommodationType}{Accommodation\+Type}
+\begin{DoxyCompactList}\small\item\em \hyperlink{classAccommodationType}{Accommodation\+Type}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{domain_8hpp_a18ea97ce6c7a0ad2f40c4bd1ac7b26d2}{Months} \{ \\*
+\hyperlink{domain_8hpp_a18ea97ce6c7a0ad2f40c4bd1ac7b26d2a540081f9c0d34ff33341d733d9db93fe}{k\+Jan} =1, 
+\hyperlink{domain_8hpp_a18ea97ce6c7a0ad2f40c4bd1ac7b26d2a796bf995cb97b54570353c6195309a1d}{k\+Fev}, 
+\hyperlink{domain_8hpp_a18ea97ce6c7a0ad2f40c4bd1ac7b26d2a4824a193f0013196185c8dd5ca8857ce}{k\+Mar}, 
+\hyperlink{domain_8hpp_a18ea97ce6c7a0ad2f40c4bd1ac7b26d2a3d6b1c7dfcb2c367a77c54e33705277a}{k\+Abr}, 
+\\*
+\hyperlink{domain_8hpp_a18ea97ce6c7a0ad2f40c4bd1ac7b26d2ae88c2567a3b8379690969ef3a6e481f0}{k\+Mai}, 
+\hyperlink{domain_8hpp_a18ea97ce6c7a0ad2f40c4bd1ac7b26d2af9c299df1741f1e0f04886d1a90d6aa2}{k\+Jun}, 
+\hyperlink{domain_8hpp_a18ea97ce6c7a0ad2f40c4bd1ac7b26d2af6ad3d2c285a257d7c2297931f3f3893}{k\+Jul}, 
+\hyperlink{domain_8hpp_a18ea97ce6c7a0ad2f40c4bd1ac7b26d2a6d872227b2d37344df685961a349229e}{k\+Ago}, 
+\\*
+\hyperlink{domain_8hpp_a18ea97ce6c7a0ad2f40c4bd1ac7b26d2a63a783b598ee7d2e65ec5a0da8d0a989}{k\+Set}, 
+\hyperlink{domain_8hpp_a18ea97ce6c7a0ad2f40c4bd1ac7b26d2a3d3b170db65855fb78793ec5619cb36c}{k\+Out}, 
+\hyperlink{domain_8hpp_a18ea97ce6c7a0ad2f40c4bd1ac7b26d2a48fa0bfa52943e37096fcfc470b46ad6}{k\+Nov}, 
+\hyperlink{domain_8hpp_a18ea97ce6c7a0ad2f40c4bd1ac7b26d2ae068dade0b3c2f39613204c29c186055}{k\+Dez}
+ \}\begin{DoxyCompactList}\small\item\em Months enum type. \end{DoxyCompactList}
+\item 
+enum \hyperlink{domain_8hpp_ac99446a312a3e7b8497ac6ec1f3ae080}{State\+Name} \{ \\*
+\hyperlink{domain_8hpp_ac99446a312a3e7b8497ac6ec1f3ae080a4144e097d2fa7a491cec2a7a4322f2bc}{State\+Name\+::\+AC}, 
+\hyperlink{domain_8hpp_ac99446a312a3e7b8497ac6ec1f3ae080ae892e780304dc3ef15e69b9f3fed3669}{State\+Name\+::\+AL}, 
+\hyperlink{domain_8hpp_ac99446a312a3e7b8497ac6ec1f3ae080a0fd3f8dd5edc33b28db1162e15e8fcbc}{State\+Name\+::\+AP}, 
+\hyperlink{domain_8hpp_ac99446a312a3e7b8497ac6ec1f3ae080a25ec916d56b8212e569dbf2e4e4b51d4}{State\+Name\+::\+AM}, 
+\\*
+\hyperlink{domain_8hpp_ac99446a312a3e7b8497ac6ec1f3ae080a5fc810cf62601df84b7923b9964c53e6}{State\+Name\+::\+BA}, 
+\hyperlink{domain_8hpp_ac99446a312a3e7b8497ac6ec1f3ae080a7a86131338bf955e0a56311f264aa6aa}{State\+Name\+::\+CE}, 
+\hyperlink{domain_8hpp_ac99446a312a3e7b8497ac6ec1f3ae080ab98f83032f6e8ca0c8f5a38bca1e3d75}{State\+Name\+::\+DF}, 
+\hyperlink{domain_8hpp_ac99446a312a3e7b8497ac6ec1f3ae080a04c19fa1e772ab66f0aad2efe61f25cd}{State\+Name\+::\+ES}, 
+\\*
+\hyperlink{domain_8hpp_ac99446a312a3e7b8497ac6ec1f3ae080a3d6954dd72e53b9015d2a6e6546058f8}{State\+Name\+::\+GO}, 
+\hyperlink{domain_8hpp_ac99446a312a3e7b8497ac6ec1f3ae080a2a6039655313bf5dab1e43523b62c374}{State\+Name\+::\+MA}, 
+\hyperlink{domain_8hpp_ac99446a312a3e7b8497ac6ec1f3ae080a08ad08f6491037714d09263a79bebfba}{State\+Name\+::\+MT}, 
+\hyperlink{domain_8hpp_ac99446a312a3e7b8497ac6ec1f3ae080a7a663caea1b722a63dc2868158ed584d}{State\+Name\+::\+MS}, 
+\\*
+\hyperlink{domain_8hpp_ac99446a312a3e7b8497ac6ec1f3ae080aba2a034f4d913f87fe07cad29368d114}{State\+Name\+::\+MG}, 
+\hyperlink{domain_8hpp_ac99446a312a3e7b8497ac6ec1f3ae080a06f6a489209115c5cef3f45036aad3ec}{State\+Name\+::\+PA}, 
+\hyperlink{domain_8hpp_ac99446a312a3e7b8497ac6ec1f3ae080acd203ccd68b84de1c5df8fd890e104e0}{State\+Name\+::\+PB}, 
+\hyperlink{domain_8hpp_ac99446a312a3e7b8497ac6ec1f3ae080a0fe75a5189c2ea3f123621d098ddd03e}{State\+Name\+::\+PR}, 
+\\*
+\hyperlink{domain_8hpp_ac99446a312a3e7b8497ac6ec1f3ae080a3acf83834396fa1c878707132ead62b8}{State\+Name\+::\+PE}, 
+\hyperlink{domain_8hpp_ac99446a312a3e7b8497ac6ec1f3ae080a3a372b04b95323b72c2b2f9a5d24e67b}{State\+Name\+::\+PI}, 
+\hyperlink{domain_8hpp_ac99446a312a3e7b8497ac6ec1f3ae080a0f4bda3a8e49e714c26ef610e2893454}{State\+Name\+::\+RJ}, 
+\hyperlink{domain_8hpp_ac99446a312a3e7b8497ac6ec1f3ae080abcc029cfba7ada8237717e5f1ff494f1}{State\+Name\+::\+RN}, 
+\\*
+\hyperlink{domain_8hpp_ac99446a312a3e7b8497ac6ec1f3ae080a8cee5050eeb7c783e8bfaa73003ced3a}{State\+Name\+::\+RS}, 
+\hyperlink{domain_8hpp_ac99446a312a3e7b8497ac6ec1f3ae080af5b15f58cabad73d1bf2de7bcb89db6c}{State\+Name\+::\+RO}, 
+\hyperlink{domain_8hpp_ac99446a312a3e7b8497ac6ec1f3ae080acb95449a94688af33f6e9bb090cf2936}{State\+Name\+::\+RR}, 
+\hyperlink{domain_8hpp_ac99446a312a3e7b8497ac6ec1f3ae080a6a65edb0cc17d66c677814115b1477f5}{State\+Name\+::\+SC}, 
+\\*
+\hyperlink{domain_8hpp_ac99446a312a3e7b8497ac6ec1f3ae080a674769e3326f8cf937af4282f2815c02}{State\+Name\+::\+SP}, 
+\hyperlink{domain_8hpp_ac99446a312a3e7b8497ac6ec1f3ae080af003c44deab679aa2edfaff864c77402}{State\+Name\+::\+SE}, 
+\hyperlink{domain_8hpp_ac99446a312a3e7b8497ac6ec1f3ae080a304917b92bc3dc0953aab8356f74c02c}{State\+Name\+::\+TO}
+ \}\begin{DoxyCompactList}\small\item\em State\+Name enum type. \end{DoxyCompactList}
+\item 
+enum \hyperlink{domain_8hpp_a431fd866a01d44cdd7f9dc9ce476d1c2}{Accommodation\+Option} \{ \hyperlink{domain_8hpp_a431fd866a01d44cdd7f9dc9ce476d1c2af9f7168215ae34860a20a8e91bafdace}{Accommodation\+Option\+::\+Apartamento}, 
+\hyperlink{domain_8hpp_a431fd866a01d44cdd7f9dc9ce476d1c2aca90fdc7b90b2152e5dcccefb2c828f7}{Accommodation\+Option\+::\+Casa}, 
+\hyperlink{domain_8hpp_a431fd866a01d44cdd7f9dc9ce476d1c2a745e3db6a7ffd50e1a72b39482f0882d}{Accommodation\+Option\+::\+Flat}
+ \}\begin{DoxyCompactList}\small\item\em Accommodation\+Option enum type. \end{DoxyCompactList}
+\end{DoxyCompactItemize}
+
+
+\subsection{Enumeration Type Documentation}
+\index{domain.\+hpp@{domain.\+hpp}!Accommodation\+Option@{Accommodation\+Option}}
+\index{Accommodation\+Option@{Accommodation\+Option}!domain.\+hpp@{domain.\+hpp}}
+\subsubsection[{\texorpdfstring{Accommodation\+Option}{AccommodationOption}}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf Accommodation\+Option}\hspace{0.3cm}{\ttfamily [strong]}}\hypertarget{domain_8hpp_a431fd866a01d44cdd7f9dc9ce476d1c2}{}\label{domain_8hpp_a431fd866a01d44cdd7f9dc9ce476d1c2}
+
+
+Accommodation\+Option enum type. 
+
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{Apartamento@{Apartamento}!domain.\+hpp@{domain.\+hpp}}\index{domain.\+hpp@{domain.\+hpp}!Apartamento@{Apartamento}}\item[{\em 
+Apartamento\hypertarget{domain_8hpp_a431fd866a01d44cdd7f9dc9ce476d1c2af9f7168215ae34860a20a8e91bafdace}{}\label{domain_8hpp_a431fd866a01d44cdd7f9dc9ce476d1c2af9f7168215ae34860a20a8e91bafdace}
+}]\index{Casa@{Casa}!domain.\+hpp@{domain.\+hpp}}\index{domain.\+hpp@{domain.\+hpp}!Casa@{Casa}}\item[{\em 
+Casa\hypertarget{domain_8hpp_a431fd866a01d44cdd7f9dc9ce476d1c2aca90fdc7b90b2152e5dcccefb2c828f7}{}\label{domain_8hpp_a431fd866a01d44cdd7f9dc9ce476d1c2aca90fdc7b90b2152e5dcccefb2c828f7}
+}]\index{Flat@{Flat}!domain.\+hpp@{domain.\+hpp}}\index{domain.\+hpp@{domain.\+hpp}!Flat@{Flat}}\item[{\em 
+Flat\hypertarget{domain_8hpp_a431fd866a01d44cdd7f9dc9ce476d1c2a745e3db6a7ffd50e1a72b39482f0882d}{}\label{domain_8hpp_a431fd866a01d44cdd7f9dc9ce476d1c2a745e3db6a7ffd50e1a72b39482f0882d}
+}]\end{description}
+\end{Desc}
+\index{domain.\+hpp@{domain.\+hpp}!Months@{Months}}
+\index{Months@{Months}!domain.\+hpp@{domain.\+hpp}}
+\subsubsection[{\texorpdfstring{Months}{Months}}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf Months}}\hypertarget{domain_8hpp_a18ea97ce6c7a0ad2f40c4bd1ac7b26d2}{}\label{domain_8hpp_a18ea97ce6c7a0ad2f40c4bd1ac7b26d2}
+
+
+Months enum type. 
+
+Months values begins at 1(January) and end at 12(December) \begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{k\+Jan@{k\+Jan}!domain.\+hpp@{domain.\+hpp}}\index{domain.\+hpp@{domain.\+hpp}!k\+Jan@{k\+Jan}}\item[{\em 
+k\+Jan\hypertarget{domain_8hpp_a18ea97ce6c7a0ad2f40c4bd1ac7b26d2a540081f9c0d34ff33341d733d9db93fe}{}\label{domain_8hpp_a18ea97ce6c7a0ad2f40c4bd1ac7b26d2a540081f9c0d34ff33341d733d9db93fe}
+}]\index{k\+Fev@{k\+Fev}!domain.\+hpp@{domain.\+hpp}}\index{domain.\+hpp@{domain.\+hpp}!k\+Fev@{k\+Fev}}\item[{\em 
+k\+Fev\hypertarget{domain_8hpp_a18ea97ce6c7a0ad2f40c4bd1ac7b26d2a796bf995cb97b54570353c6195309a1d}{}\label{domain_8hpp_a18ea97ce6c7a0ad2f40c4bd1ac7b26d2a796bf995cb97b54570353c6195309a1d}
+}]\index{k\+Mar@{k\+Mar}!domain.\+hpp@{domain.\+hpp}}\index{domain.\+hpp@{domain.\+hpp}!k\+Mar@{k\+Mar}}\item[{\em 
+k\+Mar\hypertarget{domain_8hpp_a18ea97ce6c7a0ad2f40c4bd1ac7b26d2a4824a193f0013196185c8dd5ca8857ce}{}\label{domain_8hpp_a18ea97ce6c7a0ad2f40c4bd1ac7b26d2a4824a193f0013196185c8dd5ca8857ce}
+}]\index{k\+Abr@{k\+Abr}!domain.\+hpp@{domain.\+hpp}}\index{domain.\+hpp@{domain.\+hpp}!k\+Abr@{k\+Abr}}\item[{\em 
+k\+Abr\hypertarget{domain_8hpp_a18ea97ce6c7a0ad2f40c4bd1ac7b26d2a3d6b1c7dfcb2c367a77c54e33705277a}{}\label{domain_8hpp_a18ea97ce6c7a0ad2f40c4bd1ac7b26d2a3d6b1c7dfcb2c367a77c54e33705277a}
+}]\index{k\+Mai@{k\+Mai}!domain.\+hpp@{domain.\+hpp}}\index{domain.\+hpp@{domain.\+hpp}!k\+Mai@{k\+Mai}}\item[{\em 
+k\+Mai\hypertarget{domain_8hpp_a18ea97ce6c7a0ad2f40c4bd1ac7b26d2ae88c2567a3b8379690969ef3a6e481f0}{}\label{domain_8hpp_a18ea97ce6c7a0ad2f40c4bd1ac7b26d2ae88c2567a3b8379690969ef3a6e481f0}
+}]\index{k\+Jun@{k\+Jun}!domain.\+hpp@{domain.\+hpp}}\index{domain.\+hpp@{domain.\+hpp}!k\+Jun@{k\+Jun}}\item[{\em 
+k\+Jun\hypertarget{domain_8hpp_a18ea97ce6c7a0ad2f40c4bd1ac7b26d2af9c299df1741f1e0f04886d1a90d6aa2}{}\label{domain_8hpp_a18ea97ce6c7a0ad2f40c4bd1ac7b26d2af9c299df1741f1e0f04886d1a90d6aa2}
+}]\index{k\+Jul@{k\+Jul}!domain.\+hpp@{domain.\+hpp}}\index{domain.\+hpp@{domain.\+hpp}!k\+Jul@{k\+Jul}}\item[{\em 
+k\+Jul\hypertarget{domain_8hpp_a18ea97ce6c7a0ad2f40c4bd1ac7b26d2af6ad3d2c285a257d7c2297931f3f3893}{}\label{domain_8hpp_a18ea97ce6c7a0ad2f40c4bd1ac7b26d2af6ad3d2c285a257d7c2297931f3f3893}
+}]\index{k\+Ago@{k\+Ago}!domain.\+hpp@{domain.\+hpp}}\index{domain.\+hpp@{domain.\+hpp}!k\+Ago@{k\+Ago}}\item[{\em 
+k\+Ago\hypertarget{domain_8hpp_a18ea97ce6c7a0ad2f40c4bd1ac7b26d2a6d872227b2d37344df685961a349229e}{}\label{domain_8hpp_a18ea97ce6c7a0ad2f40c4bd1ac7b26d2a6d872227b2d37344df685961a349229e}
+}]\index{k\+Set@{k\+Set}!domain.\+hpp@{domain.\+hpp}}\index{domain.\+hpp@{domain.\+hpp}!k\+Set@{k\+Set}}\item[{\em 
+k\+Set\hypertarget{domain_8hpp_a18ea97ce6c7a0ad2f40c4bd1ac7b26d2a63a783b598ee7d2e65ec5a0da8d0a989}{}\label{domain_8hpp_a18ea97ce6c7a0ad2f40c4bd1ac7b26d2a63a783b598ee7d2e65ec5a0da8d0a989}
+}]\index{k\+Out@{k\+Out}!domain.\+hpp@{domain.\+hpp}}\index{domain.\+hpp@{domain.\+hpp}!k\+Out@{k\+Out}}\item[{\em 
+k\+Out\hypertarget{domain_8hpp_a18ea97ce6c7a0ad2f40c4bd1ac7b26d2a3d3b170db65855fb78793ec5619cb36c}{}\label{domain_8hpp_a18ea97ce6c7a0ad2f40c4bd1ac7b26d2a3d3b170db65855fb78793ec5619cb36c}
+}]\index{k\+Nov@{k\+Nov}!domain.\+hpp@{domain.\+hpp}}\index{domain.\+hpp@{domain.\+hpp}!k\+Nov@{k\+Nov}}\item[{\em 
+k\+Nov\hypertarget{domain_8hpp_a18ea97ce6c7a0ad2f40c4bd1ac7b26d2a48fa0bfa52943e37096fcfc470b46ad6}{}\label{domain_8hpp_a18ea97ce6c7a0ad2f40c4bd1ac7b26d2a48fa0bfa52943e37096fcfc470b46ad6}
+}]\index{k\+Dez@{k\+Dez}!domain.\+hpp@{domain.\+hpp}}\index{domain.\+hpp@{domain.\+hpp}!k\+Dez@{k\+Dez}}\item[{\em 
+k\+Dez\hypertarget{domain_8hpp_a18ea97ce6c7a0ad2f40c4bd1ac7b26d2ae068dade0b3c2f39613204c29c186055}{}\label{domain_8hpp_a18ea97ce6c7a0ad2f40c4bd1ac7b26d2ae068dade0b3c2f39613204c29c186055}
+}]\end{description}
+\end{Desc}
+\index{domain.\+hpp@{domain.\+hpp}!State\+Name@{State\+Name}}
+\index{State\+Name@{State\+Name}!domain.\+hpp@{domain.\+hpp}}
+\subsubsection[{\texorpdfstring{State\+Name}{StateName}}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf State\+Name}\hspace{0.3cm}{\ttfamily [strong]}}\hypertarget{domain_8hpp_ac99446a312a3e7b8497ac6ec1f3ae080}{}\label{domain_8hpp_ac99446a312a3e7b8497ac6ec1f3ae080}
+
+
+State\+Name enum type. 
+
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{AC@{AC}!domain.\+hpp@{domain.\+hpp}}\index{domain.\+hpp@{domain.\+hpp}!AC@{AC}}\item[{\em 
+AC\hypertarget{domain_8hpp_ac99446a312a3e7b8497ac6ec1f3ae080a4144e097d2fa7a491cec2a7a4322f2bc}{}\label{domain_8hpp_ac99446a312a3e7b8497ac6ec1f3ae080a4144e097d2fa7a491cec2a7a4322f2bc}
+}]\index{AL@{AL}!domain.\+hpp@{domain.\+hpp}}\index{domain.\+hpp@{domain.\+hpp}!AL@{AL}}\item[{\em 
+AL\hypertarget{domain_8hpp_ac99446a312a3e7b8497ac6ec1f3ae080ae892e780304dc3ef15e69b9f3fed3669}{}\label{domain_8hpp_ac99446a312a3e7b8497ac6ec1f3ae080ae892e780304dc3ef15e69b9f3fed3669}
+}]\index{AP@{AP}!domain.\+hpp@{domain.\+hpp}}\index{domain.\+hpp@{domain.\+hpp}!AP@{AP}}\item[{\em 
+AP\hypertarget{domain_8hpp_ac99446a312a3e7b8497ac6ec1f3ae080a0fd3f8dd5edc33b28db1162e15e8fcbc}{}\label{domain_8hpp_ac99446a312a3e7b8497ac6ec1f3ae080a0fd3f8dd5edc33b28db1162e15e8fcbc}
+}]\index{AM@{AM}!domain.\+hpp@{domain.\+hpp}}\index{domain.\+hpp@{domain.\+hpp}!AM@{AM}}\item[{\em 
+AM\hypertarget{domain_8hpp_ac99446a312a3e7b8497ac6ec1f3ae080a25ec916d56b8212e569dbf2e4e4b51d4}{}\label{domain_8hpp_ac99446a312a3e7b8497ac6ec1f3ae080a25ec916d56b8212e569dbf2e4e4b51d4}
+}]\index{BA@{BA}!domain.\+hpp@{domain.\+hpp}}\index{domain.\+hpp@{domain.\+hpp}!BA@{BA}}\item[{\em 
+BA\hypertarget{domain_8hpp_ac99446a312a3e7b8497ac6ec1f3ae080a5fc810cf62601df84b7923b9964c53e6}{}\label{domain_8hpp_ac99446a312a3e7b8497ac6ec1f3ae080a5fc810cf62601df84b7923b9964c53e6}
+}]\index{CE@{CE}!domain.\+hpp@{domain.\+hpp}}\index{domain.\+hpp@{domain.\+hpp}!CE@{CE}}\item[{\em 
+CE\hypertarget{domain_8hpp_ac99446a312a3e7b8497ac6ec1f3ae080a7a86131338bf955e0a56311f264aa6aa}{}\label{domain_8hpp_ac99446a312a3e7b8497ac6ec1f3ae080a7a86131338bf955e0a56311f264aa6aa}
+}]\index{DF@{DF}!domain.\+hpp@{domain.\+hpp}}\index{domain.\+hpp@{domain.\+hpp}!DF@{DF}}\item[{\em 
+DF\hypertarget{domain_8hpp_ac99446a312a3e7b8497ac6ec1f3ae080ab98f83032f6e8ca0c8f5a38bca1e3d75}{}\label{domain_8hpp_ac99446a312a3e7b8497ac6ec1f3ae080ab98f83032f6e8ca0c8f5a38bca1e3d75}
+}]\index{ES@{ES}!domain.\+hpp@{domain.\+hpp}}\index{domain.\+hpp@{domain.\+hpp}!ES@{ES}}\item[{\em 
+ES\hypertarget{domain_8hpp_ac99446a312a3e7b8497ac6ec1f3ae080a04c19fa1e772ab66f0aad2efe61f25cd}{}\label{domain_8hpp_ac99446a312a3e7b8497ac6ec1f3ae080a04c19fa1e772ab66f0aad2efe61f25cd}
+}]\index{GO@{GO}!domain.\+hpp@{domain.\+hpp}}\index{domain.\+hpp@{domain.\+hpp}!GO@{GO}}\item[{\em 
+GO\hypertarget{domain_8hpp_ac99446a312a3e7b8497ac6ec1f3ae080a3d6954dd72e53b9015d2a6e6546058f8}{}\label{domain_8hpp_ac99446a312a3e7b8497ac6ec1f3ae080a3d6954dd72e53b9015d2a6e6546058f8}
+}]\index{MA@{MA}!domain.\+hpp@{domain.\+hpp}}\index{domain.\+hpp@{domain.\+hpp}!MA@{MA}}\item[{\em 
+MA\hypertarget{domain_8hpp_ac99446a312a3e7b8497ac6ec1f3ae080a2a6039655313bf5dab1e43523b62c374}{}\label{domain_8hpp_ac99446a312a3e7b8497ac6ec1f3ae080a2a6039655313bf5dab1e43523b62c374}
+}]\index{MT@{MT}!domain.\+hpp@{domain.\+hpp}}\index{domain.\+hpp@{domain.\+hpp}!MT@{MT}}\item[{\em 
+MT\hypertarget{domain_8hpp_ac99446a312a3e7b8497ac6ec1f3ae080a08ad08f6491037714d09263a79bebfba}{}\label{domain_8hpp_ac99446a312a3e7b8497ac6ec1f3ae080a08ad08f6491037714d09263a79bebfba}
+}]\index{MS@{MS}!domain.\+hpp@{domain.\+hpp}}\index{domain.\+hpp@{domain.\+hpp}!MS@{MS}}\item[{\em 
+MS\hypertarget{domain_8hpp_ac99446a312a3e7b8497ac6ec1f3ae080a7a663caea1b722a63dc2868158ed584d}{}\label{domain_8hpp_ac99446a312a3e7b8497ac6ec1f3ae080a7a663caea1b722a63dc2868158ed584d}
+}]\index{MG@{MG}!domain.\+hpp@{domain.\+hpp}}\index{domain.\+hpp@{domain.\+hpp}!MG@{MG}}\item[{\em 
+MG\hypertarget{domain_8hpp_ac99446a312a3e7b8497ac6ec1f3ae080aba2a034f4d913f87fe07cad29368d114}{}\label{domain_8hpp_ac99446a312a3e7b8497ac6ec1f3ae080aba2a034f4d913f87fe07cad29368d114}
+}]\index{PA@{PA}!domain.\+hpp@{domain.\+hpp}}\index{domain.\+hpp@{domain.\+hpp}!PA@{PA}}\item[{\em 
+PA\hypertarget{domain_8hpp_ac99446a312a3e7b8497ac6ec1f3ae080a06f6a489209115c5cef3f45036aad3ec}{}\label{domain_8hpp_ac99446a312a3e7b8497ac6ec1f3ae080a06f6a489209115c5cef3f45036aad3ec}
+}]\index{PB@{PB}!domain.\+hpp@{domain.\+hpp}}\index{domain.\+hpp@{domain.\+hpp}!PB@{PB}}\item[{\em 
+PB\hypertarget{domain_8hpp_ac99446a312a3e7b8497ac6ec1f3ae080acd203ccd68b84de1c5df8fd890e104e0}{}\label{domain_8hpp_ac99446a312a3e7b8497ac6ec1f3ae080acd203ccd68b84de1c5df8fd890e104e0}
+}]\index{PR@{PR}!domain.\+hpp@{domain.\+hpp}}\index{domain.\+hpp@{domain.\+hpp}!PR@{PR}}\item[{\em 
+PR\hypertarget{domain_8hpp_ac99446a312a3e7b8497ac6ec1f3ae080a0fe75a5189c2ea3f123621d098ddd03e}{}\label{domain_8hpp_ac99446a312a3e7b8497ac6ec1f3ae080a0fe75a5189c2ea3f123621d098ddd03e}
+}]\index{PE@{PE}!domain.\+hpp@{domain.\+hpp}}\index{domain.\+hpp@{domain.\+hpp}!PE@{PE}}\item[{\em 
+PE\hypertarget{domain_8hpp_ac99446a312a3e7b8497ac6ec1f3ae080a3acf83834396fa1c878707132ead62b8}{}\label{domain_8hpp_ac99446a312a3e7b8497ac6ec1f3ae080a3acf83834396fa1c878707132ead62b8}
+}]\index{PI@{PI}!domain.\+hpp@{domain.\+hpp}}\index{domain.\+hpp@{domain.\+hpp}!PI@{PI}}\item[{\em 
+PI\hypertarget{domain_8hpp_ac99446a312a3e7b8497ac6ec1f3ae080a3a372b04b95323b72c2b2f9a5d24e67b}{}\label{domain_8hpp_ac99446a312a3e7b8497ac6ec1f3ae080a3a372b04b95323b72c2b2f9a5d24e67b}
+}]\index{RJ@{RJ}!domain.\+hpp@{domain.\+hpp}}\index{domain.\+hpp@{domain.\+hpp}!RJ@{RJ}}\item[{\em 
+RJ\hypertarget{domain_8hpp_ac99446a312a3e7b8497ac6ec1f3ae080a0f4bda3a8e49e714c26ef610e2893454}{}\label{domain_8hpp_ac99446a312a3e7b8497ac6ec1f3ae080a0f4bda3a8e49e714c26ef610e2893454}
+}]\index{RN@{RN}!domain.\+hpp@{domain.\+hpp}}\index{domain.\+hpp@{domain.\+hpp}!RN@{RN}}\item[{\em 
+RN\hypertarget{domain_8hpp_ac99446a312a3e7b8497ac6ec1f3ae080abcc029cfba7ada8237717e5f1ff494f1}{}\label{domain_8hpp_ac99446a312a3e7b8497ac6ec1f3ae080abcc029cfba7ada8237717e5f1ff494f1}
+}]\index{RS@{RS}!domain.\+hpp@{domain.\+hpp}}\index{domain.\+hpp@{domain.\+hpp}!RS@{RS}}\item[{\em 
+RS\hypertarget{domain_8hpp_ac99446a312a3e7b8497ac6ec1f3ae080a8cee5050eeb7c783e8bfaa73003ced3a}{}\label{domain_8hpp_ac99446a312a3e7b8497ac6ec1f3ae080a8cee5050eeb7c783e8bfaa73003ced3a}
+}]\index{RO@{RO}!domain.\+hpp@{domain.\+hpp}}\index{domain.\+hpp@{domain.\+hpp}!RO@{RO}}\item[{\em 
+RO\hypertarget{domain_8hpp_ac99446a312a3e7b8497ac6ec1f3ae080af5b15f58cabad73d1bf2de7bcb89db6c}{}\label{domain_8hpp_ac99446a312a3e7b8497ac6ec1f3ae080af5b15f58cabad73d1bf2de7bcb89db6c}
+}]\index{RR@{RR}!domain.\+hpp@{domain.\+hpp}}\index{domain.\+hpp@{domain.\+hpp}!RR@{RR}}\item[{\em 
+RR\hypertarget{domain_8hpp_ac99446a312a3e7b8497ac6ec1f3ae080acb95449a94688af33f6e9bb090cf2936}{}\label{domain_8hpp_ac99446a312a3e7b8497ac6ec1f3ae080acb95449a94688af33f6e9bb090cf2936}
+}]\index{SC@{SC}!domain.\+hpp@{domain.\+hpp}}\index{domain.\+hpp@{domain.\+hpp}!SC@{SC}}\item[{\em 
+SC\hypertarget{domain_8hpp_ac99446a312a3e7b8497ac6ec1f3ae080a6a65edb0cc17d66c677814115b1477f5}{}\label{domain_8hpp_ac99446a312a3e7b8497ac6ec1f3ae080a6a65edb0cc17d66c677814115b1477f5}
+}]\index{SP@{SP}!domain.\+hpp@{domain.\+hpp}}\index{domain.\+hpp@{domain.\+hpp}!SP@{SP}}\item[{\em 
+SP\hypertarget{domain_8hpp_ac99446a312a3e7b8497ac6ec1f3ae080a674769e3326f8cf937af4282f2815c02}{}\label{domain_8hpp_ac99446a312a3e7b8497ac6ec1f3ae080a674769e3326f8cf937af4282f2815c02}
+}]\index{SE@{SE}!domain.\+hpp@{domain.\+hpp}}\index{domain.\+hpp@{domain.\+hpp}!SE@{SE}}\item[{\em 
+SE\hypertarget{domain_8hpp_ac99446a312a3e7b8497ac6ec1f3ae080af003c44deab679aa2edfaff864c77402}{}\label{domain_8hpp_ac99446a312a3e7b8497ac6ec1f3ae080af003c44deab679aa2edfaff864c77402}
+}]\index{TO@{TO}!domain.\+hpp@{domain.\+hpp}}\index{domain.\+hpp@{domain.\+hpp}!TO@{TO}}\item[{\em 
+TO\hypertarget{domain_8hpp_ac99446a312a3e7b8497ac6ec1f3ae080a304917b92bc3dc0953aab8356f74c02c}{}\label{domain_8hpp_ac99446a312a3e7b8497ac6ec1f3ae080a304917b92bc3dc0953aab8356f74c02c}
+}]\end{description}
+\end{Desc}

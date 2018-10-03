@@ -1,6 +1,8 @@
 #define CATCH_CONFIG_MAIN 
 #include "../framework/catch.hpp"
 #include "../include/domain.hpp"
+#include "../include/entity.hpp"
+
 
 // Total - 4 Tests - 1 pass - 3 failed
 TEST_CASE("create agency", "[Agency]")
@@ -516,4 +518,103 @@ TEST_CASE("create CreditCardNumber", "[CreditCardNumber]")
   {
     CreditCardNumber* CreditCardNumber_test = new CreditCardNumber("3123847012389478");
   }                                                                
+}
+
+// Total - 93 Tests - 42 pass - 51 failed
+TEST_CASE("create User", "[User]")
+{
+  Name* name_test = new Name("Otho T. Komatsu");
+  Identifier* identifier_test = new Identifier("ahyef");
+  Password* password_test = new Password("123Abc!&");
+
+  User* user_test = new User();
+  user_test->set_name(name_test);
+  user_test->set_identifier(identifier_test);
+  user_test->set_password(password_test);
+
+  std::string name_value = user_test->get_name()->get_value();
+  std::string identifier_value = user_test->get_identifier()->get_value();
+  std::string password_value = user_test->get_password()->get_value();
+  
+
+  REQUIRE(name_value == "Otho T. Komatsu");
+  REQUIRE(identifier_value == "ahyef");
+  REQUIRE(password_value == "123Abc!&");
+
+}
+
+// Total - 100 Tests - 49 pass - 51 failed
+TEST_CASE("create Accommodation", "[Accommodation]")
+{
+  AccommodationType* accommodation_type_test = new AccommodationType("Flat");
+  AccommodationCapacity* accommodation_capacity_test = new AccommodationCapacity("3");
+  Identifier* identifier_test = new Identifier("ahyef");
+  Date* begin_date_test = new Date("23/jan/2023");
+  Date* end_date_test = new Date("03/fev/2040");
+  State* state_test = new State("DF");
+  DailyValue* daily_test = new DailyValue("200.00");
+
+  Accommodation* accommodation_test = new Accommodation();
+  accommodation_test->set_accommodation_type(accommodation_type_test);
+  accommodation_test->set_identifier(identifier_test);
+  accommodation_test->set_accommodation_capacity(accommodation_capacity_test);
+  accommodation_test->set_begin_date(begin_date_test);
+  accommodation_test->set_end_date(end_date_test);
+  accommodation_test->set_state(state_test);
+  accommodation_test->set_daily(daily_test);
+
+  std::string accommodation_capacity_value = accommodation_test->get_accommodation_capacity()->get_value();
+  std::string accommodation_type_value = accommodation_test->get_accommodation_type()->get_value();
+  std::string identifier_value = accommodation_test->get_identifier()->get_value();
+  std::string begin_date_value = accommodation_test->get_begin_date()->get_value();
+  std::string end_date_value = accommodation_test->get_end_date()->get_value();
+  std::string state_value = accommodation_test->get_state()->get_value();
+  std::string daily_value = accommodation_test->get_daily()->get_value();
+  
+
+  REQUIRE(accommodation_type_value == "Flat");
+  REQUIRE(accommodation_capacity_value == "3");
+  REQUIRE(identifier_value == "ahyef");
+  REQUIRE(begin_date_value == "23/jan/2023");
+  REQUIRE(end_date_value == "03/fev/2040");
+  REQUIRE(state_value == "DF");
+  REQUIRE(daily_value == "200.00");
+}
+
+// Total - 102 Tests - 51 pass - 51 failed
+TEST_CASE("create CreditCard", "[CreditCard]")
+{
+  CreditCardNumber* number_test = new CreditCardNumber("8297148378413852");
+  ExpirationDate* expiration_date_test = new ExpirationDate("03/88");
+ 
+  CreditCard* credit_card_test = new CreditCard();
+  credit_card_test->set_expiration(expiration_date_test);
+  credit_card_test->set_number(number_test);
+
+  std::string expiration_date_value = credit_card_test->get_expiration()->get_value();
+  std::string number_value = credit_card_test->get_number()->get_value();
+
+  REQUIRE(number_value == "8297148378413852");  
+  REQUIRE(expiration_date_value == "03/88");
+}
+
+// Total - 105 Tests - 54 pass - 51 failed
+TEST_CASE("create Account", "[Account]")
+{
+  Agency* agency_test = new Agency("12345");
+  AccountNumber* number_test = new AccountNumber("877838");
+  Bank* bank_test = new Bank("231");
+
+  Account* account_test = new Account();
+  account_test->set_agency(agency_test);
+  account_test->set_number(number_test);
+  account_test->set_bank(bank_test);
+
+  std::string agency_value = account_test->get_agency()->get_value();
+  std::string number_value = account_test->get_number()->get_value();
+  std::string bank_value = account_test->get_bank()->get_value();
+
+  REQUIRE(agency_value == "12345");
+  REQUIRE(number_value == "877838");  
+  REQUIRE(bank_value == "231");
 }

@@ -530,6 +530,12 @@ class ExpirationDate
 		void validate(std::string in_value);
 };
 
+inline std::string ExpirationDate::get_value()
+{
+	return (this->value_);
+}
+
+
 inline int ExpirationDate::get_month()
 {
 	return (this->month_);

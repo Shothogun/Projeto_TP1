@@ -1,0 +1,176 @@
+\hypertarget{classState}{}\section{State Class Reference}
+\label{classState}\index{State@{State}}
+
+
+\hyperlink{classState}{State}.  
+
+
+
+
+{\ttfamily \#include $<$domain.\+hpp$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classState_ae9cf5ecda4efd589235426b54c9a239a}{State} (std\+::string in\+\_\+value)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+void \hyperlink{classState_aa1a10a6dd9759136990a233421333f05}{set\+\_\+value} (std\+::string in\+\_\+value)
+\begin{DoxyCompactList}\small\item\em Set Value function. \end{DoxyCompactList}\item 
+std\+::string \hyperlink{classState_ae6687923a152552269e6edf7f172d679}{get\+\_\+value} ()
+\begin{DoxyCompactList}\small\item\em Get Value function. \end{DoxyCompactList}\item 
+\hyperlink{domain_8hpp_ac99446a312a3e7b8497ac6ec1f3ae080}{State\+Name} \hyperlink{classState_a33798fb28dd9e3ddd15209732c4d955b}{get\+\_\+state} ()
+\begin{DoxyCompactList}\small\item\em Get state function. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{domain_8hpp_ac99446a312a3e7b8497ac6ec1f3ae080}{State\+Name} \hyperlink{classState_a925750e8bf57037601e018ab7feee205}{validate} (std\+::string in\+\_\+value)
+\begin{DoxyCompactList}\small\item\em Validate function. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \hyperlink{classState_a6ba19e67857b864a5166471c32701c12}{value\+\_\+}
+\begin{DoxyCompactList}\small\item\em \hyperlink{classState}{State}\textquotesingle{}s value. \end{DoxyCompactList}\item 
+\hyperlink{domain_8hpp_ac99446a312a3e7b8497ac6ec1f3ae080}{State\+Name} \hyperlink{classState_ad8f1747b64fd9231e81157d873d5b246}{state\+\_\+}
+\begin{DoxyCompactList}\small\item\em state\textquotesingle{}s value \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static const int \hyperlink{classState_a71e6c929e5e4ba6c76d74f1ca9325d33}{k\+Size\+\_\+} = 2
+\begin{DoxyCompactList}\small\item\em \hyperlink{classState}{State} string\textquotesingle{}s size. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{classState}{State}. 
+
+Receives and validates state. 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{State@{State}!State@{State}}
+\index{State@{State}!State@{State}}
+\subsubsection[{\texorpdfstring{State(std\+::string in\+\_\+value)}{State(std::string in_value)}}]{\setlength{\rightskip}{0pt plus 5cm}State\+::\+State (
+\begin{DoxyParamCaption}
+\item[{std\+::string}]{in\+\_\+value}
+\end{DoxyParamCaption}
+)}\hypertarget{classState_ae9cf5ecda4efd589235426b54c9a239a}{}\label{classState_ae9cf5ecda4efd589235426b54c9a239a}
+
+
+Constructor. 
+
+Initializes \hyperlink{classState}{State} and validates its value according to its initials.
+
+
+\begin{DoxyParams}{Parameters}
+{\em in\+\_\+value} & a std\+::string type.\\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{classState_aa1a10a6dd9759136990a233421333f05}{State\+::set\+\_\+value(std\+::string in\+\_\+value)} 
+\end{DoxySeeAlso}
+
+
+\subsection{Member Function Documentation}
+\index{State@{State}!get\+\_\+state@{get\+\_\+state}}
+\index{get\+\_\+state@{get\+\_\+state}!State@{State}}
+\subsubsection[{\texorpdfstring{get\+\_\+state()}{get_state()}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf State\+Name} State\+::get\+\_\+state (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classState_a33798fb28dd9e3ddd15209732c4d955b}{}\label{classState_a33798fb28dd9e3ddd15209732c4d955b}
+
+
+Get state function. 
+
+Returns state value. enum class State\+Name type.
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{domain_8hpp_ac99446a312a3e7b8497ac6ec1f3ae080}{State\+Name} 
+\end{DoxySeeAlso}
+\index{State@{State}!get\+\_\+value@{get\+\_\+value}}
+\index{get\+\_\+value@{get\+\_\+value}!State@{State}}
+\subsubsection[{\texorpdfstring{get\+\_\+value()}{get_value()}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string State\+::get\+\_\+value (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classState_ae6687923a152552269e6edf7f172d679}{}\label{classState_ae6687923a152552269e6edf7f172d679}
+
+
+Get Value function. 
+
+Returns value. std\+::string type. \index{State@{State}!set\+\_\+value@{set\+\_\+value}}
+\index{set\+\_\+value@{set\+\_\+value}!State@{State}}
+\subsubsection[{\texorpdfstring{set\+\_\+value(std\+::string in\+\_\+value)}{set_value(std::string in_value)}}]{\setlength{\rightskip}{0pt plus 5cm}void State\+::set\+\_\+value (
+\begin{DoxyParamCaption}
+\item[{std\+::string}]{in\+\_\+value}
+\end{DoxyParamCaption}
+)}\hypertarget{classState_aa1a10a6dd9759136990a233421333f05}{}\label{classState_aa1a10a6dd9759136990a233421333f05}
+
+
+Set Value function. 
+
+Sets valid values to \hyperlink{classState}{State}, called during its contruction.
+
+
+\begin{DoxyParams}{Parameters}
+{\em in\+\_\+value} & a std\+::string type.\\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{classState_a925750e8bf57037601e018ab7feee205}{State\+::validate(std\+::string in\+\_\+value)} 
+\end{DoxySeeAlso}
+\index{State@{State}!validate@{validate}}
+\index{validate@{validate}!State@{State}}
+\subsubsection[{\texorpdfstring{validate(std\+::string in\+\_\+value)}{validate(std::string in_value)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf State\+Name} State\+::validate (
+\begin{DoxyParamCaption}
+\item[{std\+::string}]{in\+\_\+value}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classState_a925750e8bf57037601e018ab7feee205}{}\label{classState_a925750e8bf57037601e018ab7feee205}
+
+
+Validate function. 
+
+Validates the \hyperlink{classState}{State} value set during its construction. Returns a State\+Name type.
+
+
+\begin{DoxyParams}{Parameters}
+{\em in\+\_\+value} & a std\+::string type.\\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+State\+Name\+::\+State\+Name(std\+::string in\+\_\+value) 
+
+\hyperlink{domain_8hpp_ac99446a312a3e7b8497ac6ec1f3ae080}{State\+Name} 
+\end{DoxySeeAlso}
+
+
+\subsection{Member Data Documentation}
+\index{State@{State}!k\+Size\+\_\+@{k\+Size\+\_\+}}
+\index{k\+Size\+\_\+@{k\+Size\+\_\+}!State@{State}}
+\subsubsection[{\texorpdfstring{k\+Size\+\_\+}{kSize_}}]{\setlength{\rightskip}{0pt plus 5cm}const int State\+::k\+Size\+\_\+ = 2\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}\hypertarget{classState_a71e6c929e5e4ba6c76d74f1ca9325d33}{}\label{classState_a71e6c929e5e4ba6c76d74f1ca9325d33}
+
+
+\hyperlink{classState}{State} string\textquotesingle{}s size. 
+
+Defines \hyperlink{classState}{State}\textquotesingle{}s standard size value. const static int value. \index{State@{State}!state\+\_\+@{state\+\_\+}}
+\index{state\+\_\+@{state\+\_\+}!State@{State}}
+\subsubsection[{\texorpdfstring{state\+\_\+}{state_}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf State\+Name} State\+::state\+\_\+\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classState_ad8f1747b64fd9231e81157d873d5b246}{}\label{classState_ad8f1747b64fd9231e81157d873d5b246}
+
+
+state\textquotesingle{}s value 
+
+enum class State\+Name type.
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{domain_8hpp_ac99446a312a3e7b8497ac6ec1f3ae080}{State\+Name} 
+\end{DoxySeeAlso}
+\index{State@{State}!value\+\_\+@{value\+\_\+}}
+\index{value\+\_\+@{value\+\_\+}!State@{State}}
+\subsubsection[{\texorpdfstring{value\+\_\+}{value_}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string State\+::value\+\_\+\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classState_a6ba19e67857b864a5166471c32701c12}{}\label{classState_a6ba19e67857b864a5166471c32701c12}
+
+
+\hyperlink{classState}{State}\textquotesingle{}s value. 
+
+It\textquotesingle{}s a sequence of 2 characters. Express the initials of brazilian states. std\+::string value. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{domain_8hpp}{domain.\+hpp}\end{DoxyCompactItemize}

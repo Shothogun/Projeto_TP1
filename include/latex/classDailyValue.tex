@@ -1,0 +1,160 @@
+\hypertarget{classDailyValue}{}\section{Daily\+Value Class Reference}
+\label{classDailyValue}\index{Daily\+Value@{Daily\+Value}}
+
+
+\hyperlink{classDailyValue}{Daily\+Value}.  
+
+
+
+
+{\ttfamily \#include $<$domain.\+hpp$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classDailyValue_ad60e0817a2c4b84f5e2d3e99638de14a}{Daily\+Value} (std\+::string in\+\_\+value)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+void \hyperlink{classDailyValue_ad8caf580e54cd12c29f99f74e2a64af4}{set\+\_\+value} (std\+::string in\+\_\+value)
+\begin{DoxyCompactList}\small\item\em Set Value function. \end{DoxyCompactList}\item 
+std\+::string \hyperlink{classDailyValue_a3b1b85b388709c44a2781ebf1281c078}{get\+\_\+value} ()
+\begin{DoxyCompactList}\small\item\em Get Value function. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classDailyValue_a26a8ab814ba5ea1888ba2c6d1f147e79}{validate} (std\+::string in\+\_\+value\+\_\+)
+\begin{DoxyCompactList}\small\item\em Validate function. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \hyperlink{classDailyValue_a5021486135be58a69bd0c57c81ccb9c6}{value\+\_\+}
+\begin{DoxyCompactList}\small\item\em \hyperlink{classDailyValue}{Daily\+Value}\textquotesingle{}s value. \end{DoxyCompactList}\item 
+float \hyperlink{classDailyValue_a6316632ee7e3c421b917a423c22b9182}{dayly\+\_\+}
+\begin{DoxyCompactList}\small\item\em daily\+\_\+\textquotesingle{}s value \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static constexpr double \hyperlink{classDailyValue_a3d11c9df8edcc21b45b1807b63cf48e0}{k\+Minor\+Size\+\_\+} = 1.\+00
+\begin{DoxyCompactList}\small\item\em \hyperlink{classDailyValue}{Daily\+Value}\textquotesingle{}s minor value. \end{DoxyCompactList}\item 
+static constexpr double \hyperlink{classDailyValue_ac96d2da50ecbba486d4145ddc477cba5}{k\+Major\+Size\+\_\+} = 10000.\+00
+\begin{DoxyCompactList}\small\item\em \hyperlink{classDailyValue}{Daily\+Value}\textquotesingle{}s major value. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{classDailyValue}{Daily\+Value}. 
+
+Receives and validates daily value price. 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Daily\+Value@{Daily\+Value}!Daily\+Value@{Daily\+Value}}
+\index{Daily\+Value@{Daily\+Value}!Daily\+Value@{Daily\+Value}}
+\subsubsection[{\texorpdfstring{Daily\+Value(std\+::string in\+\_\+value)}{DailyValue(std::string in_value)}}]{\setlength{\rightskip}{0pt plus 5cm}Daily\+Value\+::\+Daily\+Value (
+\begin{DoxyParamCaption}
+\item[{std\+::string}]{in\+\_\+value}
+\end{DoxyParamCaption}
+)}\hypertarget{classDailyValue_ad60e0817a2c4b84f5e2d3e99638de14a}{}\label{classDailyValue_ad60e0817a2c4b84f5e2d3e99638de14a}
+
+
+Constructor. 
+
+Initializes \hyperlink{classDailyValue}{Daily\+Value} and validates its value, between 1.\+00 to 10\textquotesingle{}000.\+00.
+
+
+\begin{DoxyParams}{Parameters}
+{\em in\+\_\+value} & a std\+::string type.\\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{classDailyValue_ad8caf580e54cd12c29f99f74e2a64af4}{Daily\+Value\+::set\+\_\+value(std\+::string in\+\_\+value)} 
+\end{DoxySeeAlso}
+
+
+\subsection{Member Function Documentation}
+\index{Daily\+Value@{Daily\+Value}!get\+\_\+value@{get\+\_\+value}}
+\index{get\+\_\+value@{get\+\_\+value}!Daily\+Value@{Daily\+Value}}
+\subsubsection[{\texorpdfstring{get\+\_\+value()}{get_value()}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string Daily\+Value\+::get\+\_\+value (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classDailyValue_a3b1b85b388709c44a2781ebf1281c078}{}\label{classDailyValue_a3b1b85b388709c44a2781ebf1281c078}
+
+
+Get Value function. 
+
+Returns value. std\+::string type. \index{Daily\+Value@{Daily\+Value}!set\+\_\+value@{set\+\_\+value}}
+\index{set\+\_\+value@{set\+\_\+value}!Daily\+Value@{Daily\+Value}}
+\subsubsection[{\texorpdfstring{set\+\_\+value(std\+::string in\+\_\+value)}{set_value(std::string in_value)}}]{\setlength{\rightskip}{0pt plus 5cm}void Daily\+Value\+::set\+\_\+value (
+\begin{DoxyParamCaption}
+\item[{std\+::string}]{in\+\_\+value}
+\end{DoxyParamCaption}
+)}\hypertarget{classDailyValue_ad8caf580e54cd12c29f99f74e2a64af4}{}\label{classDailyValue_ad8caf580e54cd12c29f99f74e2a64af4}
+
+
+Set Value function. 
+
+Sets valid values to a \hyperlink{classDailyValue}{Daily\+Value}, called during its contruction.
+
+
+\begin{DoxyParams}{Parameters}
+{\em in\+\_\+value} & a std\+::string type.\\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{classDailyValue_a26a8ab814ba5ea1888ba2c6d1f147e79}{Daily\+Value\+::validate(std\+::string in\+\_\+value)} 
+\end{DoxySeeAlso}
+\index{Daily\+Value@{Daily\+Value}!validate@{validate}}
+\index{validate@{validate}!Daily\+Value@{Daily\+Value}}
+\subsubsection[{\texorpdfstring{validate(std\+::string in\+\_\+value\+\_\+)}{validate(std::string in_value_)}}]{\setlength{\rightskip}{0pt plus 5cm}void Daily\+Value\+::validate (
+\begin{DoxyParamCaption}
+\item[{std\+::string}]{in\+\_\+value\+\_\+}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classDailyValue_a26a8ab814ba5ea1888ba2c6d1f147e79}{}\label{classDailyValue_a26a8ab814ba5ea1888ba2c6d1f147e79}
+
+
+Validate function. 
+
+Validates the \hyperlink{classDailyValue}{Daily\+Value}\textquotesingle{}s value set during its construction.
+
+
+\begin{DoxyParams}{Parameters}
+{\em in\+\_\+value} & a std\+::string type.\\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{classDailyValue_ad60e0817a2c4b84f5e2d3e99638de14a}{Daily\+Value\+::\+Daily\+Value(std\+::string in\+\_\+value)} 
+\end{DoxySeeAlso}
+
+
+\subsection{Member Data Documentation}
+\index{Daily\+Value@{Daily\+Value}!dayly\+\_\+@{dayly\+\_\+}}
+\index{dayly\+\_\+@{dayly\+\_\+}!Daily\+Value@{Daily\+Value}}
+\subsubsection[{\texorpdfstring{dayly\+\_\+}{dayly_}}]{\setlength{\rightskip}{0pt plus 5cm}float Daily\+Value\+::dayly\+\_\+\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classDailyValue_a6316632ee7e3c421b917a423c22b9182}{}\label{classDailyValue_a6316632ee7e3c421b917a423c22b9182}
+
+
+daily\+\_\+\textquotesingle{}s value 
+
+Number between 1.\+00 to 10\textquotesingle{}000.\+00. float type. \index{Daily\+Value@{Daily\+Value}!k\+Major\+Size\+\_\+@{k\+Major\+Size\+\_\+}}
+\index{k\+Major\+Size\+\_\+@{k\+Major\+Size\+\_\+}!Daily\+Value@{Daily\+Value}}
+\subsubsection[{\texorpdfstring{k\+Major\+Size\+\_\+}{kMajorSize_}}]{\setlength{\rightskip}{0pt plus 5cm}constexpr double Daily\+Value\+::k\+Major\+Size\+\_\+ = 10000.\+00\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}\hypertarget{classDailyValue_ac96d2da50ecbba486d4145ddc477cba5}{}\label{classDailyValue_ac96d2da50ecbba486d4145ddc477cba5}
+
+
+\hyperlink{classDailyValue}{Daily\+Value}\textquotesingle{}s major value. 
+
+Defines minor Daily\textquotesingle{}s value possible\+: 10\textquotesingle{}000.\+00 real. constexpr static double type. \index{Daily\+Value@{Daily\+Value}!k\+Minor\+Size\+\_\+@{k\+Minor\+Size\+\_\+}}
+\index{k\+Minor\+Size\+\_\+@{k\+Minor\+Size\+\_\+}!Daily\+Value@{Daily\+Value}}
+\subsubsection[{\texorpdfstring{k\+Minor\+Size\+\_\+}{kMinorSize_}}]{\setlength{\rightskip}{0pt plus 5cm}constexpr double Daily\+Value\+::k\+Minor\+Size\+\_\+ = 1.\+00\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}\hypertarget{classDailyValue_a3d11c9df8edcc21b45b1807b63cf48e0}{}\label{classDailyValue_a3d11c9df8edcc21b45b1807b63cf48e0}
+
+
+\hyperlink{classDailyValue}{Daily\+Value}\textquotesingle{}s minor value. 
+
+Defines major Daily\textquotesingle{}s value possible\+: 1.\+00 real. constexpr static double type. \index{Daily\+Value@{Daily\+Value}!value\+\_\+@{value\+\_\+}}
+\index{value\+\_\+@{value\+\_\+}!Daily\+Value@{Daily\+Value}}
+\subsubsection[{\texorpdfstring{value\+\_\+}{value_}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string Daily\+Value\+::value\+\_\+\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classDailyValue_a5021486135be58a69bd0c57c81ccb9c6}{}\label{classDailyValue_a5021486135be58a69bd0c57c81ccb9c6}
+
+
+\hyperlink{classDailyValue}{Daily\+Value}\textquotesingle{}s value. 
+
+Number between 1.\+00 to 10\textquotesingle{}000.\+00. std\+::string type. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{domain_8hpp}{domain.\+hpp}\end{DoxyCompactItemize}

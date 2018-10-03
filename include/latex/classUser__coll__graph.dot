@@ -1,0 +1,12 @@
+digraph "User"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="User",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node2 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" password_" ];
+  Node2 [label="Password",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classPassword.html",tooltip="Password. "];
+  Node3 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" identifier_" ];
+  Node3 [label="Identifier",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classIdentifier.html",tooltip="Identifier. "];
+  Node4 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" name_" ];
+  Node4 [label="Name",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$className.html",tooltip="Name. "];
+}

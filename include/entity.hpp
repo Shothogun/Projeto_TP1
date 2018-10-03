@@ -1,341 +1,371 @@
 #ifndef	PROJETO_TP1_ENTITY_H 
 #define	PROJETO_TP1_ENTITY_H
 
-#include "domain.h"
+#include "../include/domain.hpp"
 
+//! User
+/*!
+    Receives and validates User.
+*/
 class User{
 
     private:
 
-        // Elementos que compoem a classe?
-        Name name; /*!< Objeto da classe Nome. Armazena o nome do cliente. */
-        Identifier identifier; /*!< Objeto da classe Identifier. Armazena o Identifier de usuário. */
-        Password password; /*!< Objeto da classe Senha. Armazena a senha do usuário. */
+        Name* name_; /*!< object of class Name. Express user name */
+        Identifier* identifier_; /*!< object of class Identifier. Express user identifier. */
+        Password* password_; /*!< object of class Password. Express user password. */
 
     public:
 
-        // Metodos de acesso ao nome:
+        //! Constructor
+        
+        User();
 
-        /*! \fn void SetNome(const Nome &nome)
-            \brief Seta o objeto passado como o nome do usuário.
-            \param nome Objeto do tipo Nome a ser setado.
+        // name_ access methods:
+
+        //! Set name_ function
+        /*! 
+            Set object name to User.
+            \param name of class Name.
         */
-        void SetName(const Name &name){
-            this->name = name;
+        void set_name(Name* name){
+            this->name_ = name;
         }
 
-        /*! \fn Nome GetNome()
-            \brief Retorna o objeto do nome do usuário.
-            \return Objeto do tipo Nome.
+        //! Get name_ function
+        /*!
+            Returns object name_ from User.
         */
-        Nome GetName() const {
-            return nome;
+        Name* get_name() const {
+            return this->name_;
         }
 
-        // Metodos de acesso a agencia da conta:
+        // identifier_ access methods:
 
-        /*! \fn void Identifier(const Identifier &Identifier)
-            \brief Seta o objeto passado como o Identifier do usuário.
-            \param Identifier Objeto do tipo Identifier a ser setado.
+        //! Set identifier_ function
+        /*! 
+            Set object identifier_ to User.
+            \param identifier of class Identifier.
         */
-        void SetIdentifier(const Identifier &identifier){
-            this->identifier = identifier;
+        void set_identifier(Identifier* identifier){
+            this->identifier_ = identifier;
         }
 
-        /*! \fn Identifier GetIdentifier()
-            \brief Retorna o objeto do Identifier de usuário armazenado.
-            \return Objeto do tipo Identifier.
+        //! Get identifier_ function
+        /*!
+            Returns object identifier_ from User.
         */
-        Identifier GetIdentifier() const {
-            return identifier;
+        Identifier* get_identifier() const {
+            return this->identifier_;
         }
 
-        // Metodos de acesso à senha:
+        // password_ access methods:
 
-        /*! \fn void SetSenha(const Senha &senha)
-            \brief Seta o objeto passado como a senha do usuário.
-            \param banco Objeto do tipo Senha a ser setado.
+        //! Set password_ function
+        /*! 
+            Set object password to User.
+            \param password_ of class Password.
         */
-        void SetPassword(const Password &password){
-            this->password = password;
+        void set_password(Password* password){
+            this->password_ = password;
         }
 
-        /*! \fn Senha GetSenha()
-            \brief Retorna o objeto da senha armazenada.
-            \return Objeto do tipo Senha.
+        //! Get password_ function
+        /*!
+            Returns object password_ from User.
         */
-        Senha GetPassword() const {
-            return password;
+        Password* get_password() const {
+            return this->password_;
         }
 };
 
-/*! \class Accommodation
-        \brief Classe que define a entitade do tipo Accommodation.
-        Classe que armazena as informações necessárias para definir uma acomodação
-        Contém um objeto para os tipos Identifier, TipoDeAccommodation, CapacidadeDeAccommodation,
-        Data, Nome, Estado e Diaria.
+//! Accommodation
+/*!
+    Receives and validates Accommodation.
 */
 class Accommodation
 {
     private:
 
-        // Elementos que compoem a classe?
-        Identifier identifier; /*!< Objeto da classe Identifier. Armazena um Identifier para a acomodação. */
-        AccommodationOption accommodation_option; /*!< Objeto da classe TipoDeAccommodation. Armazena qual é o tipo da acomodação. */
-        AccommodationCapacity accommodation_capacity; /*!< Objeto da classe CapacidadeDeAccommodation. Armazena qual é a capacidade da acomodação. */
-        Date begin_date; /*!< Objeto da classe Data. Armazena qual é a data de início da permanência. */
-        Date end_date; /*!< Objeto da classe Data. Armazena qual é a data de término da permanência. */
-        State state; /*!< Objeto da classe Estado. Armazena qual é o estado brasileiro da acaomodação. */
-        DailyValue daily; /*!< Objeto da classe Diaria. Armazena qual é o valor da diária da acomodação. */
+        Identifier* identifier_; /*!< object of class Identifier. Express Accommodation identifier */
+        AccommodationType* accommodation_type_; /*!< object of class Accommodationtype. Express Accommodation accommodation type */
+        AccommodationCapacity* accommodation_capacity_; /*!< object of class AccommodationCapacity. Express Accommodation accommodation capacity */
+        Date* begin_date_; /*!< object of class Data. Express Accommodation begin date */
+        Date* end_date_; /*!< object of class Data. Express Accommodation end date */
+        State* state_; /*!< object of class State. Express Accommodation state */
+        DailyValue* daily_; /*!< object of class Name. Express Accommodation daily value */
 
     public:
 
-        // Métodos de acesso ao Identifier
+        //! Constructor
+        
+        Accommodation();
 
-        /*! \fn void SetIdentifier(const Identifier &Identifier)
-            \brief Seta o objeto passado como o Identifier.
-            \param Identifier Objeto do tipo Identifier a ser setado.
+        // identifier_ access methods:
+        
+        //! Set identifier_ function
+        /*! 
+            Set object identifier to Accommodation.
+            \param identifier of class Identifier.
         */
-         void SetIdentifier(const Identifier &identifier){
-            this->Identifier = identifier;
+         void set_identifier(Identifier* identifier){
+            this->identifier_ = identifier;
         }
 
-        /*! \fn Identifier GetIdentifier()
-            \brief Retorna o objeto do Identifier armazenado.
-            \return Objeto do tipo Identifier.
+        //! Get identifier_ function
+        /*!
+            Returns object identifier_ from Accommodation.
         */
-        Identifier GetIdentifier(){
-            return identifier;
+        Identifier* get_identifier(){
+            return this->identifier_;
         }
 
-        // Métodos de acesso ao tipo de Accommodation
-        /*! \fn void SetTipoDeAccommodation(const TipoDeAccommodation &tipo_de_Accommodation)
-            \brief Seta o objeto passado como o tipo de Accommodation.
-            \param tipo_de_Accommodation Objeto do tipo TipoDeAccommodation a ser setado.
+        // accommodation_type_ access methods:
+
+        //! Set accommodation_type_ function
+        /*! 
+            Set object accommodation_type to Accommodation.
+            \param accommodation_type of class Accommodationtype.
         */
-        void SetTipoDeAccommodation(const TipoDeAccommodation &tipo_de_Accommodation){
-            this->tipo_de_Accommodation = tipo_de_Accommodation;
+        void set_accommodation_type(AccommodationType* accommodation_type){
+            this->accommodation_type_ = accommodation_type;
         }
 
-        /*! \fn TipoDeAccommodation GetTipoDeAccommodation()
-            \brief Retorna o objeto do tipo de Accommodation armazenado.
-            \return Objeto do tipo TipoDeAccommodation.
+        //! Get accommodation_type_ function
+        /*!
+            Returns object accommodation_type_ from Accommodation.
         */
-        AccommodationOption GetAccommodationOption(){
-            return accommodation_option;
+        AccommodationType* get_accommodation_type(){
+            return this->accommodation_type_;
         }
 
-        // Métodos de acesso à capacidade de acomodação
-
-        /*! \fn void SetCapacidaDeAccommodation(const CapacidadeDeAccommodation &capacidade)
-            \brief Seta o objeto passado como a capacidade de Accommodation.
-            \param capacidade Objeto do tipo CapacidadeDeAccommodation a ser setado.
+        // accommodation_capacity access methods:
+        
+        //! Set accommodation_capacity function
+        /*! 
+            Set object accommodation_capacity to Accommodation.
+            \param accommodation_capacity of class AccommodationCapacity.
         */
-        void SetAccommodationCapacity(const AccommodationCapacity &accommodation_capacity){
-            this->accommodation_capacity = accommodation_capacity;
+         void set_accommodation_capacity(AccommodationCapacity* accommodation_capacity){
+            this->accommodation_capacity_ = accommodation_capacity;
         }
 
-        /*! \fn CapacidadeDeAccommodation GetCapacidadeDeAccommodation()
-            \brief Retorna o objeto com a capacidade de Accommodation armazenada.
-            \return Objeto do tipo CapacidadeDeAccommodation.
+        //! Get accommodation_capacity_ function
+        /*!
+            Returns object accommodation_capacity_ from Accommodation.
         */
-        AccommodationCapacity GetAccommodationCapacity(){
-            return accommodation_capacity;
+        AccommodationCapacity* get_accommodation_capacity(){
+            return this->accommodation_capacity_;
         }
 
-        // Métodos de acesso à data de início
 
-        /*! \fn void SetDataInicio(const Data &data_inicio)
-            \brief Seta o objeto passado como a data de inicio.
-            \param data_inicio Objeto do tipo Data a ser setado.
+        // begin_date_ access methods:
+
+        //! Set begin_date_ date function
+        /*! 
+            Set object begin_date_ to Accommodation.
+            \param begin_date of class Date.
         */
-        void SetBeginDate(const Date &begin_date){
-            this->begin_date = begin_date;
+        void set_begin_date(Date* begin_date){
+            this->begin_date_ = begin_date;
         }
 
-        /*! \fn Data GetDataInicio()
-            \brief Retorna o objeto com a data de inicio armazenada.
-            \return Objeto do tipo Data
+        //! Get begin_date_ function
+        /*!
+            Returns object begin_date_ from Accommodation.
         */
-        Data GetBeginDate(){
-            return begin_date;
+        Date* get_begin_date(){
+            return this->begin_date_;
         }
 
-        // Métodos de acesso à data de término
+        // end_date_ access methods:
 
-        /*! \fn void SetDataTermino(const Data &data_termino)
-            \brief Seta o objeto passado como a data de término.
-            \param data_termino Objeto do tipo Data a ser setado.
+        //! Set end_date_ function
+        /*! 
+            Set object end_date_ to Accommodation.
+            \param end_date of class Date.
         */
-        void SetEndDate(const Date &end_date){
-            this->end_date = end_date;
+        void set_end_date(Date* end_date){
+            this->end_date_ = end_date;
         }
 
-        /*! \fn Data GetDataTermino()
-            \brief Retorna o objeto com a data de término armazenada.
-            \return Objeto do tipo Data
+        //! Get end_date_ function
+        /*!
+            Returns object end_date_ from Accommodation.
         */
-        Data GetEndDate(){
-            return end_date;
+        Date* get_end_date(){
+            return this->end_date_;
         }
 
-        // Métodos de acesso ao estado
+        // state_ access methods:
 
-        /*! \fn void SetEstado(const Estado &estado)
-            \brief Seta o objeto passado como o estado.
-            \param estado Objeto do tipo Estado a ser setado.
+        //! Set state_ function
+        /*! 
+            Set object state_ to Accommodation.
+            \param state_ of class State.
         */
-        void SetState(const State &state){
-            this->state = state;
+        void set_state(State* state){
+            this->state_ = state;
         }
 
-        /*! \fn Estado GetEstado()
-            \brief Retorna o objeto com o estado armazenado.
-            \return Objeto do tipo Estado
+        //! Get state_ function
+        /*!
+            Returns object state_ from Accommodation.
         */
-        Estado GetState(){
-            return state;
+        State* get_state(){
+            return this->state_;
         }
 
-        // Métodos de acesso à diária
+        // daily_ access methods:
 
-        /*! \fn void SetDiaria(const Diaria &diaria)
-            \brief Seta o objeto passado como a diária.
-            \param diaria Objeto do tipo Diaria a ser setado.
+        //! Set daily_ function
+        /*! 
+            Set object daily_ to Accommodation.
+            \param daily_ of class DailyValue.
         */
-        void SetDailyValue(const DailyValue &daily){
-            this->daily = daily;
+        void set_daily(DailyValue* daily){
+            this->daily_ = daily;
         }
 
-        /*! \fn GetDiaria()
-            \brief Retorna o objeto com a diaria armazenada.
-            \return Objeto do tipo Diaria
+        //! Get daily_ function
+        /*!
+            Returns object daily_ from Accommodation.
         */
-        Diaria GetDailyVallue(){
-            return daily;
+        DailyValue* get_daily(){
+            return this->daily_;
         }
 };
-/*! \class Cartao
-        \brief Classe que define a entitade do tipo Cartao.
-        Classe que armazena as caracteristicas necessárias para definir a entidade catão de crédito.
-        Contém um objeto para o tipo NumeroCartao e outro para a Validade.
+
+//! CreditCard
+/*!
+    Receives and validates CreditCard.
 */
 class CreditCard{
 
     private:
-
-        // Elementos que compoem a classe?
-        CreditCardNumber number; /*!< Objeto da classe NumeroCartao. Armazena o número do cartão de crédito. */
-        ExpirationDate expiration; /*!< Objeto da classe Validade. Armazena a data de validade do cartão de crédito. */
+        CreditCardNumber* number_; /*!< object of class CreditCardNumber. Express CreditCard number_  */
+        ExpirationDate* expiration_; /*!< object of class ExpirationDate. Express CreditCard expiration_  */
 
     public:
 
-        // Metodos de acesso ao numero do cartão:
+        //! Constructor
+        
+        CreditCard();
 
-        /*! \fn void SetNumero(const NumeroCartao &numero)
-            \brief Seta o objeto passado como o número do cartão de crédito.
-            \param numero Objeto do tipo NumeroCartao a ser setado.
+
+        // number_ access methods:
+
+        //! Set number_ function
+        /*! 
+            Set object number_ to CreditCard.
+            \param number_ of class CreditCardNumber.
         */
-        void SetCreditCardNumber(const CreditCardNumber &number){
-            this->number = number;
+        void set_number(CreditCardNumber* number_){
+            this->number_ = number_;
         }
 
-        /*! \fn NumeroCartao GetNumero()
-            \brief Retorna o objeto do número do cartão armazenado.
-            \return Objeto do tipo NumeroCartao.
+        //! Get number_ function
+        /*!
+            Returns object number_ from CreditCard.
         */
-       CreditCardNumber GetCreditCardNumber() const {
-            return number;
+        CreditCardNumber* get_number(){
+            return this->number_;
         }
 
-        // Metodos de acesso a data de validade do cartao:
+        // expiration_ access methods:
 
-        /*! \fn void SetValidade(const Validade &validade)
-            \brief Seta o objeto passado como a validade do cartão de crédito.
-            \param validade Objeto do tipo Validade a ser setado.
+        //! Set expiration_ function
+        /*! 
+            Set object expiration_ to CreditCard.
+            \param expiration_ of class ExpirationDate.
         */
-        void SetExpirationDate(const ExpirationDate &expiration){
-            this->expiration = expiration;
+        void set_expiration(ExpirationDate* expiration_){
+            this->expiration_ = expiration_;
         }
 
-        /*! \fn Validade GetValidade()
-            \brief Retorna o objeto da data de validade do cartão armazenado.
-            \return Objeto do tipo Validade.
+        //! Get expiration_ function
+        /*!
+            Returns object expiration_ from CreditCard.
         */
-        Validade GetExpirationDate() const {
-            return expiration;
+        ExpirationDate* get_expiration(){
+            return this->expiration_;
         }
 };
 
-/*! \class ContaCorrente
-        \brief Classe que define a entitade do tipo ContaCorrente.
-        Classe que armazena as caracteristicas necessárias para definir a entidade da conta corrente.
-        Contém um objeto para o tipo NumeroConta, outro para a Agencia e outro para o Banco.
+//! Account
+/*!
+    Receives and validates Account.
 */
 
 class Account{
 
     private:
 
-        // Elementos que compoem a classe?
-        AccountNumber number; /*!< Objeto da classe NumeroConta. Armazena o número da conta corrente. */
-        Agency agency; /*!< Objeto da classe Agencia. Armazena o número da agencia bancaria. */
-        Bank bank; /*!< Objeto da classe Banco. Armazena o número do banco da conta. */
+        AccountNumber* number_; /*!< object of class AccountNumber. Express Account number*/
+        Agency* agency_; /*!< object of class Agency. Express Account agency*/
+        Bank* bank_; /*!< object of class Bank. Express Account bank*/
 
     public:
 
-        // Metodos de acesso ao numero da conta:
+        //! Constructor
+        
+        Account();
 
-        /*! \fn void SetNumero(const NumeroConta &numero)
-            \brief Seta o objeto passado como o número da conta corrente.
-            \param numero Objeto do tipo NumeroConta a ser setado.
+        // number_ access methods:
+
+        //! Set number_ function
+        /*! 
+            Set object number_ to Account.
+            \param number_ of class Account.
         */
-        void SetAccountNumber(const AccountNumber &number){
-            this->number = number;
+        void set_number(AccountNumber* number){
+            this->number_ = number;
         }
 
-        /*! \fn NumeroConta GetNumero()
-            \brief Retorna o objeto do número da conta corrente.
-            \return Objeto do tipo NumeroConta.
+        //! Get number_ function
+        /*!
+            Returns object number_ from Account.
         */
-        AccountNumber GetAccountNumber() const {
-            return number;
+        AccountNumber* get_number(){
+            return this->number_;
         }
 
-        // Metodos de acesso a agencia da conta:
+        // agency_ access methods:
 
-        /*! \fn void SetAgencia(const Agencia &agencia)
-            \brief Seta o objeto passado como a agencia da conta corrente.
-            \param agencia Objeto do tipo Agencia a ser setado.
+        //! Set agency_ function
+        /*! 
+            Set object agency_ to Account.
+            \param agency_ of class Account.
         */
-        void SetAgency(const Agency &agency){
-            this->agency = agency;
+        void set_agency(Agency* agency_){
+            this->agency_ = agency_;
         }
 
-        /*! \fn Agencia GetAgencia()
-            \brief Retorna o objeto da agencia da conta corrente armazenada.
-            \return Objeto do tipo Agencia.
+        //! Get agency_ function
+        /*!
+            Returns object agency_ from Account.
         */
-        Agency GetAgency() const {
-            return agency;
+        Agency* get_agency(){
+            return this->agency_;
         }
 
-        // Metodos de acesso ao banco da conta:
+        // bank_ access methods:
 
-        /*! \fn void SetBanco(const Banco &banco)
-            \brief Seta o objeto passado como o banco da conta corrente.
-            \param banco Objeto do tipo Banco a ser setado.
+        //! Set bank_ function
+        /*! 
+            Set object bank_ to Account.
+            \param bank_ of class Account.
         */
-        void SetBank(const Bank &bank){
-            this->bank = bank;
+        void set_bank(Bank* bank_){
+            this->bank_ = bank_;
         }
 
-        /*! \fn Banco GetBanco()
-            \brief Retorna o objeto do banco da conta corrente armazenada.
-            \return Objeto do tipo Banco.
+        //! Get bank_ function
+        /*!
+            Returns object bank_ from Account.
         */
-        Bank GetBank() const {
-            return bank;
+        Bank* get_bank(){
+            return this->bank_;
         }
 };
 #endif	// PROJETO_TP1_ENTITY_H

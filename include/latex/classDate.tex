@@ -1,0 +1,262 @@
+\hypertarget{classDate}{}\section{Date Class Reference}
+\label{classDate}\index{Date@{Date}}
+
+
+\hyperlink{classDate}{Date}.  
+
+
+
+
+{\ttfamily \#include $<$domain.\+hpp$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classDate_a7ab38b0ebb2b512b546cfeb5a984a214}{Date} (std\+::string in\+\_\+value)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+void \hyperlink{classDate_af493bc102f9e980e53a78e884e25cbd2}{set\+\_\+value} (std\+::string in\+\_\+value)
+\begin{DoxyCompactList}\small\item\em Set Value function. \end{DoxyCompactList}\item 
+std\+::string \hyperlink{classDate_a93e020f3682ac17db47fc5e6edfea5af}{get\+\_\+value} ()
+\begin{DoxyCompactList}\small\item\em Get Value function. \end{DoxyCompactList}\item 
+int \hyperlink{classDate_a98037ef869b600d1df44ba6854771cf5}{get\+\_\+day} ()
+\begin{DoxyCompactList}\small\item\em Get day function. \end{DoxyCompactList}\item 
+int \hyperlink{classDate_a3c9167735b349cdc2e60155d2d79f14b}{get\+\_\+month} ()
+\begin{DoxyCompactList}\small\item\em Get month function. \end{DoxyCompactList}\item 
+int \hyperlink{classDate_ac11d382ea1458599532db3340271a7e7}{get\+\_\+year} ()
+\begin{DoxyCompactList}\small\item\em Get year function. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classDate_afc019031efa12fdb37066bc7fe287f66}{validate} (std\+::string in\+\_\+value)
+\begin{DoxyCompactList}\small\item\em Validate function. \end{DoxyCompactList}\item 
+int \hyperlink{classDate_aed23b3625c27fca1007795647778af32}{month\+\_\+validate} (std\+::string month\+\_\+in)
+\begin{DoxyCompactList}\small\item\em Month Validate function. \end{DoxyCompactList}\item 
+void \hyperlink{classDate_a86974a4c0cb5e7cd73ad1a5310a05638}{day\+\_\+validate} (int year\+\_\+value, int month\+\_\+value, int day\+\_\+value)
+\begin{DoxyCompactList}\small\item\em Day Validate function. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \hyperlink{classDate_ae79a9217c5779085c923cb82b9a0b339}{value\+\_\+}
+\begin{DoxyCompactList}\small\item\em \hyperlink{classDate}{Date}\textquotesingle{}s value. \end{DoxyCompactList}\item 
+int \hyperlink{classDate_a041a2fed5be6c658737622fa367af5e4}{day\+\_\+}
+\begin{DoxyCompactList}\small\item\em Day\textquotesingle{}s value. \end{DoxyCompactList}\item 
+int \hyperlink{classDate_ae70a5a5a937ab5ce563cac90e3d8fd4d}{month\+\_\+}
+\begin{DoxyCompactList}\small\item\em Month\textquotesingle{}s value. \end{DoxyCompactList}\item 
+int \hyperlink{classDate_a000b73bb5ec170bcb9c55fe504ee1c3c}{year\+\_\+}
+\begin{DoxyCompactList}\small\item\em Year\textquotesingle{}s value. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static const int \hyperlink{classDate_a2734054bf4ae859c5a2df8bde04284ee}{k\+Size\+\_\+} = 11
+\begin{DoxyCompactList}\small\item\em \hyperlink{classDate}{Date} value\textquotesingle{}s size. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{classDate}{Date}. 
+
+Receives and validates date. 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Date@{Date}!Date@{Date}}
+\index{Date@{Date}!Date@{Date}}
+\subsubsection[{\texorpdfstring{Date(std\+::string in\+\_\+value)}{Date(std::string in_value)}}]{\setlength{\rightskip}{0pt plus 5cm}Date\+::\+Date (
+\begin{DoxyParamCaption}
+\item[{std\+::string}]{in\+\_\+value}
+\end{DoxyParamCaption}
+)}\hypertarget{classDate_a7ab38b0ebb2b512b546cfeb5a984a214}{}\label{classDate_a7ab38b0ebb2b512b546cfeb5a984a214}
+
+
+Constructor. 
+
+Initializes date and validates its value, following the standards notion(D\+D/\+M\+M\+M/\+A\+A\+AA), where\+:
+
+DD is two digits number between 01 to 31, M\+MM is the month\+: jan,fev, mar, abr, mai, jun, jul, ago, set, out, nov or dez. A\+A\+AA is a year\+: 2000 to 2099, considering Leap years.
+
+
+\begin{DoxyParams}{Parameters}
+{\em in\+\_\+value} & a std\+::string type.\\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{classDate_af493bc102f9e980e53a78e884e25cbd2}{Date\+::set\+\_\+value(std\+::string in\+\_\+value)} 
+\end{DoxySeeAlso}
+
+
+\subsection{Member Function Documentation}
+\index{Date@{Date}!day\+\_\+validate@{day\+\_\+validate}}
+\index{day\+\_\+validate@{day\+\_\+validate}!Date@{Date}}
+\subsubsection[{\texorpdfstring{day\+\_\+validate(int year\+\_\+value, int month\+\_\+value, int day\+\_\+value)}{day_validate(int year_value, int month_value, int day_value)}}]{\setlength{\rightskip}{0pt plus 5cm}void Date\+::day\+\_\+validate (
+\begin{DoxyParamCaption}
+\item[{int}]{year\+\_\+value, }
+\item[{int}]{month\+\_\+value, }
+\item[{int}]{day\+\_\+value}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classDate_a86974a4c0cb5e7cd73ad1a5310a05638}{}\label{classDate_a86974a4c0cb5e7cd73ad1a5310a05638}
+
+
+Day Validate function. 
+
+Validates the day value in a certain month of certain year. Verifies if the leap year.
+
+
+\begin{DoxyParams}{Parameters}
+{\em year\+\_\+value} & a int type. \\
+\hline
+{\em month\+\_\+value} & a int type. \\
+\hline
+{\em day\+\_\+value} & a int type.\\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{domain_8hpp_a18ea97ce6c7a0ad2f40c4bd1ac7b26d2}{Months} 
+\end{DoxySeeAlso}
+\index{Date@{Date}!get\+\_\+day@{get\+\_\+day}}
+\index{get\+\_\+day@{get\+\_\+day}!Date@{Date}}
+\subsubsection[{\texorpdfstring{get\+\_\+day()}{get_day()}}]{\setlength{\rightskip}{0pt plus 5cm}int Date\+::get\+\_\+day (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classDate_a98037ef869b600d1df44ba6854771cf5}{}\label{classDate_a98037ef869b600d1df44ba6854771cf5}
+
+
+Get day function. 
+
+Returns day value. int type. \index{Date@{Date}!get\+\_\+month@{get\+\_\+month}}
+\index{get\+\_\+month@{get\+\_\+month}!Date@{Date}}
+\subsubsection[{\texorpdfstring{get\+\_\+month()}{get_month()}}]{\setlength{\rightskip}{0pt plus 5cm}int Date\+::get\+\_\+month (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classDate_a3c9167735b349cdc2e60155d2d79f14b}{}\label{classDate_a3c9167735b349cdc2e60155d2d79f14b}
+
+
+Get month function. 
+
+Returns month value. int type. \index{Date@{Date}!get\+\_\+value@{get\+\_\+value}}
+\index{get\+\_\+value@{get\+\_\+value}!Date@{Date}}
+\subsubsection[{\texorpdfstring{get\+\_\+value()}{get_value()}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string Date\+::get\+\_\+value (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classDate_a93e020f3682ac17db47fc5e6edfea5af}{}\label{classDate_a93e020f3682ac17db47fc5e6edfea5af}
+
+
+Get Value function. 
+
+Returns value. std\+::string type. \index{Date@{Date}!get\+\_\+year@{get\+\_\+year}}
+\index{get\+\_\+year@{get\+\_\+year}!Date@{Date}}
+\subsubsection[{\texorpdfstring{get\+\_\+year()}{get_year()}}]{\setlength{\rightskip}{0pt plus 5cm}int Date\+::get\+\_\+year (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classDate_ac11d382ea1458599532db3340271a7e7}{}\label{classDate_ac11d382ea1458599532db3340271a7e7}
+
+
+Get year function. 
+
+Returns year value. int type. \index{Date@{Date}!month\+\_\+validate@{month\+\_\+validate}}
+\index{month\+\_\+validate@{month\+\_\+validate}!Date@{Date}}
+\subsubsection[{\texorpdfstring{month\+\_\+validate(std\+::string month\+\_\+in)}{month_validate(std::string month_in)}}]{\setlength{\rightskip}{0pt plus 5cm}int Date\+::month\+\_\+validate (
+\begin{DoxyParamCaption}
+\item[{std\+::string}]{month\+\_\+in}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classDate_aed23b3625c27fca1007795647778af32}{}\label{classDate_aed23b3625c27fca1007795647778af32}
+
+
+Month Validate function. 
+
+Validates the \hyperlink{classDate}{Date}\textquotesingle{}s month value set during its construction. It follows the months enum standard. Returns a month equivalent, int type.
+
+
+\begin{DoxyParams}{Parameters}
+{\em month\+\_\+in} & a std\+::string type.\\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{domain_8hpp_a18ea97ce6c7a0ad2f40c4bd1ac7b26d2}{Months} 
+\end{DoxySeeAlso}
+\index{Date@{Date}!set\+\_\+value@{set\+\_\+value}}
+\index{set\+\_\+value@{set\+\_\+value}!Date@{Date}}
+\subsubsection[{\texorpdfstring{set\+\_\+value(std\+::string in\+\_\+value)}{set_value(std::string in_value)}}]{\setlength{\rightskip}{0pt plus 5cm}void Date\+::set\+\_\+value (
+\begin{DoxyParamCaption}
+\item[{std\+::string}]{in\+\_\+value}
+\end{DoxyParamCaption}
+)}\hypertarget{classDate_af493bc102f9e980e53a78e884e25cbd2}{}\label{classDate_af493bc102f9e980e53a78e884e25cbd2}
+
+
+Set Value function. 
+
+Sets valid values to \hyperlink{classDate}{Date}, called during its contruction.
+
+
+\begin{DoxyParams}{Parameters}
+{\em in\+\_\+value} & a std\+::string type.\\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{classDate_afc019031efa12fdb37066bc7fe287f66}{Date\+::validate(std\+::string in\+\_\+value)} 
+\end{DoxySeeAlso}
+\index{Date@{Date}!validate@{validate}}
+\index{validate@{validate}!Date@{Date}}
+\subsubsection[{\texorpdfstring{validate(std\+::string in\+\_\+value)}{validate(std::string in_value)}}]{\setlength{\rightskip}{0pt plus 5cm}void Date\+::validate (
+\begin{DoxyParamCaption}
+\item[{std\+::string}]{in\+\_\+value}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classDate_afc019031efa12fdb37066bc7fe287f66}{}\label{classDate_afc019031efa12fdb37066bc7fe287f66}
+
+
+Validate function. 
+
+Validates the \hyperlink{classDate}{Date} value set during its construction.
+
+
+\begin{DoxyParams}{Parameters}
+{\em in\+\_\+value} & a std\+::string type.\\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{classDate_a7ab38b0ebb2b512b546cfeb5a984a214}{Date\+::\+Date(std\+::string in\+\_\+value)} 
+\end{DoxySeeAlso}
+
+
+\subsection{Member Data Documentation}
+\index{Date@{Date}!day\+\_\+@{day\+\_\+}}
+\index{day\+\_\+@{day\+\_\+}!Date@{Date}}
+\subsubsection[{\texorpdfstring{day\+\_\+}{day_}}]{\setlength{\rightskip}{0pt plus 5cm}int Date\+::day\+\_\+\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classDate_a041a2fed5be6c658737622fa367af5e4}{}\label{classDate_a041a2fed5be6c658737622fa367af5e4}
+
+
+Day\textquotesingle{}s value. 
+
+Value depends on month and leap year. int type. \index{Date@{Date}!k\+Size\+\_\+@{k\+Size\+\_\+}}
+\index{k\+Size\+\_\+@{k\+Size\+\_\+}!Date@{Date}}
+\subsubsection[{\texorpdfstring{k\+Size\+\_\+}{kSize_}}]{\setlength{\rightskip}{0pt plus 5cm}const int Date\+::k\+Size\+\_\+ = 11\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}\hypertarget{classDate_a2734054bf4ae859c5a2df8bde04284ee}{}\label{classDate_a2734054bf4ae859c5a2df8bde04284ee}
+
+
+\hyperlink{classDate}{Date} value\textquotesingle{}s size. 
+
+Defines \hyperlink{classDate}{Date}\textquotesingle{}s standard size value. const static int value. \index{Date@{Date}!month\+\_\+@{month\+\_\+}}
+\index{month\+\_\+@{month\+\_\+}!Date@{Date}}
+\subsubsection[{\texorpdfstring{month\+\_\+}{month_}}]{\setlength{\rightskip}{0pt plus 5cm}int Date\+::month\+\_\+\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classDate_ae70a5a5a937ab5ce563cac90e3d8fd4d}{}\label{classDate_ae70a5a5a937ab5ce563cac90e3d8fd4d}
+
+
+Month\textquotesingle{}s value. 
+
+Value between 1 to 12. int type. \index{Date@{Date}!value\+\_\+@{value\+\_\+}}
+\index{value\+\_\+@{value\+\_\+}!Date@{Date}}
+\subsubsection[{\texorpdfstring{value\+\_\+}{value_}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string Date\+::value\+\_\+\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classDate_ae79a9217c5779085c923cb82b9a0b339}{}\label{classDate_ae79a9217c5779085c923cb82b9a0b339}
+
+
+\hyperlink{classDate}{Date}\textquotesingle{}s value. 
+
+It\textquotesingle{}s a sequence of 11 characters(D\+D/\+M\+M\+M/\+A\+A\+AA) between 0-\/9. std\+::string value. \index{Date@{Date}!year\+\_\+@{year\+\_\+}}
+\index{year\+\_\+@{year\+\_\+}!Date@{Date}}
+\subsubsection[{\texorpdfstring{year\+\_\+}{year_}}]{\setlength{\rightskip}{0pt plus 5cm}int Date\+::year\+\_\+\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classDate_a000b73bb5ec170bcb9c55fe504ee1c3c}{}\label{classDate_a000b73bb5ec170bcb9c55fe504ee1c3c}
+
+
+Year\textquotesingle{}s value. 
+
+Value between 2000 to 2099. int type. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{domain_8hpp}{domain.\+hpp}\end{DoxyCompactItemize}

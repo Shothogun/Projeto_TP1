@@ -1,0 +1,190 @@
+\hypertarget{classExpirationDate}{}\section{Expiration\+Date Class Reference}
+\label{classExpirationDate}\index{Expiration\+Date@{Expiration\+Date}}
+
+
+\hyperlink{classExpirationDate}{Expiration\+Date}.  
+
+
+
+
+{\ttfamily \#include $<$domain.\+hpp$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classExpirationDate_ada7d6416fcc75c1faafd578ae56c1ed7}{Expiration\+Date} (std\+::string in\+\_\+value)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+void \hyperlink{classExpirationDate_a83f4b1ca035e44618f3ef9a09b38be65}{set\+\_\+value} (std\+::string in\+\_\+value)
+\begin{DoxyCompactList}\small\item\em Set Value function. \end{DoxyCompactList}\item 
+std\+::string \hyperlink{classExpirationDate_a96a351141951ebc7eb9004f3f683ff51}{get\+\_\+value} ()
+\begin{DoxyCompactList}\small\item\em Get Value function. \end{DoxyCompactList}\item 
+int \hyperlink{classExpirationDate_a8ef282d7a42caad75d156599620be08d}{get\+\_\+month} ()
+\begin{DoxyCompactList}\small\item\em Get month function. \end{DoxyCompactList}\item 
+int \hyperlink{classExpirationDate_afc44a74a98182eb61690c2e7e1521e1b}{get\+\_\+year} ()
+\begin{DoxyCompactList}\small\item\em Get year function. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classExpirationDate_a14430408ff2aa0f9388b9a1d34e63029}{validate} (std\+::string in\+\_\+value)
+\begin{DoxyCompactList}\small\item\em Validate function. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \hyperlink{classExpirationDate_ad7f3f57106f31c50573fc15792f8f784}{value\+\_\+}
+\begin{DoxyCompactList}\small\item\em \hyperlink{classExpirationDate}{Expiration\+Date}\textquotesingle{}s value. \end{DoxyCompactList}\item 
+int \hyperlink{classExpirationDate_ad51648c09ae9ed6dfceb14a00324295a}{month\+\_\+}
+\begin{DoxyCompactList}\small\item\em Month\textquotesingle{}s value. \end{DoxyCompactList}\item 
+int \hyperlink{classExpirationDate_a8311d413f31ed2b108dce8e790506cd7}{year\+\_\+}
+\begin{DoxyCompactList}\small\item\em Year\textquotesingle{}s value. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static const int \hyperlink{classExpirationDate_a33ebe65d3c314fc67fd972a0969b6a21}{k\+Size\+\_\+} = 5
+\begin{DoxyCompactList}\small\item\em \hyperlink{classExpirationDate}{Expiration\+Date} value\textquotesingle{}s size. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{classExpirationDate}{Expiration\+Date}. 
+
+Receives and validates date. 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Expiration\+Date@{Expiration\+Date}!Expiration\+Date@{Expiration\+Date}}
+\index{Expiration\+Date@{Expiration\+Date}!Expiration\+Date@{Expiration\+Date}}
+\subsubsection[{\texorpdfstring{Expiration\+Date(std\+::string in\+\_\+value)}{ExpirationDate(std::string in_value)}}]{\setlength{\rightskip}{0pt plus 5cm}Expiration\+Date\+::\+Expiration\+Date (
+\begin{DoxyParamCaption}
+\item[{std\+::string}]{in\+\_\+value}
+\end{DoxyParamCaption}
+)}\hypertarget{classExpirationDate_ada7d6416fcc75c1faafd578ae56c1ed7}{}\label{classExpirationDate_ada7d6416fcc75c1faafd578ae56c1ed7}
+
+
+Constructor. 
+
+Initializes \hyperlink{classExpirationDate}{Expiration\+Date} and validates its value, following the standards notion(D\+D/\+MM), where\+:
+
+MM is two digits number between 01 to 12, AA is the month\+: 00 to 99.
+
+
+\begin{DoxyParams}{Parameters}
+{\em in\+\_\+value} & a std\+::string type.\\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{classExpirationDate_a83f4b1ca035e44618f3ef9a09b38be65}{Expiration\+Date\+::set\+\_\+value(std\+::string in\+\_\+value)} 
+\end{DoxySeeAlso}
+
+
+\subsection{Member Function Documentation}
+\index{Expiration\+Date@{Expiration\+Date}!get\+\_\+month@{get\+\_\+month}}
+\index{get\+\_\+month@{get\+\_\+month}!Expiration\+Date@{Expiration\+Date}}
+\subsubsection[{\texorpdfstring{get\+\_\+month()}{get_month()}}]{\setlength{\rightskip}{0pt plus 5cm}int Expiration\+Date\+::get\+\_\+month (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classExpirationDate_a8ef282d7a42caad75d156599620be08d}{}\label{classExpirationDate_a8ef282d7a42caad75d156599620be08d}
+
+
+Get month function. 
+
+Returns month value. int type. \index{Expiration\+Date@{Expiration\+Date}!get\+\_\+value@{get\+\_\+value}}
+\index{get\+\_\+value@{get\+\_\+value}!Expiration\+Date@{Expiration\+Date}}
+\subsubsection[{\texorpdfstring{get\+\_\+value()}{get_value()}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string Expiration\+Date\+::get\+\_\+value (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classExpirationDate_a96a351141951ebc7eb9004f3f683ff51}{}\label{classExpirationDate_a96a351141951ebc7eb9004f3f683ff51}
+
+
+Get Value function. 
+
+Returns value. std\+::string type. \index{Expiration\+Date@{Expiration\+Date}!get\+\_\+year@{get\+\_\+year}}
+\index{get\+\_\+year@{get\+\_\+year}!Expiration\+Date@{Expiration\+Date}}
+\subsubsection[{\texorpdfstring{get\+\_\+year()}{get_year()}}]{\setlength{\rightskip}{0pt plus 5cm}int Expiration\+Date\+::get\+\_\+year (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classExpirationDate_afc44a74a98182eb61690c2e7e1521e1b}{}\label{classExpirationDate_afc44a74a98182eb61690c2e7e1521e1b}
+
+
+Get year function. 
+
+Returns year value. int type. \index{Expiration\+Date@{Expiration\+Date}!set\+\_\+value@{set\+\_\+value}}
+\index{set\+\_\+value@{set\+\_\+value}!Expiration\+Date@{Expiration\+Date}}
+\subsubsection[{\texorpdfstring{set\+\_\+value(std\+::string in\+\_\+value)}{set_value(std::string in_value)}}]{\setlength{\rightskip}{0pt plus 5cm}void Expiration\+Date\+::set\+\_\+value (
+\begin{DoxyParamCaption}
+\item[{std\+::string}]{in\+\_\+value}
+\end{DoxyParamCaption}
+)}\hypertarget{classExpirationDate_a83f4b1ca035e44618f3ef9a09b38be65}{}\label{classExpirationDate_a83f4b1ca035e44618f3ef9a09b38be65}
+
+
+Set Value function. 
+
+Sets valid values to \hyperlink{classExpirationDate}{Expiration\+Date}, called during its contruction.
+
+
+\begin{DoxyParams}{Parameters}
+{\em in\+\_\+value} & a std\+::string type.\\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{classDate_afc019031efa12fdb37066bc7fe287f66}{Date\+::validate(std\+::string in\+\_\+value)} 
+\end{DoxySeeAlso}
+\index{Expiration\+Date@{Expiration\+Date}!validate@{validate}}
+\index{validate@{validate}!Expiration\+Date@{Expiration\+Date}}
+\subsubsection[{\texorpdfstring{validate(std\+::string in\+\_\+value)}{validate(std::string in_value)}}]{\setlength{\rightskip}{0pt plus 5cm}void Expiration\+Date\+::validate (
+\begin{DoxyParamCaption}
+\item[{std\+::string}]{in\+\_\+value}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classExpirationDate_a14430408ff2aa0f9388b9a1d34e63029}{}\label{classExpirationDate_a14430408ff2aa0f9388b9a1d34e63029}
+
+
+Validate function. 
+
+Validates the \hyperlink{classExpirationDate}{Expiration\+Date} value set during its construction.
+
+It\textquotesingle{}s important to note that the only way year input is invalid is in the case which the in\+\_\+value has a length lesser than 5 and its digits is not a number, as every possible two number digits is satisfied in the standard(0 to 99). Therefore, the particular year substring value is not required to be check, in contrast to month(01 to 12).
+
+
+\begin{DoxyParams}{Parameters}
+{\em in\+\_\+value} & a std\+::string type.\\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{classExpirationDate_ada7d6416fcc75c1faafd578ae56c1ed7}{Expiration\+Date\+::\+Expiration\+Date(std\+::string in\+\_\+value)} 
+\end{DoxySeeAlso}
+
+
+\subsection{Member Data Documentation}
+\index{Expiration\+Date@{Expiration\+Date}!k\+Size\+\_\+@{k\+Size\+\_\+}}
+\index{k\+Size\+\_\+@{k\+Size\+\_\+}!Expiration\+Date@{Expiration\+Date}}
+\subsubsection[{\texorpdfstring{k\+Size\+\_\+}{kSize_}}]{\setlength{\rightskip}{0pt plus 5cm}const int Expiration\+Date\+::k\+Size\+\_\+ = 5\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}\hypertarget{classExpirationDate_a33ebe65d3c314fc67fd972a0969b6a21}{}\label{classExpirationDate_a33ebe65d3c314fc67fd972a0969b6a21}
+
+
+\hyperlink{classExpirationDate}{Expiration\+Date} value\textquotesingle{}s size. 
+
+Defines \hyperlink{classExpirationDate}{Expiration\+Date}\textquotesingle{}s standard size value. const static int value. \index{Expiration\+Date@{Expiration\+Date}!month\+\_\+@{month\+\_\+}}
+\index{month\+\_\+@{month\+\_\+}!Expiration\+Date@{Expiration\+Date}}
+\subsubsection[{\texorpdfstring{month\+\_\+}{month_}}]{\setlength{\rightskip}{0pt plus 5cm}int Expiration\+Date\+::month\+\_\+\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classExpirationDate_ad51648c09ae9ed6dfceb14a00324295a}{}\label{classExpirationDate_ad51648c09ae9ed6dfceb14a00324295a}
+
+
+Month\textquotesingle{}s value. 
+
+Value between 1 to 12. int type. \index{Expiration\+Date@{Expiration\+Date}!value\+\_\+@{value\+\_\+}}
+\index{value\+\_\+@{value\+\_\+}!Expiration\+Date@{Expiration\+Date}}
+\subsubsection[{\texorpdfstring{value\+\_\+}{value_}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string Expiration\+Date\+::value\+\_\+\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classExpirationDate_ad7f3f57106f31c50573fc15792f8f784}{}\label{classExpirationDate_ad7f3f57106f31c50573fc15792f8f784}
+
+
+\hyperlink{classExpirationDate}{Expiration\+Date}\textquotesingle{}s value. 
+
+It\textquotesingle{}s a sequence of 5 characters(M\+M/\+AA) between 0-\/9. std\+::string value. \index{Expiration\+Date@{Expiration\+Date}!year\+\_\+@{year\+\_\+}}
+\index{year\+\_\+@{year\+\_\+}!Expiration\+Date@{Expiration\+Date}}
+\subsubsection[{\texorpdfstring{year\+\_\+}{year_}}]{\setlength{\rightskip}{0pt plus 5cm}int Expiration\+Date\+::year\+\_\+\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classExpirationDate_a8311d413f31ed2b108dce8e790506cd7}{}\label{classExpirationDate_a8311d413f31ed2b108dce8e790506cd7}
+
+
+Year\textquotesingle{}s value. 
+
+Value between 2000 to 2099. int type. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{domain_8hpp}{domain.\+hpp}\end{DoxyCompactItemize}

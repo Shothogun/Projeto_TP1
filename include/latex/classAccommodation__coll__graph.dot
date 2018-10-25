@@ -1,0 +1,18 @@
+digraph "Accommodation"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="Accommodation",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node2 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" accommodation_type_" ];
+  Node2 [label="AccommodationType",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classAccommodationType.html",tooltip="AccommodationType. "];
+  Node3 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" daily_" ];
+  Node3 [label="DailyValue",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classDailyValue.html",tooltip="DailyValue. "];
+  Node4 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" identifier_" ];
+  Node4 [label="Identifier",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classIdentifier.html",tooltip="Identifier. "];
+  Node5 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" accommodation_capacity_" ];
+  Node5 [label="AccommodationCapacity",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classAccommodationCapacity.html",tooltip="AccommodationCapacity. "];
+  Node6 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" end_date_\nbegin_date_" ];
+  Node6 [label="Date",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classDate.html",tooltip="Date. "];
+  Node7 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" state_" ];
+  Node7 [label="State",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classState.html",tooltip="State. "];
+}

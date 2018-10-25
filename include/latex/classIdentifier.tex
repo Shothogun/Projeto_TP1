@@ -1,0 +1,142 @@
+\hypertarget{classIdentifier}{}\section{Identifier Class Reference}
+\label{classIdentifier}\index{Identifier@{Identifier}}
+
+
+\hyperlink{classIdentifier}{Identifier}.  
+
+
+
+
+{\ttfamily \#include $<$domain.\+hpp$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classIdentifier_a777a5c50de163535df8f8929c85b2050}{Identifier} (std\+::string in\+\_\+value)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+void \hyperlink{classIdentifier_a3b81a3f25b80dfe32cb7c7b116a2c766}{set\+\_\+value} (std\+::string in\+\_\+value)
+\begin{DoxyCompactList}\small\item\em Set Value function. \end{DoxyCompactList}\item 
+std\+::string \hyperlink{classIdentifier_a02abf893c9b651a8da1990f0e9213c41}{get\+\_\+value} ()
+\begin{DoxyCompactList}\small\item\em Get Value function. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classIdentifier_aaf7e66d94e93242e30b6a27ad4b057c1}{validate} (std\+::string in\+\_\+value)
+\begin{DoxyCompactList}\small\item\em Validate function. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \hyperlink{classIdentifier_acc41cf6f89bc5a8572fa474d2739fa28}{value\+\_\+}
+\begin{DoxyCompactList}\small\item\em \hyperlink{classIdentifier}{Identifier} value. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static const int \hyperlink{classIdentifier_a953b0225624bfcd43de7f8e3351e1dec}{k\+Size\+\_\+} = 5
+\begin{DoxyCompactList}\small\item\em \hyperlink{classIdentifier}{Identifier}\textquotesingle{}s size. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{classIdentifier}{Identifier}. 
+
+Receives and validates identifier. 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Identifier@{Identifier}!Identifier@{Identifier}}
+\index{Identifier@{Identifier}!Identifier@{Identifier}}
+\subsubsection[{\texorpdfstring{Identifier(std\+::string in\+\_\+value)}{Identifier(std::string in_value)}}]{\setlength{\rightskip}{0pt plus 5cm}Identifier\+::\+Identifier (
+\begin{DoxyParamCaption}
+\item[{std\+::string}]{in\+\_\+value}
+\end{DoxyParamCaption}
+)}\hypertarget{classIdentifier_a777a5c50de163535df8f8929c85b2050}{}\label{classIdentifier_a777a5c50de163535df8f8929c85b2050}
+
+
+Constructor. 
+
+Initializes \hyperlink{classIdentifier}{Identifier} and validates following the standards notion(X\+X\+X\+XX, all lowe-\/case letters a-\/z).
+
+
+\begin{DoxyParams}{Parameters}
+{\em in\+\_\+value} & a std\+::string type.\\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{classIdentifier_a3b81a3f25b80dfe32cb7c7b116a2c766}{Identifier\+::set\+\_\+value(std\+::string in\+\_\+value)} 
+\end{DoxySeeAlso}
+
+
+\subsection{Member Function Documentation}
+\index{Identifier@{Identifier}!get\+\_\+value@{get\+\_\+value}}
+\index{get\+\_\+value@{get\+\_\+value}!Identifier@{Identifier}}
+\subsubsection[{\texorpdfstring{get\+\_\+value()}{get_value()}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string Identifier\+::get\+\_\+value (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classIdentifier_a02abf893c9b651a8da1990f0e9213c41}{}\label{classIdentifier_a02abf893c9b651a8da1990f0e9213c41}
+
+
+Get Value function. 
+
+Returns value. std\+::string type. \index{Identifier@{Identifier}!set\+\_\+value@{set\+\_\+value}}
+\index{set\+\_\+value@{set\+\_\+value}!Identifier@{Identifier}}
+\subsubsection[{\texorpdfstring{set\+\_\+value(std\+::string in\+\_\+value)}{set_value(std::string in_value)}}]{\setlength{\rightskip}{0pt plus 5cm}void Identifier\+::set\+\_\+value (
+\begin{DoxyParamCaption}
+\item[{std\+::string}]{in\+\_\+value}
+\end{DoxyParamCaption}
+)}\hypertarget{classIdentifier_a3b81a3f25b80dfe32cb7c7b116a2c766}{}\label{classIdentifier_a3b81a3f25b80dfe32cb7c7b116a2c766}
+
+
+Set Value function. 
+
+Sets valid values to \hyperlink{classIdentifier}{Identifier}, called during its contruction.
+
+
+\begin{DoxyParams}{Parameters}
+{\em in\+\_\+value} & a std\+::string type.\\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{classIdentifier_aaf7e66d94e93242e30b6a27ad4b057c1}{Identifier\+::validate(std\+::string in\+\_\+value)} 
+\end{DoxySeeAlso}
+\index{Identifier@{Identifier}!validate@{validate}}
+\index{validate@{validate}!Identifier@{Identifier}}
+\subsubsection[{\texorpdfstring{validate(std\+::string in\+\_\+value)}{validate(std::string in_value)}}]{\setlength{\rightskip}{0pt plus 5cm}void Identifier\+::validate (
+\begin{DoxyParamCaption}
+\item[{std\+::string}]{in\+\_\+value}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classIdentifier_aaf7e66d94e93242e30b6a27ad4b057c1}{}\label{classIdentifier_aaf7e66d94e93242e30b6a27ad4b057c1}
+
+
+Validate function. 
+
+Validates the \hyperlink{classIdentifier}{Identifier} value set during its construction.
+
+
+\begin{DoxyParams}{Parameters}
+{\em in\+\_\+value} & a std\+::string type.\\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{classIdentifier_a777a5c50de163535df8f8929c85b2050}{Identifier\+::\+Identifier(std\+::string in\+\_\+value)} 
+\end{DoxySeeAlso}
+
+
+\subsection{Member Data Documentation}
+\index{Identifier@{Identifier}!k\+Size\+\_\+@{k\+Size\+\_\+}}
+\index{k\+Size\+\_\+@{k\+Size\+\_\+}!Identifier@{Identifier}}
+\subsubsection[{\texorpdfstring{k\+Size\+\_\+}{kSize_}}]{\setlength{\rightskip}{0pt plus 5cm}const int Identifier\+::k\+Size\+\_\+ = 5\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}\hypertarget{classIdentifier_a953b0225624bfcd43de7f8e3351e1dec}{}\label{classIdentifier_a953b0225624bfcd43de7f8e3351e1dec}
+
+
+\hyperlink{classIdentifier}{Identifier}\textquotesingle{}s size. 
+
+Defines \hyperlink{classIdentifier}{Identifier}\textquotesingle{}s standard size value. const static int value. \index{Identifier@{Identifier}!value\+\_\+@{value\+\_\+}}
+\index{value\+\_\+@{value\+\_\+}!Identifier@{Identifier}}
+\subsubsection[{\texorpdfstring{value\+\_\+}{value_}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string Identifier\+::value\+\_\+\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classIdentifier_acc41cf6f89bc5a8572fa474d2739fa28}{}\label{classIdentifier_acc41cf6f89bc5a8572fa474d2739fa28}
+
+
+\hyperlink{classIdentifier}{Identifier} value. 
+
+It\textquotesingle{}s a sequence of 5 letter(\+X\+X\+X\+X\+X) lower-\/case. std\+::string type. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{domain_8hpp}{domain.\+hpp}\end{DoxyCompactItemize}

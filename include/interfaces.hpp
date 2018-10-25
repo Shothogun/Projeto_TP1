@@ -12,7 +12,7 @@ class IUAuthentication
 {
   public:
     virtual int authenticate() = 0;
-    virtual void setCntrServAutenticate(IServAuthentication *server) = 0;
+    virtual void setCntrServAuthentication(IServAuthentication *server) = 0;
     virtual ~IUAuthentication(){};
 };
 
@@ -23,7 +23,16 @@ class IServAuthentication
     virtual ~IServAuthentication();
 };
 
-class IUAccommodation;
-class IServAccommodation;
+class IUUser
+{
+  public:
+  private:
+};
+
+class IServUser
+{
+  public:
+  private:
+};
 
 #endif 

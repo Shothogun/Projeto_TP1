@@ -7,9 +7,19 @@
 
 using namespace std;
 
-class CntrIUAuthentication
+class CntrIUAuthentication : public IUAuthentication
 {
+  public:
+    int autenticar();
+    void setCntrServAuthentication(IServAuthentication*);
 
+  private:
+    IServAuthentication* cntr_serv_authentication_;
+};
+
+void inline CntrIUAuthentication::setCntrServAuthentication(IServAuthentication* cntr_serv_authentication)
+{
+  this->cntr_serv_authentication_= cntr_serv_authentication; 
 };
 
 #endif

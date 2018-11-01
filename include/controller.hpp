@@ -2,6 +2,7 @@
 #define PROJETO_TP1_CONTROLLER_HPP
 
 #include "../include/domain.hpp"
+#include "../include/entity.hpp"
 #include "../include/interfaces.hpp"
 
 
@@ -23,7 +24,7 @@ class CntrIUAuthentication : public IUAuthentication
 void inline CntrIUAuthentication::setCntrServAuthentication(IServAuthentication* cntr_serv_authentication)
 {
   this->cntr_serv_authentication_= cntr_serv_authentication; 
-};
+}
 
 // User entity's controller 
 class CntrIUUser : public IUUser
@@ -51,6 +52,6 @@ class CntrIUUser : public IUUser
 void inline CntrIUUser::setCntrServUser(IServUser* cntr_serv_user)
 {
   this->cntrServUser = cntr_serv_user;
-};
+}
 
 #endif

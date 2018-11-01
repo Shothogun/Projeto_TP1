@@ -36,6 +36,7 @@ class Agency
 
 				\sa Agency::set_value(std::string in_value)	
 		*/
+		Agency();
 		Agency(std::string in_value);
 
 		//! Set Value function
@@ -102,6 +103,7 @@ class Bank
 
 				\sa Bank::set_value(std::string in_value)	
 		*/
+		Bank(){};
 		Bank(std::string in_value);
 
 		//! Set Value function
@@ -166,6 +168,7 @@ class AccommodationCapacity
 
 				\sa AccommodationCapacity::set_value(std::string in_value)	
 		*/
+		AccommodationCapacity(){};
 		AccommodationCapacity(std::string in_value);
 
 		//!	Set Value function
@@ -232,6 +235,7 @@ class DailyValue
 
 				\sa DailyValue::set_value(std::string in_value)	
 		*/
+		DailyValue(){};
 		DailyValue(std::string in_value);
 
 		//!	Set Value function
@@ -314,6 +318,7 @@ class Date
 
 				\sa Date::set_value(std::string in_value)	
 		*/
+		Date(){};
 		Date(std::string in_value);
 
 		//!	Set Value function
@@ -458,6 +463,7 @@ class ExpirationDate
 
 				\sa ExpirationDate::set_value(std::string in_value)	
 		*/
+		ExpirationDate(){};
 		ExpirationDate(std::string in_value);
 
 		//!	Set Value function
@@ -561,6 +567,7 @@ class State
 
 				\sa State::set_value(std::string in_value)	
 		*/
+		State(){};
 		State(std::string in_value);
 
 		//!	Set Value function
@@ -648,6 +655,7 @@ class Identifier
 
 				\sa Identifier::set_value(std::string in_value)	
 		*/
+		Identifier(){};
 		Identifier(std::string in_value);
 
 		//!	Set Value function
@@ -713,6 +721,7 @@ class Name
 
 				\sa Name::set_value(std::string in_value)	
 		*/
+		Name(){};
 		Name(std::string in_value);
 
 		//!	Set Value function
@@ -797,6 +806,7 @@ class CreditCardNumber
 
 				\sa CreditCardNumber::set_value(std::string in_value)	
 		*/
+		CreditCardNumber(){};
 		CreditCardNumber(std::string in_value);
 
 		//! Set Value function
@@ -863,6 +873,7 @@ class AccountNumber
 
 				\sa AccountNumber::set_value(std::string in_value)	
 		*/
+		AccountNumber(){};
 		AccountNumber(std::string in_value);
 
 		//! Set Value function
@@ -929,6 +940,7 @@ class Password
 
 				\sa Password::set_value(std::string in_value)	
 		*/
+		Password(){};
 		Password(std::string in_value);
 
 		//!	Set Value function
@@ -1009,6 +1021,7 @@ class AccommodationType
 
 				\sa AccommodationType::set_value(std::string in_value)	
 		*/
+		AccommodationType(){};
 		AccommodationType(std::string in_value);
 
 		//! Set Value function

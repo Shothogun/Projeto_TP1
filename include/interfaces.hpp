@@ -18,13 +18,13 @@ class IUAuthentication
 {
   public:
     // Authentication service's solicitation method 
-    virtual int authenticate() throw(runtime_error) = 0;
+    virtual FeedbackAuthentication authenticate() throw(runtime_error) = 0;
 
     // Service's layer Authentication controller linking method
     virtual void setCntrServAuthentication(IServAuthentication *server) = 0;
 
     // Virtual Destructor method
-    virtual ~IUAuthentication(){};
+    virtual ~IUAuthentication(){}
 };
 
 // Authentication Service's interface. Executes
@@ -36,10 +36,10 @@ class IServAuthentication
 {
   public:
     // Authentication service's solicitation method 
-    virtual int authenticate(const Identifier&, const Password&) throw(runtime_error) = 0;
+    virtual Feedback authenticate(const Identifier&, const Password&) throw(runtime_error) = 0;
     
     // Virtual Destructor method
-    virtual ~IServAuthentication();
+    virtual ~IServAuthentication(){}
 };
 
 // User entity User's interface. Communicates
@@ -59,7 +59,7 @@ class IUUser
     virtual void setCntrUser(IServUser* ) = 0;
 
     // Virtual Destructor method
-    virtual ~IUUser();
+    virtual ~IUUser(){}
 
 };
 
@@ -70,23 +70,12 @@ class IServUser
 {
   public:
     // User entity service's solicitation method
-    virtual int include(const User&) throw(runtime_error) = 0;
-    virtual int remove(const Identifier&) throw(runtime_error) = 0;
-    virtual int seek(const Identifier&) throw(runtime_error) = 0;
-    virtual int update(const User&) throw(runtime_error)= 0;
+    virtual Feedback include(const User&) throw(runtime_error) = 0;
+    virtual Feedback remove(const Identifier&) throw(runtime_error) = 0;
+    virtual FeedbackUser seek(const Identifier&) throw(runtime_error) = 0;
+    virtual Feedback update(const User&) throw(runtime_error)= 0;
 
     // Virtual Destructor method
-    virtual ~IServUser();
+    virtual ~IServUser(){}
 };
-
-class IUAccommodation
-{
-
-};
-
-class IServAccommodation
-{
-
-};
-
 #endif 

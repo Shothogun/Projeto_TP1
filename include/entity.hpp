@@ -368,4 +368,63 @@ class Account{
             return this->bank_;
         }
 };
+
+// Class Feedback represents success of operations 
+class Feedback 
+{
+  protected:
+  	int value;
+
+	public:
+		const static int kSuccess_ = 0;
+		const static int kFail_ = 1;
+
+		void set_value(int value)
+		{
+				this->value = value;
+		}
+
+		int get_value() const
+		{
+				return this->value;
+		}
+};
+
+// Class FeedbackAuthentication represents success of Authentication module 
+
+class FeedbackAuthentication: public Feedback
+{
+	private:
+		Identifier identifier;
+
+	public:
+		void set_identifier(const Identifier &identifier)
+		{
+			this->identifier = identifier;
+		}
+
+		Identifier get_identifier() const
+		{
+			return this->identifier;
+		}
+};
+
+// Class FeedbackUser represents success of User module 
+class FeedbackUser: public Feedback
+{
+	private:
+		User user;
+
+	public:
+		void set_user(const User &user)
+		{
+			this->user = user;
+		}
+
+		User get_user() const
+		{
+			return this->user;
+		}
+};
+
 #endif	// PROJETO_TP1_ENTITY_H

@@ -1,10 +1,12 @@
 #ifndef PROJETO_TP1_CONTROLLER_HPP
 #define PROJETO_TP1_CONTROLLER_HPP
 
-#include "../include/domain.hpp"
-#include "../include/entity.hpp"
 #include "../include/interfaces.hpp"
+#include "../include/domain.hpp"
 
+#include <stdexcept>
+#include <iostream>
+#include <cstdlib>
 
 using namespace std;
 
@@ -13,7 +15,7 @@ using namespace std;
 class CntrIUAuthentication : public IUAuthentication
 {
   public:
-    int authenticate() throw(runtime_error);
+    FeedbackAuthentication authenticate() throw(runtime_error);
     void setCntrServAuthentication(IServAuthentication*);
 
   private:

@@ -1,14 +1,17 @@
 #include "../include/controller.hpp"
-#define ERROR 23
 
-int CntrIUAuthentication::authenticate() throw(runtime_error)
+FeedbackAuthentication CntrIUAuthentication::authenticate() throw(runtime_error)
 {
   Identifier* identifier = new Identifier();
   Password* password = new Password();
-  int authentication_feedback = 0;
-  int feedback = 0;
+  FeedbackAuthentication authentication_feedback;
+  Feedback feedback;
   std::string id_input;
   std::string password_input;
+
+  // ====================================
+  //    Solicitar Identificador e senha
+  // ====================================
   
   while (true)
   {
@@ -38,7 +41,20 @@ int CntrIUAuthentication::authenticate() throw(runtime_error)
 
   // Authentication result
 
+  if(feedback.get_value() == FeedbackAuthentication::kFail_)
+  {
+    cout << std::endl << "Falha na autenticação." << std::endl;
+  }
+
+  authentication_feedback.set_value(feedback.get_value());
+  authentication_feedback.set_identifier(*identifier);
+
   return authentication_feedback;
+}
+
+void CntrIUUser::execute(const Identifier &identifier) throw(runtime_error)
+{
+  
 }
 
 

@@ -11,6 +11,9 @@ using namespace std;
 // by interaction through text interface in the user layer.
 //=========================================================
 
+class IUAuthentication;
+class IServAuthentication;
+
 class IUAuthentication
 {
   public:
@@ -42,6 +45,9 @@ class IServAuthentication
 // User entity User's interface. Communicates
 // by interaction through text interface in the user layer.
 //=========================================================
+
+class IUUSer;
+class IServUser;
 
 class IUUser
 {

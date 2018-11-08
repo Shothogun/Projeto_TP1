@@ -4,8 +4,8 @@
 
 FeedbackAuthentication CntrIUAuthentication::authenticate() throw(runtime_error)
 {
-  Identifier* identifier = new Identifier();
-  Password* password = new Password();
+  Identifier identifier;
+  Password password;
   FeedbackAuthentication authentication_feedback;
   Feedback feedback;
   std::string id_input;
@@ -22,12 +22,12 @@ FeedbackAuthentication CntrIUAuthentication::authenticate() throw(runtime_error)
       cout << "Digite o identificador: ";
       cin >> id_input;
 
-      identifier->set_value(id_input);
+      identifier.set_value(id_input);
 
       cout << "Digite a senha: ";
       cin >> password_input;
 
-      password->set_value(password_input);
+      password.set_value(password_input);
       break;      
     }
 
@@ -39,7 +39,7 @@ FeedbackAuthentication CntrIUAuthentication::authenticate() throw(runtime_error)
 
   // Authentication solicitation
 
-  feedback = this->cntr_serv_authentication_->authenticate(*identifier, *password);
+  feedback = this->cntr_serv_authentication_->authenticate(identifier, password);
 
   // Authentication result
 
@@ -49,14 +49,14 @@ FeedbackAuthentication CntrIUAuthentication::authenticate() throw(runtime_error)
   }
 
   authentication_feedback.set_value(feedback.get_value());
-  authentication_feedback.set_identifier(*identifier);
+  authentication_feedback.set_identifier(identifier);
 
   return authentication_feedback;
 }
 
 void CntrIUUser::execute(const Identifier &identifier) throw(runtime_error)
 {
-  CommandIUUser *comand;
+  CommandIUUser *command;
 
   int option;
 
@@ -64,7 +64,11 @@ void CntrIUUser::execute(const Identifier &identifier) throw(runtime_error)
   {
     // Clean terminal's screen
 
-    // system("CLS");
+    // #ifdef WIN32
+    //   system("CLS");
+	  // #else
+		//   system("clear");
+	  // #endif
 
     // Show options
 
@@ -81,24 +85,24 @@ void CntrIUUser::execute(const Identifier &identifier) throw(runtime_error)
 
     switch(option)
     {
-      case kInclude_:  comand = new CommandIUUserInclude();
-                       comand->execute(this->cntrServUser);
-                       delete comand;
+      case kInclude_:  command = new CommandIUUserInclude();
+                       command->execute(this->cntrServUser);
+                       delete command;
                        break;
         
-      case kRemove_:   comand = new CommandIUUserRemove();
-                       comand->execute(this->cntrServUser);
-                       delete comand;
+      case kRemove_:   command = new CommandIUUserRemove();
+                       command->execute(this->cntrServUser);
+                       delete command;
                        break;
 
-      case kSeek_:     comand = new CommandIUUserSeek();
-                       comand->execute(this->cntrServUser);
-                       delete comand;
+      case kSeek_:     command = new CommandIUUserSeek();
+                       command->execute(this->cntrServUser);
+                       delete command;
                        break;
 
-      case kUpdate_:   comand = new CommandIUUserUpdate();
-                       comand->execute(this->cntrServUser);
-                       delete comand;
+      case kUpdate_:   command = new CommandIUUserUpdate();
+                       command->execute(this->cntrServUser);
+                       delete command;
                        break;
 
     }

@@ -159,5 +159,6 @@ void CommandIUUserUpdate::execute(IServUser* cntr_serv_user) throw(runtime_error
     cout << "Falha na execucao da operacao" << endl;
   }
 
+  delete user;
   delete identifier;
 }

@@ -12,7 +12,7 @@ using namespace std;
 
 // Authentication User's layer controller
 
-class CntrIUAuthentication : public IUAuthentication
+class CntrIUAuthentication :public IUAuthentication
 {
   public:
     FeedbackAuthentication authenticate() throw(runtime_error);
@@ -25,11 +25,11 @@ class CntrIUAuthentication : public IUAuthentication
 
 void inline CntrIUAuthentication::setCntrServAuthentication(IServAuthentication* cntr_serv_authentication)
 {
-  this->cntr_serv_authentication_= cntr_serv_authentication; 
+  this->cntr_serv_authentication_ = cntr_serv_authentication;
 }
 
 // User entity's controller 
-class CntrIUUser : public IUUser
+class CntrIUUser :public IUUser
 {
   public:
     // Interface's declared method.

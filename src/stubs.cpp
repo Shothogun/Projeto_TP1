@@ -15,7 +15,7 @@ Feedback StubServAuthentication::authenticate(const Identifier &identifier, cons
 
   if(identifier.get_value().compare(kTriggerFail_) == kEqual_)
   {
-    feedback.set_value(FeedbackAuthentication::kSuccess_);
+    feedback.set_value(FeedbackAuthentication::kFail_);
   }
 
   else if(identifier.get_value().compare(KSystemError_) == kEqual_)
@@ -45,7 +45,7 @@ Feedback StubServUser::include(const User &user) throw(runtime_error)
 
   if(user.get_identifier()->get_value().compare(kTriggerFail_) == kEqual_)
   {
-    feedback.set_value(FeedbackAuthentication::kSuccess_);
+    feedback.set_value(FeedbackAuthentication::kFail_);
   }
 
   else if(user.get_identifier()->get_value().compare(KSystemError_) == kEqual_)
@@ -75,7 +75,7 @@ Feedback StubServUser::remove(const Identifier &identifier) throw (runtime_error
 
   if(identifier.get_value().compare(kTriggerFail_) == kEqual_)
   {
-    feedback.set_value(FeedbackAuthentication::kSuccess_);
+    feedback.set_value(FeedbackAuthentication::kFail_);
   }
 
   else if(identifier.get_value().compare(KSystemError_) == kEqual_)
@@ -105,7 +105,7 @@ FeedbackUser StubServUser::seek(const Identifier &identifier) throw (runtime_err
 
   if(identifier.get_value().compare(kTriggerFail_) == kEqual_)
   {
-    feedback.set_value(FeedbackAuthentication::kSuccess_);
+    feedback.set_value(FeedbackAuthentication::kFail_);
   }
 
   else if(identifier.get_value().compare(KSystemError_) == kEqual_)
@@ -135,7 +135,7 @@ Feedback StubServUser::update(const User &user) throw (runtime_error)
 
   if(user.get_identifier()->get_value().compare(kTriggerFail_) == kEqual_)
   {
-    feedback.set_value(FeedbackAuthentication::kSuccess_);
+    feedback.set_value(FeedbackAuthentication::kFail_);
   }
 
   else if(user.get_identifier()->get_value().compare(KSystemError_) == kEqual_)

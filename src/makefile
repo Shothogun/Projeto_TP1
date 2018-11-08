@@ -31,11 +31,11 @@ $(ODIR)/%.o: %.cpp $(DEPS)
 $(ODIR)/%.o: $(T_SDIR)/%.cpp $(DEPS)
 	$(CC) -c -o $@ $< $(CXXFLAGS) $(DEBUG)
 
-test: $(T_OBJ)
-	$(CC) -o $(T_EDIR)/$@ $^ $(CXXFLAGS) $(LIBS) $(DEBUG)
-
 main: $(OBJ)
 	$(CC) -o $(EDIR)/$@ $^ $(CXXFLAGS) $(LIBS) $(DEBUG)
+
+test: $(T_OBJ)
+	$(CC) -o $(T_EDIR)/$@ $^ $(CXXFLAGS) $(LIBS) $(DEBUG)
 
 .PHONY: clean
 

@@ -1,5 +1,5 @@
 #ifndef PROJETO_TP1_INTERFACES_HPP
-#define PROJETO_TP1_INTERFACEX_HPP
+#define PROJETO_TP1_INTERFACES_HPP
 
 #include "../include/domain.hpp"
 #include "../include/entity.hpp"
@@ -11,8 +11,8 @@ using namespace std;
 // by interaction through text interface in the user layer.
 //=========================================================
 
-class IUAuthentication;
 class IServAuthentication;
+class IServUser;
 
 class IUAuthentication
 {
@@ -21,7 +21,7 @@ class IUAuthentication
     virtual FeedbackAuthentication authenticate() throw(runtime_error) = 0;
 
     // Service's layer Authentication controller linking method
-    virtual void setCntrServAuthentication(IServAuthentication *server) = 0;
+    virtual void setCntrServAuthentication(IServAuthentication *cntr_serv_authentication) = 0;
 
     // Virtual Destructor method
     virtual ~IUAuthentication(){}
@@ -46,9 +46,6 @@ class IServAuthentication
 // by interaction through text interface in the user layer.
 //=========================================================
 
-class IUUSer;
-class IServUser;
-
 class IUUser
 {
   public:
@@ -56,7 +53,7 @@ class IUUser
     virtual void execute(const Identifier&) throw(runtime_error) = 0;
 
     // Service's layer User controller linking method
-    virtual void setCntrUser(IServUser* ) = 0;
+    virtual void setCntrServUser(IServUser* ) = 0;
 
     // Virtual Destructor method
     virtual ~IUUser(){}

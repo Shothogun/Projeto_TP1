@@ -15,14 +15,12 @@ class StubServAuthentication:public IServAuthentication
 
   // Error's notification trigger
 
-  const static std::string kTriggerFail_;
-  const static std::string KSystemError_;
+  const static int kEqual_ = 0;
+  const std::string kTriggerFail_ = "abcde";
+  const std::string KSystemError_ = "syser";
 
   Feedback authenticate(const Identifier&, const Password&) throw(runtime_error);
 };
-
-const std::string StubServAuthentication::kTriggerFail_ = "abcde";
-const std::string StubServAuthentication::KSystemError_ = "syser";
 
 // Interface's IServUser stub
 
@@ -32,8 +30,9 @@ class StubServUser: public IServUser
 
   // Error's notification trigger
 
-  const static std::string kTriggerFail_;
-  const static std::string KSystemError_;
+  const static int kEqual_ = 0;
+  const std::string kTriggerFail_ = "abcde";
+  const std::string KSystemError_ = "syser";
 
   Feedback include(const User&) throw(runtime_error);
   Feedback remove(const Identifier&) throw(runtime_error);
@@ -41,6 +40,4 @@ class StubServUser: public IServUser
   Feedback update(const User&) throw(runtime_error);
 };
 
-const std::string StubServUser::kTriggerFail_ = "abcde";
-const std::string StubServUser::kTriggerFail_ = "syser";
 #endif

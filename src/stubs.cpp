@@ -13,12 +13,12 @@ Feedback StubServAuthentication::authenticate(const Identifier &identifier, cons
 
   // Actions according to identifier value
 
-  if(identifier.get_value().compare(kTriggerFail_))
+  if(identifier.get_value().compare(kTriggerFail_) == kEqual_)
   {
-    feedback.set_value(FeedbackAuthentication::kSuccess_);
+    feedback.set_value(FeedbackAuthentication::kFail_);
   }
 
-  else if(identifier.get_value().compare(KSystemError_))
+  else if(identifier.get_value().compare(KSystemError_) == kEqual_)
   {
     throw runtime_error("Erro de sistema");
   }
@@ -29,4 +29,125 @@ Feedback StubServAuthentication::authenticate(const Identifier &identifier, cons
   }
   
   return feedback;
+}
+
+Feedback StubServUser::include(const User &user) throw(runtime_error)
+{
+  // Show input data
+
+  cout << std::endl << "StubServUser::include" << std::endl;
+
+  Feedback feedback;
+
+  feedback.set_value(Feedback::kSuccess_);
+
+  // Actions according to identifier value
+
+  if(user.get_identifier()->get_value().compare(kTriggerFail_) == kEqual_)
+  {
+    feedback.set_value(FeedbackAuthentication::kFail_);
+  }
+
+  else if(user.get_identifier()->get_value().compare(KSystemError_) == kEqual_)
+  {
+    throw runtime_error("Erro de sistema");
+  }
+
+  else
+  {
+    feedback.set_value(FeedbackAuthentication::kSuccess_);
+  }
+
+  return feedback;
+}
+
+Feedback StubServUser::remove(const Identifier &identifier) throw (runtime_error)
+{
+   // Show input data
+
+  cout << std::endl << "StubServUser::remove" << std::endl;
+
+  Feedback feedback;
+
+  feedback.set_value(Feedback::kSuccess_);
+
+  // Actions according to identifier value
+
+  if(identifier.get_value().compare(kTriggerFail_) == kEqual_)
+  {
+    feedback.set_value(FeedbackAuthentication::kFail_);
+  }
+
+  else if(identifier.get_value().compare(KSystemError_) == kEqual_)
+  {
+    throw runtime_error("Erro de sistema");
+  }
+
+  else
+  {
+    feedback.set_value(FeedbackAuthentication::kSuccess_);
+  }
+
+  return feedback;
+}
+
+FeedbackUser StubServUser::seek(const Identifier &identifier) throw (runtime_error)
+{
+  // Show input data
+
+  cout << std::endl << "StubServUser::seek" << std::endl;
+
+  FeedbackUser feedback;
+
+  feedback.set_value(Feedback::kSuccess_);
+
+  // Actions according to identifier value
+
+  if(identifier.get_value().compare(kTriggerFail_) == kEqual_)
+  {
+    feedback.set_value(FeedbackAuthentication::kFail_);
+  }
+
+  else if(identifier.get_value().compare(KSystemError_) == kEqual_)
+  {
+    throw runtime_error("Erro de sistema");
+  }
+
+  else
+  {
+    feedback.set_value(FeedbackAuthentication::kSuccess_);
+  }
+
+  return feedback;
+}
+
+Feedback StubServUser::update(const User &user) throw (runtime_error)
+{
+  // Show input data
+
+  cout << std::endl << "StubServUser::update" << std::endl;
+
+  FeedbackUser feedback;
+
+  feedback.set_value(Feedback::kSuccess_);
+
+  // Actions according to identifier value
+
+  if(user.get_identifier()->get_value().compare(kTriggerFail_) == kEqual_)
+  {
+    feedback.set_value(FeedbackAuthentication::kFail_);
+  }
+
+  else if(user.get_identifier()->get_value().compare(KSystemError_) == kEqual_)
+  {
+    throw runtime_error("Erro de sistema");
+  }
+
+  else
+  {
+    feedback.set_value(FeedbackAuthentication::kSuccess_);
+  }
+
+  return feedback;
+
 }

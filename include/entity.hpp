@@ -372,22 +372,22 @@ class Account{
 // Class Feedback represents success of operations 
 class Feedback 
 {
-  protected:
-  	int value;
+    protected:
+  	    int value;
 
-	public:
-		const static int kSuccess_ = 0;
-		const static int kFail_ = 1;
+    public:
+        const static int kSuccess_ = 0;
+        const static int kFail_ = 1;
 
-		void set_value(int value)
-		{
-				this->value = value;
-		}
+        void set_value(int value)
+        {
+                this->value = value;
+        }
 
-		int get_value() const
-		{
-				return this->value;
-		}
+        int get_value() const
+        {
+                return this->value;
+        }
 };
 
 // Class FeedbackAuthentication represents success of Authentication module 

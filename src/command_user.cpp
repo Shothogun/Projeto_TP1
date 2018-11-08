@@ -7,8 +7,6 @@ void CommandIUUserInclude::execute(IServUser* cntr_serv_user) throw(runtime_erro
   Feedback feedback;
   User* user = new User();
 
-  // User interaction message
-
   while(true)
   {
     try
@@ -48,8 +46,6 @@ void CommandIUUserRemove::execute(IServUser* cntr_serv_user) throw(runtime_error
 {
   Feedback feedback;
   Identifier* identifier = new Identifier();
-
-  // User interaction message
 
   while(true)
   {
@@ -92,11 +88,21 @@ void CommandIUUserSeek::execute(IServUser* cntr_serv_user) throw (runtime_error)
 
   // User interaction message
 
-  // =========================
-  // =========================
-  //   Codigo de acesso a BD
-  // =========================
-  // =========================
+  while(true)
+  {
+    try
+    {
+      std::string input;
+      cout << "Digite o identificador";
+      cin >> input;
+      identifier->set_value(input);
+      break;
+    }
+    catch(invalid_argument &exp)
+    {
+      cout << "Identificador com formato incorreto";
+    }
+  }
 
   feedback = cntr_serv_user->seek(*identifier);
 
@@ -121,14 +127,21 @@ void CommandIUUserUpdate::execute(IServUser* cntr_serv_user) throw(runtime_error
   User* user = new User();
   Identifier* identifier = new Identifier();
 
-
-  // User interaction message
-
-  // =========================
-  // =========================
-  //   Codigo de acesso a BD
-  // =========================
-  // =========================
+  while(true)
+  {
+    try
+    {
+      std::string input;
+      cout << "Digite o identificador";
+      cin >> input;
+      identifier->set_value(input);
+      break;
+    }
+    catch(invalid_argument &exp)
+    {
+      cout << "Identificador com formato incorreto";
+    }
+  }
 
   feedback.set_value(Feedback::kSuccess_);
 

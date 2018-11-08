@@ -116,7 +116,7 @@ class Accommodation
         /*!
             Returns object identifier_ from Accommodation.
         */
-        Identifier* get_identifier(){
+        Identifier* get_identifier() const{
             return this->identifier_;
         }
 
@@ -135,7 +135,7 @@ class Accommodation
         /*!
             Returns object accommodation_type_ from Accommodation.
         */
-        AccommodationType* get_accommodation_type(){
+        AccommodationType* get_accommodation_type() const{
             return this->accommodation_type_;
         }
 
@@ -154,7 +154,7 @@ class Accommodation
         /*!
             Returns object accommodation_capacity_ from Accommodation.
         */
-        AccommodationCapacity* get_accommodation_capacity(){
+        AccommodationCapacity* get_accommodation_capacity() const{
             return this->accommodation_capacity_;
         }
 
@@ -174,7 +174,7 @@ class Accommodation
         /*!
             Returns object begin_date_ from Accommodation.
         */
-        Date* get_begin_date(){
+        Date* get_begin_date() const{
             return this->begin_date_;
         }
 
@@ -193,7 +193,7 @@ class Accommodation
         /*!
             Returns object end_date_ from Accommodation.
         */
-        Date* get_end_date(){
+        Date* get_end_date() const{
             return this->end_date_;
         }
 
@@ -212,7 +212,7 @@ class Accommodation
         /*!
             Returns object state_ from Accommodation.
         */
-        State* get_state(){
+        State* get_state() const{
             return this->state_;
         }
 
@@ -231,7 +231,7 @@ class Accommodation
         /*!
             Returns object daily_ from Accommodation.
         */
-        DailyValue* get_daily(){
+        DailyValue* get_daily() const{
             return this->daily_;
         }
 };
@@ -268,7 +268,7 @@ class CreditCard{
         /*!
             Returns object number_ from CreditCard.
         */
-        CreditCardNumber* get_number(){
+        CreditCardNumber* get_number() const{
             return this->number_;
         }
 
@@ -279,7 +279,7 @@ class CreditCard{
             Set object expiration_ to CreditCard.
             \param expiration_ of class ExpirationDate.
         */
-        void set_expiration(ExpirationDate* expiration_){
+        void set_expiration(ExpirationDate* expiration_) {
             this->expiration_ = expiration_;
         }
 
@@ -287,7 +287,7 @@ class CreditCard{
         /*!
             Returns object expiration_ from CreditCard.
         */
-        ExpirationDate* get_expiration(){
+        ExpirationDate* get_expiration() const{
             return this->expiration_;
         }
 };
@@ -326,7 +326,7 @@ class Account{
         /*!
             Returns object number_ from Account.
         */
-        AccountNumber* get_number(){
+        AccountNumber* get_number() const{
             return this->number_;
         }
 
@@ -345,7 +345,7 @@ class Account{
         /*!
             Returns object agency_ from Account.
         */
-        Agency* get_agency(){
+        Agency* get_agency() const{
             return this->agency_;
         }
 
@@ -364,7 +364,7 @@ class Account{
         /*!
             Returns object bank_ from Account.
         */
-        Bank* get_bank(){
+        Bank* get_bank() const{
             return this->bank_;
         }
 };

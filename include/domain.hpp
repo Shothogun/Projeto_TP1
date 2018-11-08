@@ -53,7 +53,7 @@ class Agency
 		/*! 
 			Returns Agency value. std::string type.
 		*/
-		std::string get_value();
+		std::string get_value() const;
 
 	private:
 
@@ -81,7 +81,7 @@ class Agency
 		
 };
 
-inline std::string Agency::get_value() 
+inline std::string Agency::get_value() const
 {
 	return (this->value_);
 }
@@ -120,7 +120,7 @@ class Bank
 		/*! 
 				Returns Bank value. std::string type
 		*/
-		std::string get_value();
+		std::string get_value() const;
 
 	private:
 
@@ -147,7 +147,7 @@ class Bank
 		void validate(std::string in_value);
 };
 
-inline std::string Bank::get_value() 
+inline std::string Bank::get_value() const
 {
 	return (this->value_);
 }
@@ -185,7 +185,7 @@ class AccommodationCapacity
 		/*!
 				Returns value. std::string type.
 		*/
-		std::string get_value();
+		std::string get_value() const;
 
   private: 
 
@@ -214,7 +214,7 @@ class AccommodationCapacity
  
 };
  
-inline std::string AccommodationCapacity::get_value()  
+inline std::string AccommodationCapacity::get_value() const
 { 
   return (this->value_); 
 }
@@ -252,7 +252,7 @@ class DailyValue
 		/*! 
 				Returns value. std::string type.
 		*/
-		std::string get_value();
+		std::string get_value() const;
 
 	private:
 
@@ -292,7 +292,7 @@ class DailyValue
 		void validate(std::string in_value_);
 };
 
-inline std::string DailyValue::get_value()
+inline std::string DailyValue::get_value() const
 {
 	return (this->value_);
 }
@@ -335,25 +335,25 @@ class Date
 		/*!
 				Returns value. std::string type.
 		*/
-		std::string get_value();
+		std::string get_value() const;
 
 		//! Get day function
 		/*!
 				Returns day value. int type.
 		*/
-		int get_day();
+		int get_day() const;
 
 		//! Get month function
 		/*!
 				Returns month value. int type.
 		*/
-		int get_month();
+		int get_month() const;
 
 		//! Get year function
 		/*!
 				Returns year value. int type.
 		*/
-		int get_year();
+		int get_year() const;
 
 	private:
 		//! Date value's size
@@ -423,22 +423,22 @@ class Date
 
 };
 
-inline std::string Date::get_value()
+inline std::string Date::get_value() const
 {
 	return (this->value_);
 }
 
-inline int Date::get_day()
+inline int Date::get_day() const
 {
 	return (this->day_);
 }
 
-inline int Date::get_month()
+inline int Date::get_month() const
 {
 	return (this->month_);
 }
 
-inline int Date::get_year()
+inline int Date::get_year() const
 {
 	return (this->year_);
 }
@@ -480,19 +480,19 @@ class ExpirationDate
 		/*!
 				Returns value. std::string type.
 		*/
-		std::string get_value();
+		std::string get_value() const;
 
 		//! Get month function
 		/*!
 				Returns month value. int type.
 		*/
-		int get_month();
+		int get_month() const;
 
 		//! Get year function
 		/*!
 				Returns year value. int type.
 		*/
-		int get_year();
+		int get_year() const;
 
 	private:
 		//! ExpirationDate value's size
@@ -536,18 +536,18 @@ class ExpirationDate
 		void validate(std::string in_value);
 };
 
-inline std::string ExpirationDate::get_value()
+inline std::string ExpirationDate::get_value() const
 {
 	return (this->value_);
 }
 
 
-inline int ExpirationDate::get_month()
+inline int ExpirationDate::get_month() const
 {
 	return (this->month_);
 }
 
-inline int ExpirationDate::get_year()
+inline int ExpirationDate::get_year() const
 {
 	return (this->year_);
 }
@@ -584,7 +584,7 @@ class State
 		/*!
 				Returns value. std::string type.
 		*/
-		std::string get_value();
+		std::string get_value() const;
 
 		//! Get state function
 		/*!
@@ -592,7 +592,7 @@ class State
 
 				\sa StateName
 		*/
-		StateName get_state();
+		StateName get_state() const;
 
 	private:
 		//! State string's size
@@ -629,12 +629,12 @@ class State
 		StateName validate(std::string in_value);
 };
 
-inline std::string State::get_value()
+inline std::string State::get_value() const
 {
 	return (this->value_);
 }
 
-inline StateName State::get_state()
+inline StateName State::get_state() const
 {
 	return (this->state_);
 }
@@ -672,7 +672,7 @@ class Identifier
 		/*!
 				Returns value. std::string type.
 		*/
-		std::string get_value();
+		std::string get_value() const;
 
 	private:
 
@@ -699,7 +699,7 @@ class Identifier
 		void validate(std::string in_value);
 };
 
-inline std::string Identifier::get_value()
+inline std::string Identifier::get_value() const
 {
 	return (this->value_);
 }
@@ -738,7 +738,7 @@ class Name
 		/*!
 				Returns value. std::string type.
 		*/
-		std::string get_value();
+		std::string get_value() const;
 
 	private:
 		//! Name's size
@@ -784,7 +784,7 @@ class Name
 		void validate(std::string in_value);
 };
 
-inline std::string Name::get_value()
+inline std::string Name::get_value() const
 {
 	return (this->value_);
 }
@@ -823,7 +823,7 @@ class CreditCardNumber
 		/*! 
 			Returns CreditCardNumber value. std::string type.
 		*/
-		std::string get_value();
+		std::string get_value() const;
 
 	private:
 
@@ -851,7 +851,7 @@ class CreditCardNumber
 		void validate(std::string in_value);
 };
 
-inline std::string CreditCardNumber::get_value() 
+inline std::string CreditCardNumber::get_value() const 
 {
 	return (this->value_);
 }
@@ -890,7 +890,7 @@ class AccountNumber
 		/*! 
 			Returns AccountNumber value. std::string type.
 		*/
-		std::string get_value();
+		std::string get_value() const;
 
 	private:
 
@@ -917,7 +917,7 @@ class AccountNumber
 		void validate(std::string in_value);
 };
 
-inline std::string AccountNumber::get_value() 
+inline std::string AccountNumber::get_value() const 
 {
 	return (this->value_);
 }
@@ -957,7 +957,7 @@ class Password
 		/*!
 				Returns value. std::string type.
 		*/
-		std::string get_value();
+		std::string get_value() const;
 
 	private:
 		//! Password's size
@@ -999,7 +999,7 @@ class Password
 		void validate(std::string in_value);
 };
 
-inline std::string Password::get_value()
+inline std::string Password::get_value() const
 {
 	return (this->value_);
 }
@@ -1038,13 +1038,13 @@ class AccommodationType
 		/*! 
 			Returns AccommodationType value. std::string type.
 		*/
-		std::string get_value();
+		std::string get_value() const;
 
 		//! Get Value function
 		/*! 
 			Returns AccommodationType enum value. enum class AccommodationOption type.
 		*/
-		AccommodationOption get_accommodation_type();
+		AccommodationOption get_accommodation_type() const;
 
 	private:
 		//!	AccommodationType value
@@ -1074,12 +1074,12 @@ class AccommodationType
 		
 };
 
-inline std::string AccommodationType::get_value() 
+inline std::string AccommodationType::get_value() const 
 {
 	return (this->value_);
 }
 
-inline AccommodationOption AccommodationType::get_accommodation_type() 
+inline AccommodationOption AccommodationType::get_accommodation_type() const
 {
 	return (this->accommodation_type_);
 }

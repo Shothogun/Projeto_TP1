@@ -15,6 +15,7 @@ class StubServAuthentication:public IServAuthentication
 
   // Error's notification trigger
 
+  const static int kEqual_ = 0;
   const static std::string kTriggerFail_;
   const static std::string KSystemError_;
 
@@ -32,6 +33,7 @@ class StubServUser: public IServUser
 
   // Error's notification trigger
 
+  const static int kEqual_ = 0;
   const static std::string kTriggerFail_;
   const static std::string KSystemError_;
 
@@ -42,5 +44,5 @@ class StubServUser: public IServUser
 };
 
 const std::string StubServUser::kTriggerFail_ = "abcde";
-const std::string StubServUser::kTriggerFail_ = "syser";
+const std::string StubServUser::KSystemError_ = "syser";
 #endif

@@ -1,5 +1,6 @@
 #include "../include/controller_user.hpp"
 #include "../include/command_user.hpp"
+#include <string>
 
 
 FeedbackAuthentication CntrIUAuthentication::authenticate() throw(runtime_error)
@@ -10,10 +11,12 @@ FeedbackAuthentication CntrIUAuthentication::authenticate() throw(runtime_error)
   Feedback feedback;
   std::string id_input;
   std::string password_input;
+  
 
   // ====================================
   //    Solicitar Identificador e senha
   // ====================================
+
   
   while (true)
   {
@@ -62,13 +65,6 @@ void CntrIUUser::execute(const Identifier &identifier) throw(runtime_error)
 
   while(true)
   {
-    // Clean terminal's screen
-
-    // #ifdef WIN32
-    //   system("CLS");
-	  // #else
-		//   system("clear");
-	  // #endif
 
     // Show options
 
@@ -82,6 +78,7 @@ void CntrIUUser::execute(const Identifier &identifier) throw(runtime_error)
     cout << "Selecione uma opcao : ";
 
     cin >> option;
+    getchar();
 
     switch(option)
     {

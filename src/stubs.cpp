@@ -121,7 +121,7 @@ FeedbackUser StubServUser::seek(const Identifier &identifier) throw (runtime_err
   return feedback;
 }
 
-Feedback StubServUser::update(const User &user) throw (runtime_error)
+Feedback StubServUser::update(const Identifier &identifier) throw (runtime_error)
 {
   // Show input data
 
@@ -133,12 +133,12 @@ Feedback StubServUser::update(const User &user) throw (runtime_error)
 
   // Actions according to identifier value
 
-  if(user.get_identifier()->get_value().compare(kTriggerFail_) == kEqual_)
+  if(identifier.get_value().compare(kTriggerFail_) == kEqual_)
   {
     feedback.set_value(FeedbackAuthentication::kFail_);
   }
 
-  else if(user.get_identifier()->get_value().compare(KSystemError_) == kEqual_)
+  else if(identifier.get_value().compare(KSystemError_) == kEqual_)
   {
     throw runtime_error("Erro de sistema");
   }

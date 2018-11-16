@@ -16,7 +16,7 @@ T_OBJ = $(patsubst %,$(ODIR)/%,$(_T_OBJ))
 
 T_SRC = $(patsubst %,$(T_SDIR)/%,$(wildcard *.cpp))
 
-LIBS = -lm
+LIBS = -lm -lpthread -ldl
 DEBUG = -g
 
 _DEPS = $(patsubst $(IDIR)/%,%,$(DEPS))
@@ -31,7 +31,7 @@ $(ODIR)/%.o: %.cpp $(DEPS)
 $(ODIR)/%.o: $(T_SDIR)/%.cpp $(DEPS)
 	$(CC) -c -o $@ $< $(CXXFLAGS) $(DEBUG)
 
-main: $(OBJ)
+main: $(OBJ) ../framework/sqlite3.o
 	$(CC) -o $(EDIR)/$@ $^ $(CXXFLAGS) $(LIBS) $(DEBUG)
 
 test: $(T_OBJ)

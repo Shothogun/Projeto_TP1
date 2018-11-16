@@ -28,7 +28,7 @@ void inline CntrIUAuthentication::setCntrServAuthentication(IServAuthentication*
   this->cntr_serv_authentication_ = cntr_serv_authentication;
 }
 
-// User entity's controller 
+// User entity's controller(user layer)
 class CntrIUUser :public IUUser
 {
   public:

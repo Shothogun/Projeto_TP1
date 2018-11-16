@@ -649,7 +649,7 @@ class Identifier
 		//! Constructor
 		/*!
 				Initializes Identifier and validates following the 
-				standards notion(XXXXX, all lowe-case letters a-z).
+				standards notion(XXXXX, all lower-case letters a-z).
 
 				\param in_value a std::string type.
 
@@ -966,7 +966,7 @@ class Password
 		*/
 		const static int kSize_ = 8;
 
-		//!	Identifier value
+		//!	Password value
 		/*!
 				It's a sequence of 8 letter(XXXXXXXX), special character (! # $ % &),
 				and number (0 to 9). std::string type.

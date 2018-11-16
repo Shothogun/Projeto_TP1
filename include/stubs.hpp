@@ -37,7 +37,7 @@ class StubServUser: public IServUser
   Feedback include(const User&) throw(runtime_error);
   Feedback remove(const Identifier&) throw(runtime_error);
   FeedbackUser seek(const Identifier&) throw(runtime_error);
-  Feedback update(const User&) throw(runtime_error);
+  Feedback update(const Identifier&) throw(runtime_error);
 };
 
 #endif

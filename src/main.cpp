@@ -6,6 +6,7 @@
 #include "../include/entity.hpp"
 #include "../include/interfaces.hpp"
 #include "../include/controller_user.hpp"
+#include "../include/controller_service.hpp"
 #include "../include/stubs.hpp"
 
 using namespace std;
@@ -18,24 +19,24 @@ int main()
   cntr_iu_authentication = new CntrIUAuthentication();
   cntr_iu_user = new CntrIUUser();
 
-  IServAuthentication *stub_serv_authentication;
-  IServUser           *stub_serv_user;
+  IServAuthentication *serv_authentication;
+  IServUser           *serv_user;
 
-  stub_serv_authentication = new StubServAuthentication();
-  stub_serv_user = new StubServUser();
+  serv_authentication = new ServAuthentication();
+  serv_user = new ServUser();
 
-  cntr_iu_authentication->setCntrServAuthentication(stub_serv_authentication);
-  cntr_iu_user->setCntrServUser(stub_serv_user);
+  cntr_iu_authentication->setCntrServAuthentication(serv_authentication);
+  cntr_iu_user->setCntrServUser(serv_user);
 
-  cout << endl << "VALORES DOS TRIGGERS:" << endl << endl;
-  cout << "Trigger de falha            = " << "abcde"  << endl;
-  cout << "Trigger de erro de sistema  = " << "syser" << endl;
+  // cout << endl << "VALORES DOS TRIGGERS:" << endl << endl;
+  // cout << "Trigger de falha            = " << "abcde"  << endl;
+  // cout << "Trigger de erro de sistema  = " << "syser" << endl;
 
   FeedbackAuthentication feedback;
 
   while(true)
   {
-    cout << endl << "Trabalho TP1" << endl;
+    cout << endl << "--------- Trabalho TP1 ---------\n" << endl;
 
     try
     {
@@ -65,8 +66,8 @@ int main()
 
   delete cntr_iu_authentication;
   delete cntr_iu_user;
-  delete stub_serv_authentication;
-  delete stub_serv_user;
+  delete serv_authentication;
+  delete serv_user;
 
   return 0;
 }

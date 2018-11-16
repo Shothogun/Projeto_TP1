@@ -70,7 +70,7 @@ class IServUser
     virtual Feedback include(const User&) throw(runtime_error) = 0;
     virtual Feedback remove(const Identifier&) throw(runtime_error) = 0;
     virtual FeedbackUser seek(const Identifier&) throw(runtime_error) = 0;
-    virtual Feedback update(const User&) throw(runtime_error)= 0;
+    virtual Feedback update(const Identifier&) throw(runtime_error)= 0;
 
     // Virtual Destructor method
     virtual ~IServUser(){}

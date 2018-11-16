@@ -1,27 +1,51 @@
 #include "../include/command_user.hpp"
+#include <string>
+
 
 // -------Command service's solicitation methods -------
 
 void CommandIUUserInclude::execute(IServUser* cntr_serv_user) throw(runtime_error)
 {
+  cout << "Cadastrar" << std::endl << std::endl;
+
   Feedback feedback;
   User* user = new User();
+
+  Name       *name = new Name();
+  Identifier *identifier = new Identifier();
+  Password   *password = new Password();
+
+  std::string input_name;
+  std::string input_identifier;
+  std::string input_password;
 
   while(true)
   {
     try
     {
-      std::string input;
-      Identifier* identifier = new Identifier();
+      cout << "Digite o nome: ";
+      getline(cin, input_name);
+
       cout << "Digite o identificador: ";
-      cin >> input;
-      identifier->set_value(input);
+      getline(cin, input_identifier);
+
+      cout << "Digite a senha: ";
+      getline(cin,input_password) ;
+
+      name->set_value(input_name);
+      identifier->set_value(input_identifier);
+      password->set_value(input_password);
+
+      user->set_name(name);
       user->set_identifier(identifier);
+      user->set_password(password);
+
       break;
     }
-    catch (invalid_argument &exp)
+
+    catch (const invalid_argument *exp)
     {
-      cout << "Identificador com formato incorreto"<< std::endl;
+      cout << "Dado com formato incorreto"<< std::endl;
     }    
   }
 
@@ -44,6 +68,9 @@ void CommandIUUserInclude::execute(IServUser* cntr_serv_user) throw(runtime_erro
 
 void CommandIUUserRemove::execute(IServUser* cntr_serv_user) throw(runtime_error)
 {
+
+  cout << "Remover usuario." << std::endl << std::endl;
+
   Feedback feedback;
   Identifier* identifier = new Identifier();
 
@@ -52,7 +79,7 @@ void CommandIUUserRemove::execute(IServUser* cntr_serv_user) throw(runtime_error
     try
     {
       std::string input;
-      cout << "Digite o identificador";
+      cout << "Digite o identificador: ";
       cin >> input;
       identifier->set_value(input);
       break;
@@ -86,6 +113,8 @@ void CommandIUUserSeek::execute(IServUser* cntr_serv_user) throw (runtime_error)
 
   Identifier* identifier = new Identifier();
 
+  cout << std::endl<< "Procurar usuario" << std::endl << std::endl;
+
   // User interaction message
 
   while(true)
@@ -93,11 +122,14 @@ void CommandIUUserSeek::execute(IServUser* cntr_serv_user) throw (runtime_error)
     try
     {
       std::string input;
-      cout << "Digite o identificador";
+      cout << "Digite o identificador: ";
       cin >> input;
+
       identifier->set_value(input);
+
       break;
     }
+
     catch(invalid_argument &exp)
     {
       cout << "Identificador com formato incorreto";
@@ -124,15 +156,16 @@ void CommandIUUserUpdate::execute(IServUser* cntr_serv_user) throw(runtime_error
 {
   Feedback feedback;
 
-  User* user = new User();
   Identifier* identifier = new Identifier();
+
+  cout << "Editar usuario." << std::endl << std::endl;
 
   while(true)
   {
     try
     {
       std::string input;
-      cout << "Digite o identificador";
+      cout << "Digite o identificador: ";
       cin >> input;
       identifier->set_value(input);
       break;
@@ -147,7 +180,7 @@ void CommandIUUserUpdate::execute(IServUser* cntr_serv_user) throw(runtime_error
 
   // -------Method solicitation-------
 
-  cntr_serv_user->update(*user);
+  cntr_serv_user->update(*identifier);
 
   if(feedback.get_value() == Feedback::kSuccess_)
   {
@@ -156,9 +189,8 @@ void CommandIUUserUpdate::execute(IServUser* cntr_serv_user) throw(runtime_error
 
   else
   {
-    cout << "Falha na execucao da operacao" << endl;
+    cout << "Falha na execucao da operacao" << std::endl;
   }
 
-  delete user;
   delete identifier;
 }

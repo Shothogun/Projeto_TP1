@@ -171,13 +171,17 @@ Feedback ServUser::update(const Identifier &identifier) throw(runtime_error)
   cout << "Identificador : " << DB_user.get_identifier()->get_value() << endl;
   cout << "Senha : " << DB_user.get_password()->get_value() << endl;
 
-  cout << "Digite os novos dados. " << endl << endl;
+  cout << "Digite os novos dados.\n" << endl;
+
   cout << "Nome : ";
-  cin >> name_input;
+  getchar();
+  getline(std::cin, name_input);
+
   cout << "Identificador : ";
-  cin >> identifier_input;
+  getline(std::cin,identifier_input);
+
   cout << "Senha : ";
-  cin >> password_input;
+  getline(std::cin, password_input);
   
   try
   {

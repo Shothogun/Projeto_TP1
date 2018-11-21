@@ -45,7 +45,7 @@ void CommandIUUserInclude::execute(IServUser* cntr_serv_user) throw(runtime_erro
 
     catch (const invalid_argument *exp)
     {
-      cout << "Dado com formato incorreto"<< std::endl;
+      cout << std::endl<< "Dado com formato incorreto"<< std::endl;
     }    
   }
 
@@ -86,7 +86,7 @@ void CommandIUUserRemove::execute(IServUser* cntr_serv_user) throw(runtime_error
     }
     catch(invalid_argument &exp)
     {
-      cout << "Identificador com formato incorreto";
+      cout << std::endl<< "Identificador com formato incorreto"<< std::endl;
     }
   }
 
@@ -132,7 +132,7 @@ void CommandIUUserSeek::execute(IServUser* cntr_serv_user) throw (runtime_error)
 
     catch(invalid_argument &exp)
     {
-      cout << "Identificador com formato incorreto";
+      cout << std::endl << "Identificador com formato incorreto"<< std::endl;
     }
   }
 
@@ -172,7 +172,7 @@ void CommandIUUserUpdate::execute(IServUser* cntr_serv_user) throw(runtime_error
     }
     catch(invalid_argument &exp)
     {
-      cout << "Identificador com formato incorreto";
+      cout << std::endl<< "Identificador com formato incorreto" << std::endl;
     }
   }
 

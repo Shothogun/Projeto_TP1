@@ -30,14 +30,16 @@ Feedback ServAuthentication::authenticate(const Identifier &identifier, const Pa
     else
     {
       feedback.set_value(Feedback::kFail_);
-      cout << endl << endl << "Digite algo para continuar." << endl;
+      cout << endl << endl << "Digite 'enter' para continuar." << endl;
+      getchar();
       getchar();
     }
   }
   catch(StorageError exp)
   {
     std::cout << std::endl << exp.What();
-    cout << endl << endl << "Digite algo para continuar."<< endl;
+    cout << endl << endl << "Digite 'enter' para continuar."<< endl;
+    getchar();
     getchar();
   }
 
@@ -60,7 +62,8 @@ Feedback ServUser::include(const User& user) throw(runtime_error)
   {
     feedback.set_value(Feedback::kFail_);
     cout << endl << "Erro no acesso ao banco de dados.";
-    cout << endl << endl << "Digite algo para continuar." << endl;
+    cout << endl << endl << "Digite 'enter' para continuar." << endl;
+    getchar();
     getchar();
   }
 
@@ -82,7 +85,8 @@ Feedback ServUser::remove(const Identifier& identifier) throw(runtime_error)
   {
     feedback.set_value(Feedback::kFail_);
     cout << endl << "Erro no acesso ao banco de dados.";
-    cout << endl << endl << "Digite algo para continuar." << endl;
+    cout << endl << endl << "Digite 'enter' para continuar." << endl;
+    getchar();
     getchar();
   }
 
@@ -106,7 +110,8 @@ FeedbackUser ServUser::seek(const Identifier &identifier) throw(runtime_error)
   {
     feedback.set_value(Feedback::kFail_);
     cout << endl << "Erro no acesso ao banco de dados.";
-    cout << endl << endl << "Digite algo para continuar." << endl;
+    cout << endl << endl << "Digite 'enter' para continuar." << endl;
+    getchar();
     getchar();
 
     return feedback; 
@@ -120,7 +125,8 @@ FeedbackUser ServUser::seek(const Identifier &identifier) throw(runtime_error)
     cout << "Nome : " << user.get_name()->get_value() << endl;
     cout << "Identificador : " << user.get_identifier()->get_value() << endl;
     cout << "Senha : " << user.get_password()->get_value() << endl;
-    cout << "Digite algo para continuar" << endl;
+    cout << "Digite 'enter' para continuar" << endl;
+    getchar();
     getchar();
   }
 
@@ -128,8 +134,9 @@ FeedbackUser ServUser::seek(const Identifier &identifier) throw(runtime_error)
   {
     feedback.set_value(Feedback::kFail_);
     cout << endl << exp.What();
-    cout << endl << endl << "Digite algo para continuar." << endl;
+    cout << endl << endl << "Digite 'enter' para continuar." << endl;
     getchar(); 
+    getchar();
   }
 
   return feedback; 
@@ -158,7 +165,8 @@ Feedback ServUser::update(const Identifier &identifier) throw(runtime_error)
   {
     feedback.set_value(Feedback::kFail_);
     cout << endl << "Erro no acesso ao banco de dados.";
-    cout << endl << endl << "Digite algo para continuar." << endl;
+    cout << endl << endl << "Digite 'enter' para continuar." << endl;
+    getchar();
     getchar();
 
     return feedback;
@@ -194,8 +202,10 @@ Feedback ServUser::update(const Identifier &identifier) throw(runtime_error)
   {
     feedback.set_value(Feedback::kFail_);
     cout << endl << "Dado informado incorretamente." << endl << endl;
-    cout << "Digite algo para continuar :" << endl;
+    cout << "Digite 'enter' para continuar :" << endl;
     getchar(); 
+    getchar();
+
     return feedback;
   }
 
@@ -216,8 +226,10 @@ Feedback ServUser::update(const Identifier &identifier) throw(runtime_error)
   {
     feedback.set_value(Feedback::kFail_);
     cout << endl << "Erro no acesso ao banco de dados.";
-    cout << endl << endl << "Digite algo para continuar." << endl;
+    cout << endl << endl << "Digite 'enter' para continuar." << endl;
     getchar(); 
+    getchar();
+
   }
 
   return feedback;
